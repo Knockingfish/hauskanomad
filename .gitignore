@@ -1,0 +1,10 @@
+# Node.js
+node_modules/
+.DS_Store
+
+# Build files
+build/
+dist/
+
+# Environment variables
+.env
