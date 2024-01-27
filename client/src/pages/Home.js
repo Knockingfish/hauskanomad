@@ -1,5 +1,7 @@
 import React from 'react';
 import DestinationCard from '../components/DestinationCard';
+import SearchBar from '../components/SearchBar';
+import Slideshow from '../components/Slideshow';
 
 const Home = () => {
   const destinations = [
@@ -36,10 +38,25 @@ const Home = () => {
     // Add more destinations as needed
   ];
 
+  const placeholderImages = [
+    { id: 1, url: 'https://thoughtcatalog.com/wp-content/uploads/2014/07/shutterstock_117016681.jpg', caption: 'Placeholder Caption 1' },
+    { id: 2, url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftravelfoodpeople.com%2Fwp-content%2Fuploads%2F2021%2F04%2FTFP-Travel-Guides-1.jpg&f=1&nofb=1&ipt=c40f30aecbe8e4dd5b5d083d47d3fc100c1941d9cf04cf336969046a1f882469&ipo=images', caption: 'Placeholder Caption 2' },
+    { id: 3, url: 'https://www.ampagency.com/hs-fs/hubfs/flash/hero-images/desktop--2x/travel_hero-2x.jpg?width=11520&height=6480&name=travel_hero-2x.jpg', caption: 'Placeholder Caption 3' }
+    // Add more placeholder images as needed
+  ];
+
   return (
     <div>
       <h1>Welcome to the Travel Agency</h1>
       <p>Explore our amazing travel packages and book your next adventure!</p>
+
+      <div className="sheiss">
+        <Slideshow images={placeholderImages} />
+      </div>
+
+      <div className="placehold">
+        <SearchBar />
+      </div>
 
       {/* Directly map through destinations and render DestinationCard components */}
       <div className="destinations-list">
