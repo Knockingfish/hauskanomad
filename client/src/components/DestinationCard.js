@@ -1,8 +1,8 @@
+// W
 import React from 'react';
 
-const DestinationCard = ({ destination }) => {
-  // Assuming 'destination' is an object with properties like 'name', 'image', and 'info'
-  const { name, image, info } = destination;
+const DestinationCard = ({ destination }) => { // Function takes a property object as an argument
+  const { name, image, info } = destination; // Format for property object
 
   return (
     <div className="destination-card">

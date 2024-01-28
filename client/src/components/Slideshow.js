@@ -1,6 +1,8 @@
+// W
 import React, { useState, useEffect } from 'react';
 
 const Slideshow = ({ images }) => {
+  // Create state for position in slideshow
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -8,19 +10,22 @@ const Slideshow = ({ images }) => {
 
     slideshowInterval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Adjust the interval (in milliseconds) as needed
+    }, 3000); // Timer for switching slideshow image
 
     return () => clearInterval(slideshowInterval);
   }, [currentImageIndex, images]);
 
+  // Move slideshow forwards
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
+  // Move slideshow backwards
   const prevImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
+  // Directly select slideshow position
   const selectImage = (index) => {
     setCurrentImageIndex(index);
   };

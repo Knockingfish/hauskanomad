@@ -1,4 +1,8 @@
+// W
 import React from 'react';
+
+// Currently an empty placeholder
+// Likely to be replaced or unused in later versions
 
 function BookingForm() {
   return (

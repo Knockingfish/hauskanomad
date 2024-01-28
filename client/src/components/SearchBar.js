@@ -1,8 +1,10 @@
+// W
 import React, { useState } from 'react';
 import DateModal from './DateModal';
 import GuestRoomModal from './GuestRoomModal';
 
 const SearchBar = () => {
+  // Create states for each input and output
   const [textQuery, setTextQuery] = useState('');
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
@@ -10,25 +12,31 @@ const SearchBar = () => {
   const [numRooms, setNumRooms] = useState(1);
   const [suggestions, setSuggestions] = useState([]);
 
+  // Set modals to closed by default
   const [dateModalIsOpen, setDateModalIsOpen] = useState(false);
   const [guestRoomModalIsOpen, setGuestRoomModalIsOpen] = useState(false);
 
+  // Handles opening and closing of modal windows based on user input.
   const openDateModal = () => setDateModalIsOpen(true);
   const closeDateModal = () => setDateModalIsOpen(false);
   const openGuestRoomModal = () => setGuestRoomModalIsOpen(true);
   const closeGuestRoomModal = () => setGuestRoomModalIsOpen(false);
 
+  // Updates start and end date based on user input
   const handleDateSelect = (dates) => {
     setStartDate(dates[0]);
     setEndDate(dates[1]);
     closeDateModal();
   };
 
+  // Updates guest and room count based on user input
   const handleGuestRoomSelect = ({ numGuests, numRooms }) => {
     setNumGuests(numGuests);
     setNumRooms(numRooms);
   };
 
+  // Currently logs search input to console for debugging purposes
+  // Will be replaced at future date with an API call
   const handleSearch = () => {
     console.log('Search clicked!');
     console.log('Text Query:', textQuery);
@@ -37,20 +45,21 @@ const SearchBar = () => {
     console.log('Rooms:', numRooms);
   };
 
+  // Mockup of search suggestions being generated based on input
   const handleInputChange = (e) => {
     const query = e.target.value;
     setTextQuery(query);
 
     // Simulate fetching suggestions based on the query
-    // Replace this with actual fetching logic from your backend
+    // Replace this with actual fetching logic from backend
     const fetchedSuggestions = ['Suggestion 1', 'Suggestion 2', 'Suggestion 3'];
     setSuggestions(fetchedSuggestions);
   };
 
+  // Allow search suggestions to be selected, completing the query
   const handleSuggestionClick = (suggestion) => {
-    // Handle the selected suggestion (e.g., set it as the query)
     setTextQuery(suggestion);
-    setSuggestions([]); // Clear suggestions
+    setSuggestions([]); // Clear suggestions once selection is made
   };
 
   return (

@@ -1,6 +1,8 @@
+// W
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// 99% of this will need to be replaced at some point
 function Header() {
   return (
     <nav>

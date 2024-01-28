@@ -1,16 +1,22 @@
+// W
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Modal from 'react-modal';
 
+// Treat modal windows as root elements
+// Improves window focus behavior and makes it more accessible to screen readers
 Modal.setAppElement('#root');
 
+// Function creates modal window for user input for aesthetic purposes
 const DateModal = ({ isOpen, onRequestClose, onSelectDates }) => {
+  // Create states for start and end dates
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
 
+  // Update state for startDate and endDate based on user interaction
   const handleSelectDates = () => {
-    onSelectDates([startDate, endDate]);
+    onSelectDates([startDate, endDate]); // Passes values to parent component
     onRequestClose();
   };
 
@@ -40,7 +46,7 @@ const DateModal = ({ isOpen, onRequestClose, onSelectDates }) => {
             selectsEnd
             startDate={startDate}
             endDate={endDate}
-            minDate={startDate}
+            minDate={startDate} /* Cannot select an end date prior to start date */
             placeholderText="Select end date"
           />
         </div>

@@ -1,4 +1,7 @@
+// W
 import React from 'react';
+
+/* This will be converted to something like a search result page? */
 
 function TravelListings() {
   return (

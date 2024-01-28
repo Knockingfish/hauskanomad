@@ -1,3 +1,4 @@
+// W
 import React from 'react';
 import DestinationCard from '../components/DestinationCard';
 import SearchBar from '../components/SearchBar';
@@ -5,6 +6,8 @@ import Slideshow from '../components/Slideshow';
 import Footer from '../components/Footer';
 
 const Home = () => {
+  // Placeholder object to demonstrate mapping onto component
+  // Will be replaced with information sourced from backend
   const destinations = [
     {
       id: 1,
@@ -39,6 +42,10 @@ const Home = () => {
     // Add more destinations as needed
   ];
 
+
+  // Placeholder images sourced from Google Images
+  // Will be replaced with locally stored Creative Commons or otherwise royalty free images
+  // Used for slideshow
   const placeholderImages = [
     { id: 1, url: 'https://thoughtcatalog.com/wp-content/uploads/2014/07/shutterstock_117016681.jpg', caption: 'Placeholder Caption 1' },
     { id: 2, url: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftravelfoodpeople.com%2Fwp-content%2Fuploads%2F2021%2F04%2FTFP-Travel-Guides-1.jpg&f=1&nofb=1&ipt=c40f30aecbe8e4dd5b5d083d47d3fc100c1941d9cf04cf336969046a1f882469&ipo=images', caption: 'Placeholder Caption 2' },
@@ -55,11 +62,12 @@ const Home = () => {
         <Slideshow images={placeholderImages} />
       </div>
 
-      <div className="placehold">
+      <div className="placehold"> {/* Placeholder className for CSS styling
+      Will be updated at future date when styling is actually done*/}
         <SearchBar />
       </div>
 
-      {/* Directly map through destinations and render DestinationCard components */}
+      {/* Render destination cards using information from ""backend"" */}
       <div className="destinations-list">
         {destinations.map((destination) => (
           <DestinationCard key={destination.id} destination={destination} />

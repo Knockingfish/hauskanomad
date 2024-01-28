@@ -1,10 +1,13 @@
+// W
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 
-const GuestRoomModal = ({ isOpen, onRequestClose, onSelectGuestRoom }) => {
+const GuestRoomModal = ({ isOpen, onRequestClose, onSelectGuestRoom }) => { 
+  // Create states for room and guest count
   const [numGuests, setNumGuests] = useState(1);
   const [numRooms, setNumRooms] = useState(1);
 
+  // Update room and guest counts based on user input
   const handleSelect = () => {
     onSelectGuestRoom({ numGuests, numRooms });
     onRequestClose();
