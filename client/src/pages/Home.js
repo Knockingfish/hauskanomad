@@ -2,6 +2,7 @@ import React from 'react';
 import DestinationCard from '../components/DestinationCard';
 import SearchBar from '../components/SearchBar';
 import Slideshow from '../components/Slideshow';
+import Footer from '../components/Footer';
 
 const Home = () => {
   const destinations = [
@@ -64,6 +65,10 @@ const Home = () => {
           <DestinationCard key={destination.id} destination={destination} />
         ))}
       </div>
+      <div>
+       <Footer/>
+      </div>
+      
     </div>
   );
 };
