@@ -1,15 +1,13 @@
-// W
+// DestinationCard.js
 import React from 'react';
 
-const DestinationCard = ({ destination }) => { // Function takes a property object as an argument
-  const { name, image, info } = destination; // Format for property object
-
+const DestinationCard = ({ destination }) => {
   return (
     <div className="destination-card">
-      <img src={image} alt={name} />
+      <img src={destination.image} alt={destination.name} />
       <div className="destination-info">
-        <h3>{name}</h3>
-        <p>{info}</p>
+        <h3>{destination.name}</h3>
+        <p>{destination.info}</p>
       </div>
     </div>
   );
