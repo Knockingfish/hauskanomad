@@ -1,15 +1,13 @@
-// server/index.js
 import express from 'express';
 import cors from 'cors';
 import destinationRoutes from './routes/destinationRoutes.js';
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5000; // Use default port in absence of reasons to do otherwise.
 
 app.use(cors());
 app.use(express.json());
 
-// Connect your destination routes
 app.use('/api', destinationRoutes);
 
 app.listen(port, () => {

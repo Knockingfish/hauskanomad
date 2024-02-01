@@ -8,13 +8,15 @@ const Home = () => {
   const [destinations, setDestinations] = useState([]);
   const [loading, setLoading] = useState(true); // Added loading state
 
-  fetch('http://localhost:5000/api/destinations') // Assuming your backend is running on port 5000
+  // Retrieves backend content to fill in destination card component content
+  fetch('http://localhost:5000/api/destinations')
   .then((response) => response.json())
   .then((data) => {
-    console.log('Received data:', data);
+    // console.log('Received data:', data); // Print response to console for debugging purposes
     setDestinations(data.destinations);
     setLoading(false);
   })
+  // Prevent crashing incase of errors when fetching from backend
   .catch((error) => {
     console.error("Error fetching destinations:", error);
     setLoading(false);

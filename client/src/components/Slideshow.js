@@ -1,9 +1,11 @@
-// W
+// W M
 import React, { useState, useEffect } from 'react';
 
 const Slideshow = () => {
+  // Initiate state for the slideshow
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  // Hardcoded array of images and captions
   const images = [
     {
       id: 1,
@@ -30,9 +32,9 @@ const Slideshow = () => {
       url: '/slideshow/photo5.png',
       caption: 'Cut off contact from the world and focus on inner peace.',
     },
-    // Add more placeholder images as needed
   ];
 
+  // Control refresh rate for slideshow
   useEffect(() => {
     let slideshowInterval;
 
@@ -43,14 +45,17 @@ const Slideshow = () => {
     return () => clearInterval(slideshowInterval);
   }, [currentImageIndex, images]);
 
+  // Enable moving forwards in the slideshow index manually
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
+  // Enable moving backwards in the slideshow index manually
   const prevImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
+  // Handles manual selectio of a position in the index.
   const selectImage = (index) => {
     setCurrentImageIndex(index);
   };

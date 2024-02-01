@@ -1,9 +1,5 @@
-// server/controllers/destinationController.js
-
-// This is a placeholder. Replace it with your actual logic for fetching destinations from the database.
-
 const getAllDestinations = (req, res) => {
-  // Replace this with your logic to fetch destinations from the database
+  // This will be replaced with logic for interacting with MongoDB once the database is implemented
   const destinations = [
     {
       id: 1,
@@ -13,7 +9,7 @@ const getAllDestinations = (req, res) => {
     // Add more destinations as needed
   ];
 
-  res.json({ destinations }); // Wrap the destinations array in an object
+  res.json({ destinations }); // Wrap the destinations array in an object; it seems to be necessary.
 };
 
 export { getAllDestinations };
