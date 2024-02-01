@@ -1,15 +1,25 @@
-// W M
-import React from "react";
+import React, { useEffect, useState } from "react";
 import DestinationCard from "../components/DestinationCard";
 import SearchBar from "../components/SearchBar";
 import Slideshow from "../components/Slideshow";
 import Footer from "../components/Footer";
 
 const Home = () => {
-  
+  const [destinations, setDestinations] = useState([]);
+  const [loading, setLoading] = useState(true); // Added loading state
 
-  // Images used for slideshow.
-  // No current plans for backend integration.
+  fetch('http://localhost:5000/api/destinations') // Assuming your backend is running on port 5000
+  .then((response) => response.json())
+  .then((data) => {
+    console.log('Received data:', data);
+    setDestinations(data.destinations);
+    setLoading(false);
+  })
+  .catch((error) => {
+    console.error("Error fetching destinations:", error);
+    setLoading(false);
+  });
+
   const slideshowImages = [
     {
       id: 1,
@@ -24,7 +34,7 @@ const Home = () => {
     {
       id: 3,
       url: "/slideshow/photo3.png",
-      caption: "The fun doesnt end even when the sun goes down.",
+      caption: "The fun doesn't end even when the sun goes down.",
     },
     {
       id: 4,
@@ -39,6 +49,10 @@ const Home = () => {
     // Add more placeholder images as needed
   ];
 
+  if (loading) {
+    return <div>Loading...</div>; // Render loading state while data is being fetched
+  }
+
   return (
     <div>
       <h1>Welcome to the Travel Agency</h1>
@@ -49,13 +63,9 @@ const Home = () => {
       </div>
 
       <div className="placehold">
-        {" "}
-        {/* Placeholder className for CSS styling
-      Will be updated at future date when styling is actually done*/}
         <SearchBar />
       </div>
 
-      {/* Render destination cards using information from ""backend"" */}
       <div className="destinations-list">
         {destinations.map((destination) => (
           <DestinationCard key={destination.id} destination={destination} />
