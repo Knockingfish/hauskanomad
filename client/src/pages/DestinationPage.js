@@ -54,7 +54,7 @@ const DestinationPage = () => {
           <p>Date: {bookingData.selectedDate}</p>
           <p>Guests: {bookingData.guests}</p>
           <p>Rooms: {bookingData.rooms}</p>
-          {/* Add payment and other details as needed */}
+          {/* payment and other details as needed */}
         </div>
       )}
 
