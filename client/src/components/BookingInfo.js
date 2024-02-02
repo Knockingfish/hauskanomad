@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const BookingInfo = ({ price, capacity, availableDates, restrictions }) => {

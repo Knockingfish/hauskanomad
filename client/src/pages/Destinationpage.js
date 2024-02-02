@@ -1,10 +1,9 @@
-// DestinationPage.js
 import React, { useState } from 'react';
-import ImageComponent from './ImageComponent'; // Import ImageComponent
-import DescriptionComponent from './DescriptionComponent'; // Import DescriptionComponent
-import BookingInfo from './BookingInfo'; // Import BookingInfo
-import BookingForm from './BookingForm'; // Import BookingForm
-import ReviewComments from './ReviewComments'; // Import ReviewComments
+import ImageComponent from './ImageComponent'; 
+import DescriptionComponent from './DescriptionComponent'; 
+import BookingInfo from './BookingInfo'; 
+import BookingForm from './BookingForm'; 
+import ReviewComments from './ReviewComments'; 
 
 const DestinationPage = () => {
   // Sample data for demonstration, replace with actual data from backend or state management
@@ -47,7 +46,7 @@ const DestinationPage = () => {
       {/* Booking Form Component */}
       <BookingForm onSubmit={handleBookingSubmit} />
 
-      {/* Display Booking Confirmation or Success Message */}
+      {/* Displaying Booking Confirmation or Success Message */}
       {bookingData && (
         <div>
           <h2>Booking Confirmation</h2>
