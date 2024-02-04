@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import ImageComponent from './ImageComponent'; 
-import DescriptionComponent from './DescriptionComponent'; 
-import BookingInfo from './BookingInfo'; 
-import BookingForm from './BookingForm'; 
-import ReviewComments from './ReviewComments'; 
+import ImageComponent from '../components/ImageComponent'; 
+import DescriptionComponent from '../components/DescriptionComponent'; 
+import BookingInfo from '../components/BookingInfo'; 
+import BookingForm from '../components/BookingForm'; 
+import ReviewComments from '../components/ReviewComments'; 
 
 const DestinationPage = () => {
   // Sample data for demonstration, replace with actual data from backend or state management
