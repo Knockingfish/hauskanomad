@@ -3,7 +3,8 @@ import ImageComponent from '../components/ImageComponent';
 import DescriptionComponent from '../components/DescriptionComponent'; 
 import BookingInfo from '../components/BookingInfo'; 
 import BookingForm from '../components/BookingForm'; 
-import ReviewComments from '../components/ReviewComments'; 
+import ReviewComments from '../components/ReviewComments';
+import Footer from '../components/Footer'; 
 
 const DestinationPage = () => {
   // Sample data for demonstration, replace with actual data from backend or state management
@@ -59,6 +60,7 @@ const DestinationPage = () => {
 
       {/* Review and Comments Component */}
       <ReviewComments reviews={reviews} />
+      <Footer/>
     </div>
   );
 };
