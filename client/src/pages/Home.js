@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import DestinationCard from "../components/DestinationCard";
-import SearchBar from "../components/SearchBar";
-import Slideshow from "../components/Slideshow";
+import DestinationCard from "../components/home/DestinationCard";
+import SearchBar from "../components/home/SearchBar";
+import Slideshow from "../components/home/Slideshow";
 import Footer from "../components/Footer";
 
 const Home = () => {
