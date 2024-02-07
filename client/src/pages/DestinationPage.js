@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import ImageComponent from '../components/ImageComponent'; 
-import DescriptionComponent from '../components/DescriptionComponent'; 
-import BookingInfo from '../components/BookingInfo'; 
-import BookingForm from '../components/BookingForm'; 
-import ReviewComments from '../components/ReviewComments';
+import ImageComponent from '../components/destinationpage/ImageComponent'; 
+import DescriptionComponent from '../components/destinationpage/DescriptionComponent'; 
+import BookingInfo from '../components/destinationpage/BookingInfo'; 
+import BookingForm from '../components/destinationpage/BookingForm'; 
+import ReviewComments from '../components/destinationpage/ReviewComments';
 import Footer from '../components/Footer'; 
 
 const DestinationPage = () => {
-  // Sample data for demonstration, replace with actual data from backend or state management
+  // Placeholder information for feature testing.
   const images = ['image1.jpg', 'image2.jpg', 'image3.jpg'];
   const description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
   const marketingContent = 'Discover the beauty of this amazing destination!';
@@ -34,20 +34,10 @@ const DestinationPage = () => {
   return (
     <div>
       <h1>Destination Page</h1>
-      
-      {/* Image Component */}
       <ImageComponent images={images} />
-
-      {/* Description Component */}
       <DescriptionComponent description={description} marketingContent={marketingContent} />
-
-      {/* Booking Info Component */}
       <BookingInfo {...bookingInfo} />
-
-      {/* Booking Form Component */}
       <BookingForm onSubmit={handleBookingSubmit} />
-
-      {/* Displaying Booking Confirmation or Success Message */}
       {bookingData && (
         <div>
           <h2>Booking Confirmation</h2>
@@ -57,8 +47,6 @@ const DestinationPage = () => {
           {/* payment and other details as needed */}
         </div>
       )}
-
-      {/* Review and Comments Component */}
       <ReviewComments reviews={reviews} />
       <Footer/>
     </div>

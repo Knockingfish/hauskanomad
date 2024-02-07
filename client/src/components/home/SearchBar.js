@@ -1,7 +1,7 @@
 // W
 import React, { useState } from 'react';
-import DateModal from '../DateModal';
-import GuestRoomModal from '../GuestRoomModal';
+import DateModal from './DateModal';
+import GuestRoomModal from './GuestRoomModal';
 
 const SearchBar = () => {
   // Create states for each input and output
