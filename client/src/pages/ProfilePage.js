@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import AccountDetails from '../component/AccountDetails';
-import ReservationManagement from '../component/ReservationManagement';
+import AccountDetails from '../components/profile/AccountDetails';
+import ReservationManagement from '../components/profile/ReservationManagement';
+import ProfileInfo from '../components/profile/ProfileInfo';
 
 const ProfilePage = () => {
-  const [activeSection, setActiveSection] = useState('account'); // To track the active section
+  const [activeSection, setActiveSection] = useState('account');
 
   return (
     <div>
@@ -16,6 +17,7 @@ const ProfilePage = () => {
       {/* Rendering Active Section */}
       {activeSection === 'account' && <AccountDetails />}
       {activeSection === 'reservation' && <ReservationManagement />}
+      {activeSection === 'reservation' && <ProfileInfo />}
     </div>
   );
 };
