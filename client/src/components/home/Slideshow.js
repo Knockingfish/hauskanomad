@@ -1,4 +1,3 @@
-// W M
 import React, { useState, useEffect } from 'react';
 
 const Slideshow = () => {
@@ -61,7 +60,7 @@ const Slideshow = () => {
   };
 
   return (
-    <div className="slideshow">
+    <div>
       <img src={images[currentImageIndex].url} alt={`Slide ${currentImageIndex + 1}`} />
       <p>{images[currentImageIndex].caption}</p>
 
