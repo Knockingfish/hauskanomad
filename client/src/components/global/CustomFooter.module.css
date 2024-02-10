@@ -1,0 +1,40 @@
+.custom_footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /**/
+  font-size: 20px;
+  max-width: 100%;
+  background-color: var(--light1);
+  /**/
+  box-shadow: var(--heavy_shadow);
+}
+
+.foot_container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+  margin-right: 1em;
+  color: var(--dark3);
+}
+
+.foot_item {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.foot_link_container {
+  display: flex;
+  flex-direction: row;
+}
+.foot_link {
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  /**/
+  text-decoration: none;
+  color: var(--dark3);
+}
+.foot_link:hover {
+  color: var(--red1);
+  text-decoration: underline;
+}

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Header from "../components/global/Header";
+import CustomHeader from '../components/global/CustomHeader'
 import DestinationCard from "../components/home/DestinationCard";
 import SearchBar from "../components/home/SearchBar";
 import Slideshow from "../components/home/Slideshow";
 import NewsletterSubscription from "../components/home/NewsletterSubscription";
-import Footer from "../components/global/Footer";
+import CustomFooter from '../components/global/CustomFooter';
 
 const Home = () => {
   const [destinations, setDestinations] = useState([]);
@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <div className="container">
       <div className="header">
-        <Header />
+        <CustomHeader />
       </div>
 
       <div className="slideshow">
@@ -52,7 +52,7 @@ const Home = () => {
       </div>
 
       <div className="footer">
-        <Footer />
+        <CustomFooter />
       </div>
     </div>
   );
