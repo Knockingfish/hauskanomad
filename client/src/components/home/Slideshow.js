@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styles from './Slideshow.module.css';
 
 const Slideshow = () => {
   // Initiate state for the slideshow
@@ -54,27 +55,26 @@ const Slideshow = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
-  // Handles manual selectio of a position in the index.
+  // Handles manual selection of a position in the index.
   const selectImage = (index) => {
     setCurrentImageIndex(index);
   };
 
   return (
-    <div>
-      <img src={images[currentImageIndex].url} alt={`Slide ${currentImageIndex + 1}`} />
-      <p>{images[currentImageIndex].caption}</p>
-
-      <div className="controls">
-        <button onClick={prevImage}>Previous</button>
-        <button onClick={nextImage}>Next</button>
+    <div className={styles.slideshowContainer}>
+      <div className={styles.imageContainer}>
+        <img className={styles.image} src={images[currentImageIndex].url} alt={`Slide ${currentImageIndex + 1}`} />
+        <div className={styles.caption}>{images[currentImageIndex].caption}</div>
       </div>
 
-      <div className="thumbnails">
+      <div className={styles.controls}>
+        <button onClick={prevImage}>Previous</button>
         {images.map((image, index) => (
           <button key={image.id} onClick={() => selectImage(index)}>
             {index + 1}
           </button>
         ))}
+        <button onClick={nextImage}>Next</button>
       </div>
     </div>
   );
