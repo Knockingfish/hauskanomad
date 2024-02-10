@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LogoImage from '../../assets/HauskaNomadLogo.png'; // Importing the logo image
+import LogoImage from '../../assets/HauskaNomadLogo.png';
 import "./Header.css";
 
 function Header({ isLoggedIn }) {

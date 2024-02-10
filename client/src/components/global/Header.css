@@ -53,6 +53,7 @@ header {
 .second_section {
   display: flex;
   justify-self: flex-end;
+  margin-right: 0.5em;
 }
 
 .menu {
@@ -122,4 +123,48 @@ header {
 
 .theme_toggle:active {
   background-color: var(--red1);
+}
+
+
+/* Footer section */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /**/
+  font-size: 20px;
+  max-width: 100%;
+  /**/
+  background-color: var(--light2);
+}
+
+.foot_container {
+  display: flex;
+  flex-direction: column;
+  /**/
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.foot_item {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  /**/
+  color: var(--dark3);
+}
+
+.foot_link_container {
+  display: flex;
+  flex-direction: row;
+}
+.foot_link {
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  /**/
+  text-decoration: none;
+  color: var(--dark3);
+}
+.foot_link:hover {
+  color: var(--light1);
 }
