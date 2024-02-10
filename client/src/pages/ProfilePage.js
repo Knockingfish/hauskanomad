@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AccountDetails from '../components/profile/AccountDetails';
 import ReservationManagement from '../components/profile/ReservationManagement';
 import ProfileInfo from '../components/profile/ProfileInfo';
+import '../styles/ProfilePage.css'
 
 const ProfilePage = () => {
   const [activeSection, setActiveSection] = useState('account');
