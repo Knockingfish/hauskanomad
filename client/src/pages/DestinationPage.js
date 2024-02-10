@@ -5,6 +5,7 @@ import BookingInfo from '../components/destinationpage/BookingInfo';
 import BookingForm from '../components/destinationpage/BookingForm'; 
 import ReviewComments from '../components/destinationpage/ReviewComments';
 import Footer from '../components/Footer'; 
+import '../styles/DestinationPage.css'
 
 const DestinationPage = () => {
   // Placeholder information for feature testing.

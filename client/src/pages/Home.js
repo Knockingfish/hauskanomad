@@ -3,6 +3,7 @@ import DestinationCard from "../components/home/DestinationCard";
 import SearchBar from "../components/home/SearchBar";
 import Slideshow from "../components/home/Slideshow";
 import Footer from "../components/Footer";
+import '../styles/Home.css'
 
 const Home = () => {
   const [destinations, setDestinations] = useState([]);
