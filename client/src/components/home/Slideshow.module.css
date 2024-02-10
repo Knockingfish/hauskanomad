@@ -1,30 +1,9 @@
-.slideshowContainer {
-  position: relative;
-  width: 100%;
-}
+/*
 
-.imageContainer {
-  position: relative;
-}
+Basic premise is to have the slideshow have parallax scrolling.
+  As part of that, it is inset; it is beneath the header and searchbar areas.
+Then the controls + caption have normal scrolling, and generally behaves very normal.
 
-.image {
-  width: 100%;
-  height: auto;
-}
+Because it is late, this is being done later.
 
-.caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 10px;
-}
-
-.controls {
-  position: absolute;
-  bottom: 5em;
-  left: 50%;
-  transform: translateX(-50%);
-}
+*/
