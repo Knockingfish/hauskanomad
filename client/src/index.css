@@ -9,6 +9,7 @@
   --red2: #591f2a;
   --heavy_shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.5);
   --light_shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.25);
+  --font-family: 'Inter', sans-serif; /* Use the correct font family name */
 }
 
 :root.dark_mode {
@@ -20,11 +21,10 @@
   --light1: #1a1c2c;
 }
 
+/* Apply the font to elements */
 body {
+  font-family: var(--font-family); /* Use the custom property to specify font family */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
