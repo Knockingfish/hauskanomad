@@ -1,10 +1,14 @@
-import React from 'react'; // Don't forget to import React
-import StaffImage from '../assets/staff_picture.png'; // Importing the logo image
+import React, { useEffect } from 'react';
+import StaffImage from '../assets/staff_picture.png';
 import CustomHeader from '../components/global/CustomHeader';
 import CustomFooter from '../components/global/CustomFooter';
 import styles from './AboutUs.module.css'
 
 function AboutUs() {
+  useEffect(() => {
+    document.title = 'About Us';
+  }, []);
+
   return (
     <div>
       <CustomHeader />
@@ -25,7 +29,6 @@ function AboutUs() {
             <div className={styles.staff_image_container}>
               <h2>Meet Our Team</h2>
               <img className={styles.staff_image} src={StaffImage} alt="Staff Image" />
-              {/* Replace "path/to/your/staff/image.jpg" with the actual path to your staff image */}
             </div>
           </div>
         </div>

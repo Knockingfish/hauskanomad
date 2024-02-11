@@ -2,6 +2,7 @@
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
+  height: 6em;
   font-size: 20px;
   min-width: 100%;
   background-color: var(--light1);
@@ -11,6 +12,7 @@
 .first_section {
   display: flex;
   align-items: center;
+  height: 6em;
   padding-right: 1em;
   border-right: 0px;
   border-top-right-radius: 5em;
@@ -29,6 +31,7 @@
 .second_section {
   display: flex;
   justify-self: flex-end;
+  height: 4em;
   margin-right: 0.5em;
   border: 0px;
   border-radius: 3em;
@@ -48,11 +51,12 @@
 }
 
 .menu_item {
+  height: 0.9em;
   padding: 1em;
   border: 0em;
   border-radius: 2em;
-  color: var(--light1);
   text-decoration: none;
+  text-align: center;
 }
 
 .menu_item:hover {
@@ -60,9 +64,18 @@
   box-shadow: var(--light_shadow);
 }
 
+.menu_item:hover .menu_text {
+  color: #f4f4ff;
+}
+
 .menu_item:active {
   background-color: var(--red2);
   box-shadow: var(--light_shadow);
+}
+
+.menu_text {
+  color: var(--light1);
+  text-decoration: none;
 }
 
 .theme_toggle {
@@ -70,10 +83,7 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  padding-left: 1.25em;
-  padding-right: 1.25em;
+  padding: 1em;
   margin: 0.5em;
   border: 0em;
   border-radius: 2em;

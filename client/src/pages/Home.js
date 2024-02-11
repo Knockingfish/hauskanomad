@@ -11,6 +11,10 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.title = 'Home Page';
+  }, []);
+
+  useEffect(() => {
     fetch("http://localhost:5000/api/destinations")
       .then((response) => response.json())
       .then((data) => {
