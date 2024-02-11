@@ -2,9 +2,10 @@
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 100%;
+  height: auto;
   font-size: 20px;
   background-color: var(--light2);
+  z-index: -1;
 }
 
 .about_container {

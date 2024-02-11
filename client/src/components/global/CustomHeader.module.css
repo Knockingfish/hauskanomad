@@ -47,11 +47,13 @@
   border-radius: 2em;
   background-color: var(--dark3);
   white-space: nowrap;
-  box-shadow: var(--heavy_shadow);
+  box-shadow: var(--light_shadow);
 }
 
 .menu_item {
-  height: 0.9em;
+  margin-left: -0.1em;
+  margin-right: -0.1em;
+  height: 1em;
   padding: 1em;
   border: 0em;
   border-radius: 2em;
@@ -89,7 +91,7 @@
   border-radius: 2em;
   color: var(--dark3);
   background-color: var(--light1);
-  box-shadow: var(--heavy_shadow);
+  box-shadow: var(--light_shadow);
 }
 
 .theme_toggle:hover {

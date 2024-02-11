@@ -1,9 +1,94 @@
-/*
+.formatting_outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light3);
+}
 
-Basic premise is to have the slideshow have parallax scrolling.
-  As part of that, it is inset; it is beneath the header and searchbar areas.
-Then the controls + caption have normal scrolling, and generally behaves very normal.
+.image_container {
+  position: relative;
+  width: 80vw;
+  height: auto;
+  border: 0px;
+  border-radius: 5em;
+}
 
-Because it is late, this is being done later.
+.image_container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 5em;
+  box-shadow: inset var(--heavy_shadow);
+}
 
-*/
+.formatting_inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 80vh;
+}
+
+.caption {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  margin: 0.25em;
+  border: 0px;
+  border-radius: 1em;
+  font-size: 1.5em;
+  color: var(--dark3);
+  background-color: var(--light1);
+  box-shadow: var(--heavy_shadow);
+}
+
+.controls {
+  margin: 0.5em;
+}
+
+.control_large {
+  width: 2.5em;
+  height: 2.5em;
+  border: 0px;
+  border-radius: 2em;
+  margin: 0.5em;
+  font-weight: bold;
+  color: var(--dark3);
+  background-color: var(--light1);
+  box-shadow: var(--heavy_shadow);
+}
+
+.control_large:hover {
+  color: #f4f4ff;
+  background-color: var(--red1);
+}
+
+.control_large:active {
+  background-color: var(--red2);
+}
+
+.control_small {
+  width: 2em;
+  height: 2em;
+  border: 0px;
+  border-radius: 1em;
+  margin: 0.5em;
+  font-weight: bold;
+  color: var(--dark3);
+  background-color: var(--light1);
+  box-shadow: var(--heavy_shadow);
+}
+
+.control_small:hover {
+  color: #f4f4ff;
+  background-color: var(--red1);
+}
+
+.control_small:active {
+  background-color: var(--red2);
+}

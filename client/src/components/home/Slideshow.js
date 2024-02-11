@@ -40,7 +40,7 @@ const Slideshow = () => {
 
     slideshowInterval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
+    }, 6666);
 
     return () => clearInterval(slideshowInterval);
   }, [currentImageIndex, images]);
@@ -60,21 +60,31 @@ const Slideshow = () => {
     setCurrentImageIndex(index);
   };
 
-  return (
-    <div className={styles.slideshowContainer}>
-      <div className={styles.imageContainer}>
-        <img className={styles.image} src={images[currentImageIndex].url} alt={`Slide ${currentImageIndex + 1}`} />
-        <div className={styles.caption}>{images[currentImageIndex].caption}</div>
-      </div>
+  // Inline style for the parallax effect
+  const inlineStyle = {
+    backgroundImage: `url(${images[currentImageIndex].url})`,
+    minHeight: '80vh',
+    backgroundAttachment: 'fixed',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+  };
 
-      <div className={styles.controls}>
-        <button className={styles.control_large} onClick={prevImage}>←</button>
-        {images.map((image, index) => (
-          <button className={styles.control_small} key={image.id} onClick={() => selectImage(index)}>
-            {index + 1}
-          </button>
-        ))}
-        <button className={styles.control_large} onClick={nextImage}>→</button>
+  return (
+    <div className={styles.formatting_outer}>
+      <div className={styles.image_container} style={inlineStyle}>
+        <div className={styles.formatting_inner}>
+          <div className={styles.caption}>{images[currentImageIndex].caption}</div>
+          <div className={styles.controls}>
+            <button className={styles.control_large} onClick={prevImage}>❮</button>
+              {images.map((image, index) => (
+                <button className={styles.control_small} key={image.id} onClick={() => selectImage(index)}>
+                  {index + 1}
+                </button>
+              ))}
+            <button className={styles.control_large} onClick={nextImage}>❯</button>
+          </div>
+        </div>
       </div>
     </div>
   );
