@@ -1,3 +1,25 @@
+:root {
+  --light1: #f4f4ff;
+  --light2: #c4d2db;
+  --light3: #94b0c2;
+  --dark1: #566c86;
+  --dark2: #38415c;
+  --dark3: #1a1c2c;
+  --red1: #b13e53;
+  --red2: #591f2a;
+  --heavy_shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.5);
+  --light_shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.25);
+}
+
+:root.dark_mode {
+  --dark3: #f4f4ff;
+  --dark2: #c4d2db;
+  --dark1: #94b0c2;
+  --light3: #566c86;
+  --light2: #38415c;
+  --light1: #1a1c2c;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

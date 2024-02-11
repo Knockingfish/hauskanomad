@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
+import CustomHeader from '../components/global/CustomHeader'
 import ImageComponent from '../components/destinationpage/ImageComponent'; 
 import DescriptionComponent from '../components/destinationpage/DescriptionComponent'; 
 import BookingInfo from '../components/destinationpage/BookingInfo'; 
 import BookingForm from '../components/destinationpage/BookingForm'; 
 import ReviewComments from '../components/destinationpage/ReviewComments';
-import Footer from '../components/Footer'; 
-import '../styles/DestinationPage.css'
+import CustomFooter from '../components/global/CustomFooter';
 
 const DestinationPage = () => {
   // Placeholder information for feature testing.
@@ -34,6 +34,7 @@ const DestinationPage = () => {
 
   return (
     <div>
+      <CustomHeader />
       <h1>Destination Page</h1>
       <ImageComponent images={images} />
       <DescriptionComponent description={description} marketingContent={marketingContent} />
@@ -49,7 +50,7 @@ const DestinationPage = () => {
         </div>
       )}
       <ReviewComments reviews={reviews} />
-      <Footer/>
+      <CustomFooter/>
     </div>
   );
 };

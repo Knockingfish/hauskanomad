@@ -1,45 +1,43 @@
 import React, { useEffect, useState } from "react";
+import CustomHeader from '../components/global/CustomHeader'
 import DestinationCard from "../components/home/DestinationCard";
 import SearchBar from "../components/home/SearchBar";
 import Slideshow from "../components/home/Slideshow";
-import NewsletterSubscription from "../components/home/NewsletterSubscription"; // Import NewsletterSubscription component
-import Footer from "../components/Footer";
-import '../styles/Home.css'
+import NewsletterSubscription from "../components/home/NewsletterSubscription";
+import CustomFooter from '../components/global/CustomFooter';
 
 const Home = () => {
   const [destinations, setDestinations] = useState([]);
-  const [loading, setLoading] = useState(true); // Added loading state
+  const [loading, setLoading] = useState(true);
 
-  // Retrieves backend content to fill in destination card component content
   useEffect(() => {
-    fetch('http://localhost:5000/api/destinations')
-    .then((response) => response.json())
-    .then((data) => {
-      // console.log('Received data:', data); // Print response to console for debugging purposes
-      setDestinations(data.destinations);
-      setLoading(false);
-    })
-    // Prevent crashing incase of errors when fetching from backend
-    .catch((error) => {
-      console.error("Error fetching destinations:", error);
-      setLoading(false);
-    });
+    fetch("http://localhost:5000/api/destinations")
+      .then((response) => response.json())
+      .then((data) => {
+        setDestinations(data.destinations);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching destinations:", error);
+        setLoading(false);
+      });
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>; // Render loading state while data is being fetched
+    return <div>Loading...</div>;
   }
 
   return (
-    <div>
-      <h1>Welcome to the Travel Agency</h1>
-      <p>Explore our amazing travel packages and book your next adventure!</p>
+    <div className="container">
+      <div className="header">
+        <CustomHeader />
+      </div>
 
-      <div className="sheiss">
+      <div className="slideshow">
         <Slideshow />
       </div>
 
-      <div className="placehold">
+      <div className="search-bar">
         <SearchBar />
       </div>
 
@@ -48,11 +46,13 @@ const Home = () => {
           <DestinationCard key={destination.id} destination={destination} />
         ))}
       </div>
+
       <div className="newsletter-section">
-        <NewsletterSubscription /> {/* Render NewsletterSubscription component */}
+        <NewsletterSubscription />
       </div>
-      <div>
-        <Footer />
+
+      <div className="footer">
+        <CustomFooter />
       </div>
     </div>
   );
