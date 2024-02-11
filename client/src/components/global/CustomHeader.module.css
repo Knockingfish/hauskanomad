@@ -19,13 +19,11 @@
 }
 
 .logo {
-  max-height: 0.5em;
-  width: auto;
-  padding: 0.5em;
-  min-height: 1em;
-  min-width: 1em;
-  max-height: 5em;
-  max-width: 5em;
+  max-width: 20em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 2em;
 }
 
 .second_section {
@@ -86,7 +84,7 @@
 
 .theme_toggle:hover {
   background-color: var(--red1);
-  color: var(--light1);
+  color: #f4f4ff;
 }
 
 .theme_toggle:active {
