@@ -9,6 +9,7 @@
   --red2: #591f2a;
   --heavy_shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.5);
   --light_shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.25);
+  --train: background-color 0.2s ease;
 }
 
 :root.dark_mode {
@@ -25,7 +26,6 @@
   src: local("InterVariable"), url(./fonts/InterVariable.woff2);
 }
 
-/* Apply the font to elements */
 body {
   font-family: "InterVariable";
   padding: 0;
@@ -34,4 +34,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--light2);
   overflow-x: hidden;
+  transition: var(--train);
 }

@@ -1,0 +1,60 @@
+.newsletter_outer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0em 0em 5em 0em;
+  transition: var(--train);
+}
+
+.newsletter_inner {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: baseline;
+  width: 60vw;
+  padding: 1em;
+  border: 0px;
+  border-radius: 2em;
+  color: var(--dark3);
+  background-color: var(--light1);
+  box-shadow: var(--heavy_shadow);
+}
+
+.screamlord {
+  font-size: 2em;
+  font-weight: bold;
+}
+.pitch {
+  font-size: 1.5em;
+  margin: 0em 0em 0.5em 0em;
+}
+
+.newsletter_bar {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: baseline;
+  padding: 0.5em;
+  border: 0px;
+  border-radius: 2em;
+  background-color: var(--dark2);
+}
+.newsletter_bar input {
+  outline: none;
+  width: 50vw;
+  padding: 0.5em;
+  border: 0px;
+  border-radius: 2em;
+  color: var(--light1);
+  background-color: var(--dark3);
+  font-size: 1.125em;
+}
+.newsletter_bar button {
+  padding: 0.5em;
+  margin: 0em 0em 0em 1em;
+  border: 0px;
+  border-radius: 2em;
+  font-size: 1.125em;
+  font-weight: bold;
+}

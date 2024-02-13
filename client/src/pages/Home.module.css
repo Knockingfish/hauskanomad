@@ -1,5 +1,6 @@
 .scrollarea {
   overflow: auto;
+  transition: var(--train);
 }
 
 .card_grid {

@@ -13,6 +13,7 @@
   background-color: var(--dark3);
   margin: 0.5em;
   box-shadow: var(--light_shadow);
+  transition: var(--train);
 }
 
 .counter_button_left {

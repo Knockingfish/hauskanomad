@@ -11,7 +11,9 @@ function AboutUs() {
 
   return (
     <div>
-      <CustomHeader />
+      <div className={styles.scrollarea}>
+        <CustomHeader className={styles.scrollarea} />
+      </div>
         <div className={styles.about_body}>
           <div className={styles.about_container}>
             <div className={styles.marketing_blurb}>

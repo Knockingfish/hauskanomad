@@ -1,3 +1,7 @@
+.scrollarea {
+  overflow-x: auto;
+}
+
 .about_body {
   display: flex;
   justify-content: center;
@@ -6,6 +10,7 @@
   font-size: 20px;
   background-color: var(--light2);
   z-index: -1;
+  transition: var(--train);
 }
 
 .about_container {
