@@ -5,10 +5,15 @@ import SearchBar from "../components/home/SearchBar";
 import Slideshow from "../components/home/Slideshow";
 import NewsletterSubscription from "../components/home/NewsletterSubscription";
 import CustomFooter from '../components/global/CustomFooter';
+import styles from './Home.module.css';
 
 const Home = () => {
   const [destinations, setDestinations] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    document.title = 'Home Page';
+  }, []);
 
   useEffect(() => {
     fetch("http://localhost:5000/api/destinations")
@@ -29,7 +34,7 @@ const Home = () => {
 
   return (
     <div className="container">
-      <div className="header">
+      <div className={styles.scrollarea}>
         <CustomHeader />
       </div>
 
@@ -41,10 +46,12 @@ const Home = () => {
         <SearchBar />
       </div>
 
-      <div className="destinations-list">
-        {destinations.map((destination) => (
-          <DestinationCard key={destination.id} destination={destination} />
-        ))}
+      <div className={styles.scrollarea}>
+        <div className={styles.card_grid}>
+          {destinations.map((destination) => (
+            <DestinationCard key={destination.id} destination={destination} />
+          ))}
+        </div>
       </div>
 
       <div className="newsletter-section">

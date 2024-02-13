@@ -1,14 +1,14 @@
 import React from 'react';
+import styles from './GuestRoomCounter.module.css'
 
 const GuestRoomCounter = ({ label, value, onIncrement, onDecrement }) => {
   return (
-    <div className="guest-room-counter">
-      <label>{label}:</label>
-      <div className="counter-controls">
-        <button onClick={onDecrement}>-</button>
-        <span>{value}</span>
-        <button onClick={onIncrement}>+</button>
-      </div>
+    <div className={styles.bar_item}>
+      <button className={styles.counter_button_left} onClick={onDecrement}>❮</button>
+        <div className={styles.counter_label}>
+          <label>{label}:<span>{value}</span></label>
+        </div>
+      <button className={styles.counter_button_right} onClick={onIncrement}>❯</button>
     </div>
   );
 };

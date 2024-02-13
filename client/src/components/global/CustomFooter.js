@@ -10,8 +10,8 @@ const Footer = () => {
         <div className={styles.foot_item}>Address: Helsinki, Finland</div>
       </div>
       <div className={styles.foot_container}>
-      Social Media:
         <div className={styles.foot_link_container}>
+          Social Media:
           <a className={styles.foot_link} href="https://facebook.com">Facebook</a>
           <a className={styles.foot_link} href="https://twitter.com">Twitter</a>
           <a className={styles.foot_link} href="https://instagram.com">Instagram</a>

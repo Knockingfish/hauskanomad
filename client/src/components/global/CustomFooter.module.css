@@ -7,6 +7,9 @@
   padding: 1em;
   background-color: var(--light1);
   box-shadow: var(--heavy_shadow);
+  z-index: 1;
+  overflow-x: auto;
+  transition: var(--train);
 }
 
 .foot_container {

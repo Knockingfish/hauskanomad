@@ -9,7 +9,7 @@
   --red2: #591f2a;
   --heavy_shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.5);
   --light_shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.25);
-  --font-family: 'Inter', sans-serif; /* Use the correct font family name */
+  --train: background-color 0.2s ease;
 }
 
 :root.dark_mode {
@@ -21,15 +21,18 @@
   --light1: #1a1c2c;
 }
 
-/* Apply the font to elements */
+@font-face {
+  font-family: "InterVariable";
+  src: local("InterVariable"), url(./fonts/InterVariable.woff2);
+}
+
 body {
-  font-family: var(--font-family); /* Use the custom property to specify font family */
+  font-family: "InterVariable";
+  padding: 0;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  background-color: var(--light2);
+  overflow-x: hidden;
+  transition: var(--train);
 }

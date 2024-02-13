@@ -4,7 +4,8 @@ import Home from './pages/Home';
 import DestinationPage from './pages/DestinationPage';
 import ProfilePage from './pages/ProfilePage';
 import AboutUs from './pages/AboutUs';
-import { Registration, Login, ResetPassword } from './pages/Auth';
+import Register from './pages/Register';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -15,9 +16,8 @@ function App() {
           <Route path="/About" element={<AboutUs />} />
           <Route path="/Destination" element={<DestinationPage />} />
           <Route path="/Profile" element={<ProfilePage />} />
-          <Route path="/register" element={<Registration />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/Register" element={<Register />} />
+          <Route path="/Login" element={<Login />} />
         </Routes>
       </div>
     </Router>
