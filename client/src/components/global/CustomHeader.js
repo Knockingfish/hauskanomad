@@ -38,9 +38,9 @@ function CustomHeader({ isLoggedIn }) {
               </>
             ) : (
               <>
-                <Link className={styles.menu_item} to="/login">LOGIN</Link>
-                <Link className={styles.menu_item} to="/register">REGISTER</Link>
-                <Link className={styles.menu_item} to="/profile">PROFILE</Link>
+                <Link className={`${styles.menu_item} ${location.pathname === '/register' ? styles.active : ''}`} to="/register">REGISTER</Link>
+                <Link className={`${styles.menu_item} ${location.pathname === '/login' ? styles.active : ''}`} to="/login">LOGIN</Link>
+                <Link className={`${styles.menu_item} ${location.pathname === '/profile' ? styles.active : ''}`} to="/profile">PROFILE</Link>
               </>
             )}
         </div>

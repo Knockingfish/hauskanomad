@@ -39,7 +39,7 @@
 }
 
 .bar_item:hover {
-  background-color: var(--red1);
+  background-color: var(--red2);
 }
 
 .bar_item:focus {
@@ -56,6 +56,7 @@
   border-radius: 1.5em;
   background-color: var(--dark2);
   box-shadow: var(--heavy_shadow);
+  z-index: 2;
 }
 
 .dropdown_item {
@@ -80,6 +81,10 @@
 
 .dropdown_item:active {
   background-color: var(--red2);
+}
+
+.customCalendar {
+  z-index: 2;
 }
 
 .search_button {

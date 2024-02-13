@@ -53,6 +53,13 @@
   font-size: 1.125em;
   box-shadow: var(--light_shadow);
 }
+.newsletter_bar input:hover {
+  background-color: var(--red2);
+}
+.newsletter_bar input:focus {
+  font-weight: bold;
+}
+
 .newsletter_bar button {
   padding: 0.5em;
   margin: 0em 0em 0em 1em;

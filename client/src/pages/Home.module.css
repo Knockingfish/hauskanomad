@@ -1,5 +1,4 @@
 .scrollarea {
-  overflow: auto;
   transition: var(--train);
 }
 
