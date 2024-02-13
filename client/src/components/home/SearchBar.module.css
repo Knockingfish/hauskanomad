@@ -111,3 +111,121 @@
 .search_button:active {
   background-color: var(--red2);
 }
+
+/*--- --- ---*/
+
+@media screen and (max-width: 768px) {
+  .search_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    background-color: var(--light1);
+    box-shadow: var(--heavy_shadow);
+    overflow-x: auto;
+    transition: var(--train);
+  }
+  
+  .search_bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.1em;
+    border: 0px;
+    border-radius: 2em;
+    background-color: var(--dark2);
+    box-shadow: var(--heavy_shadow);
+  }
+  
+  .bar_item {
+    position: relative;
+    height: 3em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0.5em;
+    border: 0px;
+    border-radius: 3em;
+    color: var(--light1);
+    background-color: var(--dark3);
+    box-shadow: var(--light_shadow);
+    font-size: 1.125em;
+  }
+  
+  .bar_item:hover {
+    background-color: var(--red2);
+  }
+  
+  .bar_item:focus {
+    outline: none;
+    font-weight: bold;
+  }
+  
+  .dropdown {
+    position: absolute;
+    width: 12em;
+    margin-top: 1em;
+    margin-left: 0.5em;
+    border: 0px;
+    border-radius: 1.5em;
+    background-color: var(--dark2);
+    box-shadow: var(--heavy_shadow);
+    z-index: 2;
+  }
+  
+  .dropdown_item {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0.5em;
+    border: 0px;
+    border-radius: 1em;
+    color: var(--light1);
+    background-color: var(--dark3);
+    text-align: center;
+    box-shadow: var(--light_shadow);
+  }
+  
+  .dropdown_item:hover {
+    color: #f4f4ff;
+    background-color: var(--red1);
+    font-weight: bold;
+  }
+  
+  .dropdown_item:active {
+    background-color: var(--red2);
+  }
+  
+  .customCalendar {
+    z-index: 2;
+  }
+  
+  .search_button {
+    height: 3.5em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0.5em;
+    border: 0px;
+    border-radius: 3em;
+    color: var(--dark3);
+    background-color: var(--light1);
+    font-weight: bold;
+    box-shadow: var(--light_shadow);
+    font-size: 1.125em;
+  }
+  
+  .search_button:hover {
+    color: #f4f4ff;
+    background-color: var(--red1);
+  }
+  
+  .search_button:active {
+    background-color: var(--red2);
+  }
+}

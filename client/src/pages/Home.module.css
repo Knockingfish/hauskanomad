@@ -8,3 +8,12 @@
   gap: 5em; /* Gap between grid items */
   margin: 5em 10em 5em 10em;
 }
+
+@media screen and (max-width: 768px) {
+  .card_grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

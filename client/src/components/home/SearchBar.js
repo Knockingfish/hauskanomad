@@ -75,13 +75,13 @@ const SearchBar = () => {
     <div className={styles.search_container}>
       <div className={styles.search_bar}>
         <div>
-          <input
-            className={styles.bar_item}
-            type="text"
-            placeholder="Search for a destination..."
-            value={textQuery}
-            onChange={handleInputChange}
-          />
+            <input
+              className={styles.bar_item}
+              type="text"
+              placeholder="Search for a destination..."
+              value={textQuery}
+              onChange={handleInputChange}
+            />
 
           <div className={styles.dropdown}>
               {showDropdown && (
@@ -121,11 +121,16 @@ const SearchBar = () => {
             placeholderText="Select end date"
           />
         </div>
-
-        <GuestRoomCounter label="Guests" value={numGuests} onIncrement={incrementGuests} onDecrement={decrementGuests} />
-        <GuestRoomCounter label="Rooms" value={numRooms} onIncrement={incrementRooms} onDecrement={decrementRooms} />
-
-        <button className={styles.search_button} onClick={handleSearch}>SEARCH</button>
+        
+        <div>
+          <GuestRoomCounter label="Guests" value={numGuests} onIncrement={incrementGuests} onDecrement={decrementGuests} />
+        </div>
+        <div>
+          <GuestRoomCounter label="Rooms" value={numRooms} onIncrement={incrementRooms} onDecrement={decrementRooms} />
+        </div>
+        <div>
+          <button className={styles.search_button} onClick={handleSearch}>SEARCH</button>
+        </div>
       </div>
     </div>
   );
