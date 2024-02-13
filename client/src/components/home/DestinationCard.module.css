@@ -11,8 +11,9 @@
   background-color: var(--light1);
   box-shadow: var(--heavy_shadow);
   overflow: hidden;
-  height: 300px;
-  width: 400px;
+  height: 40vh;
+  width: 50vh;
+  z-index: 1;
 }
 
 .destination_card img {

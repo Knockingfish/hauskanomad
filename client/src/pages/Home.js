@@ -34,7 +34,7 @@ const Home = () => {
 
   return (
     <div className="container">
-      <div className="header">
+      <div className={styles.scrollarea}>
         <CustomHeader />
       </div>
 
@@ -46,10 +46,12 @@ const Home = () => {
         <SearchBar />
       </div>
 
-      <div className={styles.card_grid}>
-        {destinations.map((destination) => (
-          <DestinationCard key={destination.id} destination={destination} />
-        ))}
+      <div className={styles.scrollarea}>
+        <div className={styles.card_grid}>
+          {destinations.map((destination) => (
+            <DestinationCard key={destination.id} destination={destination} />
+          ))}
+        </div>
       </div>
 
       <div className="newsletter-section">

@@ -6,6 +6,7 @@
   padding: 2em;
   background-color: var(--light1);
   box-shadow: var(--heavy_shadow);
+  overflow-x: auto;
 }
 
 .search_bar {
