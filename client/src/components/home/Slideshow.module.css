@@ -3,15 +3,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--light3);
+  background-color: var(--light2);
 }
 
 .image_container {
   position: relative;
   width: 80vw;
   height: auto;
-  border: 0px;
-  border-radius: 5em;
 }
 
 .image_container::before {
@@ -21,7 +19,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 5em;
   box-shadow: inset var(--heavy_shadow);
 }
 
@@ -33,6 +30,16 @@
   height: 80vh;
 }
 
+.bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
+  border: 0px;
+  border-radius: 2em;
+  background-color: var(--light2);
+}
+
 .caption {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -41,14 +48,16 @@
   margin: 0.25em;
   border: 0px;
   border-radius: 1em;
-  font-size: 1.5em;
+  font-size: 1.25em;
   color: var(--dark3);
   background-color: var(--light1);
   box-shadow: var(--heavy_shadow);
+  z-index: 1;
 }
 
 .controls {
   margin: 0.5em;
+  z-index: 1;
 }
 
 .control_large {

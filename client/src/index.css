@@ -24,7 +24,9 @@
 /* Apply the font to elements */
 body {
   font-family: var(--font-family); /* Use the custom property to specify font family */
+  padding: 0;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }

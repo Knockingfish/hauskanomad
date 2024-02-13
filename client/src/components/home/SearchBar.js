@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import GuestRoomCounter from './search/GuestRoomCounter'; // Import the custom GuestRoom counter component
+import GuestRoomCounter from './search/GuestRoomCounter';
+import styles from './SearchBar.module.css'
 
 const SearchBar = () => {
   const [textQuery, setTextQuery] = useState('');
@@ -71,37 +72,32 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="search-bar">
-      <input
-        type="text"
-        placeholder="Search for a destination..."
-        value={textQuery}
-        onChange={handleInputChange}
-      />
-
-      {/* Render dropdown only when there are search results and dropdown is set to show */}
-      {showDropdown && (
-        <div className="search-results-dropdown">
-          {searchResults.map((result, index) => (
-            <div key={index} onClick={() => handleResultClick(result)}>{result}</div>
-          ))}
-        </div>
-      )}
-
-      <div className="calendar-container">
-        <div className="calendar">
-          <DatePicker
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
-            selectsStart
-            startDate={startDate}
-            endDate={endDate}
-            placeholderText="Select start date"
+    <div className={styles.search_container}>
+      <div className={styles.search_bar}>
+        <div>
+          <input
+            className={styles.bar_item}
+            type="text"
+            placeholder="Search for a destination..."
+            value={textQuery}
+            onChange={handleInputChange}
           />
+
+          <div className={styles.dropdown}>
+              {showDropdown && (
+                <div>
+                  {searchResults.map((result, index) => (
+                    <div className={styles.dropdown_item} key={index} onClick={() => handleResultClick(result)}>{result}</div>
+                  ))}
+                </div>
+              )}
+          </div>
         </div>
 
-        <div className="calendar">
+        <div>
           <DatePicker
+            className={styles.bar_item}
+            calendarClassName={styles.calendar}
             selected={endDate}
             onChange={(date) => setEndDate(date)}
             selectsEnd
@@ -111,15 +107,26 @@ const SearchBar = () => {
             placeholderText="Select end date"
           />
         </div>
-      </div>
 
-      {/* Use the custom GuestRoom counter component */}
-      <div className="guest-room-selection">
+        <div>
+          <DatePicker
+            className={styles.bar_item}
+            calendarClassName={styles.customCalendar}
+            selected={endDate}
+            onChange={(date) => setEndDate(date)}
+            selectsEnd
+            startDate={startDate}
+            endDate={endDate}
+            minDate={startDate}
+            placeholderText="Select end date"
+          />
+        </div>
+
         <GuestRoomCounter label="Guests" value={numGuests} onIncrement={incrementGuests} onDecrement={decrementGuests} />
         <GuestRoomCounter label="Rooms" value={numRooms} onIncrement={incrementRooms} onDecrement={decrementRooms} />
-      </div>
 
-      <button onClick={handleSearch}>Search</button>
+        <button className={styles.search_button} onClick={handleSearch}>Search</button>
+      </div>
     </div>
   );
 };

@@ -25,37 +25,23 @@ function CustomHeader({ isLoggedIn }) {
       </div>
       <div className={styles.second_section}>
         <nav className={styles.menu}>
-          <div className={styles.menu_item}>
-            <Link className={styles.menu_text} activeClassName="active" to="/">HOME</Link>
-          </div>
-          <div className={styles.menu_item}>
-            <Link className={styles.menu_text} activeClassName="active" to="/about">ABOUT US</Link>
-          </div>
-          <div className={styles.menu_item}>
-            <Link className={styles.menu_text} activeClassName="active" to="/blog">BLOG</Link>
-          </div>
-          <div className={styles.menu_item}>
-            <a className={styles.menu_text} href="https://github.com/Knockingfish/hauskanomad">SOURCE</a>
-          </div>
+          <div><Link className={styles.menu_item} activeClassName="active" to="/">HOME</Link></div>
+          <div><Link className={styles.menu_item} activeClassName="active" to="/about">ABOUT US</Link></div>
+          <div><Link className={styles.menu_item} activeClassName="active" to="/blog">BLOG</Link></div>
+          <div><a className={styles.menu_item} href="https://github.com/Knockingfish/hauskanomad">SOURCE</a></div>
         </nav>
         <div className={styles.menu}>
-          {isLoggedIn ? (
-            <div className={styles.menu_item}>
-              <button onClick={handleLogout}>Logout</button>
-            </div>
-          ) : (
-            <>
-              <div className={styles.menu_item}>
-                <Link className={styles.menu_text} to="/login">LOGIN</Link>
-              </div>
-              <div className={styles.menu_item}>
-                <Link className={styles.menu_text} to="/register">REGISTER</Link>
-              </div>
-              <div className={styles.menu_item}>
-                <Link className={styles.menu_text} to="/profile">PROFILE</Link>
-              </div>
-            </>
-          )}
+            {isLoggedIn ? (
+              <>
+                <button onClick={handleLogout}>Logout</button>
+              </>
+            ) : (
+              <>
+                <Link className={styles.menu_item} to="/login">LOGIN</Link>
+                <Link className={styles.menu_item} to="/register">REGISTER</Link>
+                <Link className={styles.menu_item} to="/profile">PROFILE</Link>
+              </>
+            )}
         </div>
         <div className={styles.theme_toggle} onClick={toggleDarkMode}>⏻</div>
       </div>
