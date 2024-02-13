@@ -39,22 +39,36 @@
   border: 0px;
   border-radius: 2em;
   background-color: var(--dark2);
+  width: 95%;
+  box-shadow: var(--heavy_shadow)
 }
 .newsletter_bar input {
   outline: none;
-  width: 50vw;
+  width: 100%;
   padding: 0.5em;
   border: 0px;
   border-radius: 2em;
   color: var(--light1);
   background-color: var(--dark3);
   font-size: 1.125em;
+  box-shadow: var(--light_shadow);
 }
 .newsletter_bar button {
   padding: 0.5em;
   margin: 0em 0em 0em 1em;
   border: 0px;
   border-radius: 2em;
+  color: var(--dark3);
+  background-color: var(--light1);
   font-size: 1.125em;
   font-weight: bold;
+  box-shadow: var(--light_shadow);
+}
+.newsletter_bar button:hover {
+  color: #f4f4ff;
+  background-color: var(--red1);
+}
+
+.newsletter_bar button:active {
+  background-color: var(--red2);
 }
