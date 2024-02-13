@@ -1,0 +1,6 @@
+.card_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  gap: 5em; /* Gap between grid items */
+  margin: 5em 10em 5em 10em;
+}

@@ -67,3 +67,6 @@
   color: var(--light1);
   font-weight: bold;
 }
+.counter_label span {
+  margin-left: 0.5em;
+}

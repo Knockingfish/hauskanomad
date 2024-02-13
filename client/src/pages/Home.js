@@ -5,6 +5,7 @@ import SearchBar from "../components/home/SearchBar";
 import Slideshow from "../components/home/Slideshow";
 import NewsletterSubscription from "../components/home/NewsletterSubscription";
 import CustomFooter from '../components/global/CustomFooter';
+import styles from './Home.module.css';
 
 const Home = () => {
   const [destinations, setDestinations] = useState([]);
@@ -45,7 +46,7 @@ const Home = () => {
         <SearchBar />
       </div>
 
-      <div className="destinations-list">
+      <div className={styles.card_grid}>
         {destinations.map((destination) => (
           <DestinationCard key={destination.id} destination={destination} />
         ))}

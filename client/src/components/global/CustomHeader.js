@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import LogoImage from '../../assets/HauskaNomadLogo.png';
 import styles from './CustomHeader.module.css';
 
 function CustomHeader({ isLoggedIn }) {
   const [darkMode, setDarkMode] = useState(false);
+  const location = useLocation();
 
   const handleLogout = () => {
     // Handle logout functionality here
@@ -25,10 +26,10 @@ function CustomHeader({ isLoggedIn }) {
       </div>
       <div className={styles.second_section}>
         <nav className={styles.menu}>
-          <div><Link className={styles.menu_item} activeClassName="active" to="/">HOME</Link></div>
-          <div><Link className={styles.menu_item} activeClassName="active" to="/about">ABOUT US</Link></div>
-          <div><Link className={styles.menu_item} activeClassName="active" to="/blog">BLOG</Link></div>
-          <div><a className={styles.menu_item} href="https://github.com/Knockingfish/hauskanomad">SOURCE</a></div>
+          <div><Link className={`${styles.menu_item} ${location.pathname === '/' ? styles.active : ''}`} to="/">HOME</Link></div>
+          <div><Link className={`${styles.menu_item} ${location.pathname === '/about' ? styles.active : ''}`} to="/about">ABOUT US</Link></div>
+          <div><Link className={`${styles.menu_item} ${location.pathname === '/blog' ? styles.active : ''}`} to="/blog">BLOG</Link></div>
+          <div><a className={`${styles.menu_item} ${location.pathname === '/source' ? styles.active : ''}`} href="https://github.com/Knockingfish/hauskanomad">SOURCE</a></div>
         </nav>
         <div className={styles.menu}>
             {isLoggedIn ? (
@@ -43,7 +44,7 @@ function CustomHeader({ isLoggedIn }) {
               </>
             )}
         </div>
-        <div className={styles.theme_toggle} onClick={toggleDarkMode}>⏻</div>
+        <div className={styles.theme} onClick={toggleDarkMode}>THEME</div>
       </div>
     </header>
   );

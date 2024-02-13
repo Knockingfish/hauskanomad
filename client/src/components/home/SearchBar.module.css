@@ -6,7 +6,6 @@
   padding: 2em;
   background-color: var(--light1);
   box-shadow: var(--heavy_shadow);
-  z-index: 1;
 }
 
 .search_bar {

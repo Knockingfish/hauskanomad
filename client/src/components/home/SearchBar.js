@@ -125,7 +125,7 @@ const SearchBar = () => {
         <GuestRoomCounter label="Guests" value={numGuests} onIncrement={incrementGuests} onDecrement={decrementGuests} />
         <GuestRoomCounter label="Rooms" value={numRooms} onIncrement={incrementRooms} onDecrement={decrementRooms} />
 
-        <button className={styles.search_button} onClick={handleSearch}>Search</button>
+        <button className={styles.search_button} onClick={handleSearch}>SEARCH</button>
       </div>
     </div>
   );

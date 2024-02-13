@@ -9,7 +9,6 @@
   --red2: #591f2a;
   --heavy_shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.5);
   --light_shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.25);
-  --font-family: 'Inter', sans-serif; /* Use the correct font family name */
 }
 
 :root.dark_mode {
@@ -21,12 +20,18 @@
   --light1: #1a1c2c;
 }
 
+@font-face {
+  font-family: "InterVariable";
+  src: local("InterVariable"), url(./fonts/InterVariable.woff2);
+}
+
 /* Apply the font to elements */
 body {
-  font-family: var(--font-family); /* Use the custom property to specify font family */
+  font-family: "InterVariable";
   padding: 0;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  background-color: var(--light2);
 }
