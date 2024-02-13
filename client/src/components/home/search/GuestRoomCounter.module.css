@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 2.5em;
+  height: 3em;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
   padding-left: 1em;
@@ -14,6 +14,7 @@
   margin: 0.5em;
   box-shadow: var(--light_shadow);
   transition: var(--train);
+  font-size: 1.125em;
 }
 
 .counter_button_left {
