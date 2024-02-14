@@ -49,6 +49,7 @@
 
 /* Active button */
 nav button.active {
+  color: #f4f4ff;
   background-color: var(--red1);
   z-index: 1;
 }
