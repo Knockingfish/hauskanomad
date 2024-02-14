@@ -4,16 +4,16 @@
   flex-direction: column;
   align-items: baseline;
   justify-content: baseline;
+  height: 20em;
+  width: 30em;
   padding: 1em;
+  margin: 2.5em;
   border: 0px;
   border-radius: 2em;
   color: var(--dark3);
   background-color: var(--light1);
   box-shadow: var(--heavy_shadow);
   overflow: hidden;
-  height: 40vh;
-  width: 50vh;
-  z-index: 1;
   transition: var(--train);
 }
 

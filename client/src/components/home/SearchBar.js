@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import CustomDatePicker from './search/CustomDatePicker';
 import CustomNumberInput from './search/CustomNumberInput';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -26,17 +25,17 @@ const SearchBar = () => {
   }, []);
 
   const handleInputChange = (e) => {
-    setTextQuery(e.target.value);
-    if (e.target.name === 'numGuests') {
-      setNumGuests(parseInt(e.target.value));
-    } else if (e.target.name === 'numRooms') {
-      setNumRooms(parseInt(e.target.value));
+    const { name, value } = e.target;
+    if (name === 'numGuests') {
+      setNumGuests(parseInt(value));
+    } else if (name === 'numRooms') {
+      setNumRooms(parseInt(value));
     } else {
-      const query = e.target.value;
-      if (query.trim() === '') {
+      setTextQuery(value);
+      if (value.trim() === '') {
         setShowDropdown(false);
       } else {
-        handleSearchSuggestions(query);
+        handleSearchSuggestions(value);
       }
     }
   };
@@ -79,10 +78,21 @@ const SearchBar = () => {
               placeholder="Search for a destination..."
               value={textQuery}
               onChange={handleInputChange}
+              name="textQuery"
             />
           </div>
           <div className={styles.bar_section}>
-            <CustomDatePicker
+            <DatePicker
+              className={styles.date_item}
+              calendarClassName={styles.calendar}
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+              selectsStart
+              startDate={startDate}
+              endDate={endDate}
+              placeholderText="Select start date"
+            />
+            <DatePicker
               className={styles.date_item}
               calendarClassName={styles.calendar}
               selected={endDate}
@@ -93,26 +103,16 @@ const SearchBar = () => {
               minDate={startDate}
               placeholderText="Select end date"
             />
-            <DatePicker
-              className={styles.date_item}
-              calendarClassName={styles.customCalendar}
-              selected={endDate}
-              selectsEnd
-              startDate={startDate}
-              endDate={endDate}
-              minDate={startDate}
-              placeholderText="Select end date"
-            />
           </div>
           <CustomNumberInput
             value={numGuests}
             label="Guests: "
-            onChange={setNumGuests}
+            onChange={(value) => setNumGuests(parseInt(value))}
           />
           <CustomNumberInput
             value={numRooms}
             label="Rooms: "
-            onChange={setNumRooms}
+            onChange={(value) => setNumRooms(parseInt(value))}
           />
           <button className={styles.search_button} onClick={handleSearch}>SEARCH</button>
         </div>

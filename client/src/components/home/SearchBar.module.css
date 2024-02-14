@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: center;
   width: auto;
-  height: 6em;
+  height: 4em;
   margin: 2em 0 2em 0;
   border: 0px;
   border-radius: 5em;
@@ -28,7 +28,7 @@
   align-items: center;
   justify-content: center;
   width: auto;
-  height: 5em;
+  height: 3em;
   padding: 0 0.5em 0 0.5em;
   margin: 0 0.5em 0 0.5em;
   outline: none;
@@ -44,7 +44,7 @@
 
 .bar_item {
   width: 100%;
-  height: 4em;
+  height: 2em;
   padding: 0 1em 0 1em;
   outline: none;
   border: 0px;
@@ -69,7 +69,7 @@
 .date_item {
   position: relative;
   width: auto;
-  height: 4em;
+  height: 2em;
   padding: 0em 1em 0em 1em;
   outline: none;
   border: 0px;
@@ -89,88 +89,6 @@
   background-color: var(--red2);
 }
 
-/* Calendar */
-.calendar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  anchor-name: --date;
-  width: 15em;
-  height: 15em;
-  margin-top: 2em;
-  border: 0;
-  border-radius: 1em;
-  font-weight: bold;
-  color: var(--light1);
-  background-color: var(--dark2);
-  box-shadow: var(--heavy_shadow);
-  z-index: 2;
-}
-
-.calendar_header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  anchor: --date center;
-  height: 2em;
-  width: 90%;
-  margin: 0 0 0.5em 0;
-  border: 0;
-  border-radius: 1em;
-  color: var(--light1);
-  background-color: var(--dark3);
-}
-.backward, .forward {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  border: 0;
-  color: var(--light1);
-  background-color: transparent;
-}
-.backward {
-  padding: 0.5em;
-  border-radius: 5em 0 0 5em;
-}
-.forward {
-  padding: 0.5em;
-  border-radius: 0 5em 5em 0;
-}
-.backward:hover, .forward:hover {
-  color: #f4f4ff;
-  background-color: var(--red1);
-}
-.backward:active, .forward:active {
-  background-color: var(--red2);
-}
-
-.calendar_body {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  height: 11.5em;
-  width: 90%;
-  border: 0;
-  border-radius: 0.5em;
-  background-color: var(--dark3);
-}
-
-.day {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 0;
-  border-radius: 0.5em;
-}
-
-.day:hover {
-  background-color: var(--red1);
-}
 
 /* Number input */
 .number_item {
@@ -179,7 +97,7 @@
   align-items: center;
   justify-content: center;
   width: auto;
-  height: 5em;
+  height: 3em;
   margin: 0 0.5em 0 0.5em;
   outline: none;
   border: 0px;
@@ -197,10 +115,9 @@
 
 .plus, .minus {
   border: 0px;
-  height: 99%;
+  height: 3rem;
   padding: 0.5em 0.75em 0.5em 0.75em;
   font-weight: bold;
-  font-size: 1.5rem;
   color: var(--light1);
   background-color: transparent;
 }

@@ -13,7 +13,9 @@ function LoginPage() {
       <div className={styles.container}>
         <LoginForm />
       </div>
-      <CustomFooter />
+      <div className={styles.scrollarea}>
+        <CustomFooter />
+      </div>
     </div>
   );
 }

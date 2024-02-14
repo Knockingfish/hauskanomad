@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './DestinationCard.module.css';
 
 const DestinationCard = ({ destination }) => {
+
   return (
     <div className={styles.destination_card}>
       <img src={destination.url} alt={destination.name} /> {/* Wrap in a Link tag later, and extend the Schema to use it. */}

@@ -13,7 +13,9 @@ function RegistrationPage() {
       <div className={styles.container}>
         <RegistrationForm />
       </div>
-      <CustomFooter />
+      <div className={styles.scrollarea}>
+        <CustomFooter />
+      </div>
     </div>
   );
 }
