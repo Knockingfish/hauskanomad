@@ -76,13 +76,13 @@ const Slideshow = () => {
         <div className={styles.formatting_inner}>
           <div className={styles.caption}>{images[currentImageIndex].caption}</div>
           <div className={styles.controls}>
-            <button className={styles.control_large} onClick={prevImage}>❮</button>
+            <button className={styles.control_large} onClick={prevImage}>🞀</button>
               {images.map((image, index) => (
                 <button className={styles.control_small} key={image.id} onClick={() => selectImage(index)}>
                   {index + 1}
                 </button>
               ))}
-            <button className={styles.control_large} onClick={nextImage}>❯</button>
+            <button className={styles.control_large} onClick={nextImage}>🞂</button>
           </div>
         </div>
       </div>

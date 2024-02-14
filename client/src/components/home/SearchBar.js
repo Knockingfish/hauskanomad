@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import CustomDatePicker from './search/CustomDatePicker';
+import CustomNumberInput from './search/CustomNumberInput';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import GuestRoomCounter from './search/GuestRoomCounter';
-import styles from './SearchBar.module.css'
+import styles from './SearchBar.module.css';
 
 const SearchBar = () => {
+  const [containerWidth, setContainerWidth] = useState(window.screen.width);
   const [textQuery, setTextQuery] = useState('');
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
@@ -13,19 +15,35 @@ const SearchBar = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
 
+  useEffect(() => {
+    function updateWidth() {
+      setContainerWidth(window.screen.width);
+    }
+
+    window.addEventListener('resize', updateWidth);
+
+    return () => window.removeEventListener('resize', updateWidth);
+  }, []);
+
   const handleInputChange = (e) => {
-    const query = e.target.value;
-    setTextQuery(query);
-    if (query.trim() === '') {
-      setShowDropdown(false);
+    setTextQuery(e.target.value);
+    if (e.target.name === 'numGuests') {
+      setNumGuests(parseInt(e.target.value));
+    } else if (e.target.name === 'numRooms') {
+      setNumRooms(parseInt(e.target.value));
     } else {
-      handleSearchSuggestions(query);
+      const query = e.target.value;
+      if (query.trim() === '') {
+        setShowDropdown(false);
+      } else {
+        handleSearchSuggestions(query);
+      }
     }
   };
 
   const handleSearchSuggestions = (query) => {
     // Hardcoded search suggestions for testing
-    const suggestions = ['New York', 'London', 'Paris', 'Tokyo'].filter(result =>
+    const suggestions = ['New York', 'London', 'Paris', 'Tokyo', 'Phillipines'].filter(result =>
       result.toLowerCase().includes(query.toLowerCase())
     );
     setSearchResults(suggestions);
@@ -51,30 +69,10 @@ const SearchBar = () => {
     setShowDropdown(false);
   };
 
-  const incrementGuests = () => {
-    setNumGuests(prevNumGuests => prevNumGuests + 1);
-  };
-
-  const decrementGuests = () => {
-    if (numGuests > 1) {
-      setNumGuests(prevNumGuests => prevNumGuests - 1);
-    }
-  };
-
-  const incrementRooms = () => {
-    setNumRooms(prevNumRooms => prevNumRooms + 1);
-  };
-
-  const decrementRooms = () => {
-    if (numRooms > 1) {
-      setNumRooms(prevNumRooms => prevNumRooms - 1);
-    }
-  };
-
   return (
-    <div className={styles.search_container}>
-      <div className={styles.search_bar}>
-        <div>
+      <div className={styles.search_container} style={{ width: containerWidth }}>
+        <div className={styles.search_bar}>
+          <div className={styles.bar_section}>
             <input
               className={styles.bar_item}
               type="text"
@@ -82,57 +80,50 @@ const SearchBar = () => {
               value={textQuery}
               onChange={handleInputChange}
             />
-
-          <div className={styles.dropdown}>
-              {showDropdown && (
-                <div>
-                  {searchResults.map((result, index) => (
-                    <div className={styles.dropdown_item} key={index} onClick={() => handleResultClick(result)}>{result}</div>
-                  ))}
-                </div>
-              )}
           </div>
-        </div>
-
-        <div>
-          <DatePicker
-            className={styles.bar_item}
-            calendarClassName={styles.calendar}
-            selected={endDate}
-            onChange={(date) => setEndDate(date)}
-            selectsEnd
-            startDate={startDate}
-            endDate={endDate}
-            minDate={startDate}
-            placeholderText="Select end date"
+          <div className={styles.bar_section}>
+            <CustomDatePicker
+              className={styles.date_item}
+              calendarClassName={styles.calendar}
+              selected={endDate}
+              onChange={(date) => setEndDate(date)}
+              selectsEnd
+              startDate={startDate}
+              endDate={endDate}
+              minDate={startDate}
+              placeholderText="Select end date"
+            />
+            <DatePicker
+              className={styles.date_item}
+              calendarClassName={styles.customCalendar}
+              selected={endDate}
+              selectsEnd
+              startDate={startDate}
+              endDate={endDate}
+              minDate={startDate}
+              placeholderText="Select end date"
+            />
+          </div>
+          <CustomNumberInput
+            value={numGuests}
+            label="Guests: "
+            onChange={setNumGuests}
           />
-        </div>
-
-        <div>
-          <DatePicker
-            className={styles.bar_item}
-            calendarClassName={styles.customCalendar}
-            selected={endDate}
-            onChange={(date) => setEndDate(date)}
-            selectsEnd
-            startDate={startDate}
-            endDate={endDate}
-            minDate={startDate}
-            placeholderText="Select end date"
+          <CustomNumberInput
+            value={numRooms}
+            label="Rooms: "
+            onChange={setNumRooms}
           />
-        </div>
-        
-        <div>
-          <GuestRoomCounter label="Guests" value={numGuests} onIncrement={incrementGuests} onDecrement={decrementGuests} />
-        </div>
-        <div>
-          <GuestRoomCounter label="Rooms" value={numRooms} onIncrement={incrementRooms} onDecrement={decrementRooms} />
-        </div>
-        <div>
           <button className={styles.search_button} onClick={handleSearch}>SEARCH</button>
         </div>
+        {showDropdown && (
+          <div className={styles.dropdown}>
+            {searchResults.map((result, index) => (
+              <div className={styles.dropdown_item} key={index} onClick={() => handleResultClick(result)}>{result}</div>
+            ))}
+          </div>
+        )}
       </div>
-    </div>
   );
 };
 

@@ -1,11 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import LogoImage from '../../assets/HauskaNomadLogo.png';
 import styles from './CustomHeader.module.css';
 
 function CustomHeader({ isLoggedIn }) {
+  const [containerWidth, setContainerWidth] = useState(window.screen.width);
   const [darkMode, setDarkMode] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    function updateWidth() {
+      setContainerWidth(window.screen.width);
+    }
+
+    window.addEventListener('resize', updateWidth);
+
+    return () => window.removeEventListener('resize', updateWidth);
+  }, []);
 
   const handleLogout = () => {
     // Handle logout functionality here
@@ -18,7 +29,7 @@ function CustomHeader({ isLoggedIn }) {
   };
 
   return (
-    <header className={`${styles.container} ${darkMode ? styles.dark_mode : ''}`}>
+    <header className={`${styles.container} ${darkMode ? styles.dark_mode : ''}`} style={{ width: containerWidth }}>
       <div className={styles.first_section}>
         <Link to="/">
           <img className={styles.logo} src={LogoImage} alt="Logo" />

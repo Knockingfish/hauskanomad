@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: calc(100vw -7em);
     padding: 1em;
     border: 0px;
     border-radius: 2em;

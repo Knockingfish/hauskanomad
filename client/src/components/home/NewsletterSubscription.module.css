@@ -56,9 +56,6 @@
 .newsletter_bar input:hover {
   background-color: var(--red2);
 }
-.newsletter_bar input:focus {
-  font-weight: bold;
-}
 
 .newsletter_bar button {
   padding: 0.5em;

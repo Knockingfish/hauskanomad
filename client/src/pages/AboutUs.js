@@ -15,7 +15,6 @@ function AboutUs() {
         <CustomHeader className={styles.scrollarea} />
       </div>
         <div className={styles.about_body}>
-          <div className={styles.about_container}>
             <div className={styles.marketing_blurb}>
               <h2>About HauskaNomad</h2>
               <p>
@@ -29,10 +28,11 @@ function AboutUs() {
               </p>
             </div>
             <div className={styles.staff_image_container}>
-              <h2>Meet Our Team</h2>
               <img className={styles.staff_image} src={StaffImage} alt="Staff Image" />
+              <div className={styles.text_overlay}>
+                <h2>Meet Our Team</h2>
+              </div>
             </div>
-          </div>
         </div>
       <CustomFooter />
     </div>

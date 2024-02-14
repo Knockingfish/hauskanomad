@@ -4,12 +4,12 @@
   align-items: center;
   justify-content: center;
   transition: var(--train);
+  height: calc(100vh - 7em);
 }
 
 .image_container {
   position: relative;
   width: 80vw;
-  height: auto;
 }
 
 .image_container::before {
@@ -27,7 +27,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  height: 85vh;
+  height: calc(100vh - 7em);
 }
 
 .bg {
