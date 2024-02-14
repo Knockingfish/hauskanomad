@@ -3,6 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   height: 7em;
   background-color: var(--light1);
   transition: var(--train);

@@ -1,0 +1,54 @@
+.scrollarea {
+  transition: var(--train);
+  overflow: scroll;
+  box-shadow: var(--heavy_shadow);
+  scrollbar-width: none;
+  position: relative;
+  z-index: 3;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: baseline;
+  height: calc(100vh - 7em);
+  width: 100vw;
+}
+
+.top_panel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 4em;
+  width: 100vw;
+  background-color: var(--dark2);
+  box-shadow: var(--heavy_shadow);
+  transition: transform 0.3s ease; /* Transition for smooth animation */
+}
+
+.row {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.section {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 0.5em;
+  text-align: start;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  color: var(--light1);
+  background-color: var(--dark3);
+  box-shadow: var(--heavy_shadow);
+}
+
+/* Active button */
+nav button.active {
+  background-color: var(--red1);
+  z-index: 1;
+}
