@@ -64,6 +64,11 @@
   background-color: var(--red2);
 }
 
+.bar_item:focus {
+  color: #f4f4ff;
+  background-color: var(--red2);
+}
+
 /* Date input */
 
 .date_item {
@@ -89,6 +94,10 @@
   background-color: var(--red2);
 }
 
+.date_item:focus {
+  color: #f4f4ff;
+  background-color: var(--red2);
+}
 
 /* Number input */
 .number_item {
@@ -173,9 +182,9 @@
   align-items: center;
   justify-content: center;
   width: auto;
-  height: 4.5em;
+  height: 3em;
   padding: 0em 0.5em 0em 0.5em;
-  margin: 1em 0 1em 0;
+  margin: 0.25em 0 2em 0;
   border: 0px;
   border-radius: 5em;
   background-color: var(--dark2);
@@ -187,8 +196,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 6em;
-  height: 3em;
+  width: auto;
+  height: 2em;
   padding: 0em 1em 0em 1em;
   margin: 0em 0.5em 0em 0.5em;
   outline: none;
@@ -206,9 +215,5 @@
 }
 
 .dropdown_item:active {
-  background-color: var(--red2);
-}
-
-.active {
   background-color: var(--red2);
 }
