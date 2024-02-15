@@ -19,8 +19,10 @@ function AboutUs() {
               <h2>About HauskaNomad</h2>
               <p>
                 HauskaNomad is your ultimate travel companion, offering a diverse range of curated experiences for adventurers and explorers alike. 
-                We believe in the power of travel to inspire, connect, and transform lives. Whether you're seeking serene retreats in nature, 
-                immersive cultural experiences, or adrenaline-pumping adventures, HauskaNomad has something for everyone.
+                We believe in the power of travel to inspire, connect, and transform lives. 
+              </p>
+              <p>
+                Whether you're seeking serene retreats in nature, immersive cultural experiences, or adrenaline-pumping adventures, HauskaNomad has something for everyone.
               </p>
               <p>
                 Our platform was created with a vision to make travel accessible, enjoyable, and meaningful for all. 

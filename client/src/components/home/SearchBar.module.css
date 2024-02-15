@@ -159,6 +159,7 @@
   margin: 0 0.5em 0 0.5em;
   border: 0px;
   border-radius: 5em;
+  font-weight: bold;
   font-size: 1.25rem;
   color: var(--dark3);
   background-color: var(--light1);
@@ -174,7 +175,55 @@
   background-color: var(--red2);
 }
 
-/* Cursed dropdown menu */
+/* Range inputs */
+
+input[type=range] {
+  height: 10%;
+  width: 60%;
+  margin-left: 1em;
+  border: none;
+  border-radius: 1em;
+  background-color: var(--light2);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  border: none;
+  border-radius: 50%;
+  background-color: var(--light1);
+  box-shadow: var(--light_shadow);
+}
+
+input[type=range]::-moz-range-thumb {
+  border: none;
+  border-radius: 50%; /* Make the thumb round */
+  background-color: var(--light1); /* Color of the thumb */
+  box-shadow: var(--light_shadow);
+}
+
+input[type=range]::-moz-range-thumb:hover {
+  background-color: var(--red1);
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  background-color: var(--red1);
+}
+
+input[type=range]::-moz-range-thumb:active {
+  background-color: var(--red2);
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+  background-color: var(--red2);
+}
+
+.range_item {
+  height: auto;
+  width: 6em;
+  font-weight: bold;
+  margin-left: 1em;
+}
+
+/* Cursed "dropdown" menu */
 
 .dropdown {
   display: flex;

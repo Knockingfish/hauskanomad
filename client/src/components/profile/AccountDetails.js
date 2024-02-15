@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import styles from './AccountDetail.module.css'
+import React, { useState, useRef, useEffect } from 'react';
+import styles from './AccountDetail.module.css';
 
 const AccountDetails = () => {
+  const fileInputRef = useRef(null);
   // Mock user data (assuming already logged in)
   const [user, setUser] = useState({
     username: 'JohnDoe',
@@ -23,8 +24,7 @@ const AccountDetails = () => {
   const [passwordChangeError, setPasswordChangeError] = useState('');
   const [showPasswordFields, setShowPasswordFields] = useState(false);
 
-  // Function to handle form submission
-  const handleSubmit = () => {
+  useEffect(() => {
     // Update user object with edited values
     setUser({
       ...user,
@@ -33,22 +33,7 @@ const AccountDetails = () => {
       phoneNumber: editedPhoneNumber || user.phoneNumber,
       emailAddress: editedEmailAddress || user.emailAddress,
     });
-
-    // Password change logic
-    if (newPassword !== confirmNewPassword) {
-      setPasswordChangeError('New password and confirmation do not match');
-      return;
-    }
-
-    if (currentPassword !== user.password) {
-      setPasswordChangeError('Current password is incorrect');
-      return;
-    }
-
-    setUser(prevUser => ({ ...prevUser, password: newPassword }));
-    setPasswordChangeError('');
-    setShowPasswordFields(false); // Hide password fields after successful change
-  };
+  }, [editedProfilePicture, editedAddress, editedPhoneNumber, editedEmailAddress]);
 
   // Function to handle profile picture file change
   const handleProfilePictureChange = (event) => {
@@ -67,9 +52,33 @@ const AccountDetails = () => {
     }
   };
 
+  const handleButtonClick = () => {
+    fileInputRef.current.click();
+  };
+
+  const handleResetPasswordToggle = () => {
+    setShowPasswordFields((prevShowPasswordFields) => !prevShowPasswordFields);
+  };
+
+  const handleSubmit = () => {
+    // Password change logic
+    if (newPassword !== confirmNewPassword) {
+      setPasswordChangeError('New password and confirmation do not match');
+      return;
+    }
+
+    if (currentPassword !== user.password) {
+      setPasswordChangeError('Current password is incorrect');
+      return;
+    }
+
+    setUser((prevUser) => ({ ...prevUser, password: newPassword }));
+    setPasswordChangeError('');
+    setShowPasswordFields(false); // Hide password fields after successful change
+  };
+
   return (
     <div className={styles.container}>
-
       {/* Profile Information */}
       <div className={styles.float}>
         <div className={styles.column}>
@@ -84,10 +93,19 @@ const AccountDetails = () => {
             <h4>Profile Picture</h4>
           </div>
           <div className={styles.row}>
-            <img className={styles.profile} src={user.profilePicture} alt="Profile" />
-          </div>
-          <div className={styles.row}>
-            <input type="file" accept="image/*" onChange={handleProfilePictureChange} />
+            <div className={styles.profile_container}>
+              <img className={styles.profile} src={user.profilePicture} alt="Pic" />
+            </div>
+            <button className={styles.click} onClick={handleButtonClick}>
+              PROFILE PICTURE
+            </button>
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/*"
+              onChange={handleProfilePictureChange}
+              className={styles.input}
+            />
           </div>
         </div>
 
@@ -97,10 +115,13 @@ const AccountDetails = () => {
             <h4>Street Address</h4>
           </div>
           <div className={styles.row}>
-            <p>{user.address}</p>
-          </div>
-          <div className={styles.row}>
-            <button onClick={() => spawnInputField('address', user.address, setEditedAddress)}>Change Address</button>
+            <p className={styles.field}>{user.address}</p>
+            <button
+              className={styles.click}
+              onClick={() => spawnInputField('address', user.address, setEditedAddress)}
+            >
+              STREET ADDRESS
+            </button>
           </div>
         </div>
 
@@ -110,10 +131,13 @@ const AccountDetails = () => {
             <h4>Phone Number</h4>
           </div>
           <div className={styles.row}>
-            <p>{user.phoneNumber}</p>
-          </div>
-          <div className={styles.row}>
-            <button onClick={() => spawnInputField('phone number', user.phoneNumber, setEditedPhoneNumber)}>Change Phone Number</button>
+            <p className={styles.field}>{user.phoneNumber}</p>
+            <button
+              className={styles.click}
+              onClick={() => spawnInputField('phone number', user.phoneNumber, setEditedPhoneNumber)}
+            >
+              PHONE NUMBER
+            </button>
           </div>
         </div>
 
@@ -123,10 +147,13 @@ const AccountDetails = () => {
             <h4>Email Address</h4>
           </div>
           <div className={styles.row}>
-            <p>{user.emailAddress}</p>
-          </div>
-          <div className={styles.row}>
-            <button onClick={() => spawnInputField('email address', user.emailAddress, setEditedEmailAddress)}>Change Email Address</button>
+            <p className={styles.field}>{user.emailAddress}</p>
+            <button
+              className={styles.click}
+              onClick={() => spawnInputField('email address', user.emailAddress, setEditedEmailAddress)}
+            >
+              EMAIL ADDRESS
+            </button>
           </div>
         </div>
 
@@ -136,25 +163,40 @@ const AccountDetails = () => {
             <h4>Password Change</h4>
           </div>
           <div className={styles.row}>
-            <button onClick={() => setShowPasswordFields(true)}>Change Password</button>
+            <button className={styles.click} onClick={handleResetPasswordToggle}>
+              {showPasswordFields ? 'HIDE PASSWORD RESET' : 'RESET PASSWORD'}
+            </button>
           </div>
-          <div className={styles.row}>
+          <div className={styles.password}>
             {showPasswordFields && (
-              <>
-                <input type="password" placeholder="Current Password" value={currentPassword} onChange={(e) => setCurrentPassword(e.target.value)} />
-                <input type="password" placeholder="New Password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
-                <input type="password" placeholder="Confirm New Password" value={confirmNewPassword} onChange={(e) => setConfirmNewPassword(e.target.value)} />
-                <button onClick={handleSubmit}>Submit</button>
+              <div className={styles.password_column}>
+                <input
+                  className={styles.password_input}
+                  type="password"
+                  placeholder="Current Password"
+                  value={currentPassword}
+                  onChange={(e) => setCurrentPassword(e.target.value)}
+                />
+                <input
+                  className={styles.password_input}
+                  type="password"
+                  placeholder="New Password"
+                  value={newPassword}
+                  onChange={(e) => setNewPassword(e.target.value)}
+                />
+                <input
+                  className={styles.password_input}
+                  type="password"
+                  placeholder="Confirm New Password"
+                  value={confirmNewPassword}
+                  onChange={(e) => setConfirmNewPassword(e.target.value)}
+                />
+                <button className={styles.password_click} onClick={handleSubmit}>
+                  SUBMIT
+                </button>
                 {passwordChangeError && <p className={styles.error}>{passwordChangeError}</p>}
-              </>
+              </div>
             )}
-          </div>
-        </div>
-
-        {/* Submit Button */}
-        <div className={styles.column2}>
-          <div className={styles.row}>
-            <button onClick={handleSubmit}>Save Changes</button>
           </div>
         </div>
       </div>

@@ -81,7 +81,7 @@
   
   .marketing_blurb {
     height: auto;
-    width: 60vw;
+    width: 80vw;
     padding: 1em;
     margin: 2em;
     border: 0px;
@@ -107,7 +107,7 @@
     width: 100%;
     height: 100%;
     border: 0px;
-    border-radius: 5em;
+    border-radius: 2.5em;
     object-fit: cover; /* Make the image cover its container */
   }
   
@@ -117,6 +117,7 @@
     left: -0.1%;
     padding: 1em 2em 0.75em 2em;
     border-radius: 5em 0em 5em 0em;
+    font-size: 50%;
     text-align: center;
     color: var(--dark3);
     background-color: var(--light1);

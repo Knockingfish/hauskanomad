@@ -12,7 +12,7 @@
   flex-direction: column;
   align-items: baseline;
   justify-content: baseline;
-  height: calc(100vh - 7em);
+  min-height: calc(100vh - 7em);
   width: 100vw;
 }
 
@@ -52,4 +52,11 @@ nav button.active {
   color: #f4f4ff;
   background-color: var(--red1);
   z-index: 1;
+}
+
+.content {
+  flex: 1;
+  transition: var(--train);
+  overflow: auto;
+  scrollbar-width: none;
 }

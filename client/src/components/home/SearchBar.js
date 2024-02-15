@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import CustomNumberInput from './search/CustomNumberInput';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import styles from './SearchBar.module.css';
@@ -80,6 +79,13 @@ const SearchBar = () => {
               onChange={handleInputChange}
               name="textQuery"
             />
+            {showDropdown && (
+              <div className={styles.dropdown}>
+                {searchResults.map((result, index) => (
+                  <div className={styles.dropdown_item} key={index} onClick={() => handleResultClick(result)}>{result}</div>
+                ))}
+              </div>
+            )}
           </div>
           <div className={styles.bar_section}>
             <DatePicker
@@ -104,25 +110,29 @@ const SearchBar = () => {
               placeholderText="Select end date"
             />
           </div>
-          <CustomNumberInput
-            value={numGuests}
-            label="Guests: "
-            onChange={(value) => setNumGuests(parseInt(value))}
-          />
-          <CustomNumberInput
-            value={numRooms}
-            label="Rooms: "
-            onChange={(value) => setNumRooms(parseInt(value))}
-          />
+          <div className={styles.bar_section}>
+            <input 
+              className={styles.range_item} 
+              type="range" 
+              value={numGuests} 
+              min={1} 
+              max={10} 
+              onChange={(e) => setNumGuests(parseInt(e.target.value))} 
+            />
+            <span className={styles.range_item}>Guests: {numGuests}</span>
+          </div>
+          <div className={styles.bar_section}>
+            <input  
+              type="range" 
+              value={numRooms} 
+              min={1} 
+              max={5} 
+              onChange={(e) => setNumRooms(parseInt(e.target.value))} 
+            />
+            <span className={styles.range_item}>Rooms: {numRooms}</span>
+          </div>
           <button className={styles.search_button} onClick={handleSearch}>SEARCH</button>
         </div>
-        {showDropdown && (
-          <div className={styles.dropdown}>
-            {searchResults.map((result, index) => (
-              <div className={styles.dropdown_item} key={index} onClick={() => handleResultClick(result)}>{result}</div>
-            ))}
-          </div>
-        )}
       </div>
   );
 };

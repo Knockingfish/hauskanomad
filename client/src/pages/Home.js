@@ -8,7 +8,6 @@ import CustomFooter from '../components/global/CustomFooter';
 import styles from './Home.module.css';
 
 const Home = () => {
-  const [containerWidth, setContainerWidth] = useState(window.screen.width);
   const [destinations, setDestinations] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -27,16 +26,6 @@ const Home = () => {
         console.error("Error fetching destinations:", error);
         setLoading(false);
       });
-  }, []);
-
-  useEffect(() => {
-    function updateWidth() {
-      setContainerWidth(window.screen.width);
-    }
-
-    window.addEventListener('resize', updateWidth);
-
-    return () => window.removeEventListener('resize', updateWidth);
   }, []);
 
   if (loading) {
@@ -58,7 +47,7 @@ const Home = () => {
       </div>
 
       <div className={styles.scrollarea2}>
-        <div className={styles.card_grid} style={{ width: containerWidth }}>
+        <div className={styles.card_grid}>
           {/* Split destinations array into three columns */}
           {[0, 1, 2].map(column => (
             <div key={column} className={styles.column}>
