@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import AccountDetails from '../components/profile/AccountDetails';
-import ReservationManagement from '../components/profile/ReservationManagement';
-import CustomHeader from '../components/global/CustomHeader';
-import CustomFooter from '../components/global/CustomFooter';
+import AccountDetails from './profile/AccountDetails';
+import ReservationManagement from './profile/ReservationManagement';
+import CustomHeader from './global/CustomHeader';
+import CustomFooter from './global/CustomFooter';
 import styles from './ProfilePage.module.css';
 
 const ProfilePage = () => {

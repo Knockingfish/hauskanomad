@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import LogoImage from '../../assets/HauskaNomadLogo.png';
+import LogoImage from './HauskaNomadLogo.png';
 import styles from './CustomHeader.module.css';
 
 function CustomHeader({ isLoggedIn }) {

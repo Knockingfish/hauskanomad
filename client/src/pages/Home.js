@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import CustomHeader from '../components/global/CustomHeader'
-import DestinationCard from "../components/home/DestinationCard";
-import SearchBar from "../components/home/SearchBar";
-import Slideshow from "../components/home/Slideshow";
-import NewsletterSubscription from "../components/home/NewsletterSubscription";
-import CustomFooter from '../components/global/CustomFooter';
+import CustomHeader from './global/CustomHeader'
+import DestinationCard from "./home/DestinationCard";
+import SearchBar from "./home/SearchBar";
+import Slideshow from "./home/Slideshow";
+import NewsletterSubscription from "./home/NewsletterSubscription";
+import CustomFooter from './global/CustomFooter';
 import styles from './Home.module.css';
 
 const Home = () => {

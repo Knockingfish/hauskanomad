@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import CustomHeader from '../components/global/CustomHeader'
-import ImageComponent from '../components/destinationpage/ImageComponent'; 
-import DescriptionComponent from '../components/destinationpage/DescriptionComponent'; 
-import BookingInfo from '../components/destinationpage/BookingInfo'; 
-import BookingForm from '../components/destinationpage/BookingForm'; 
-import ReviewComments from '../components/destinationpage/ReviewComments';
-import CustomFooter from '../components/global/CustomFooter';
+import CustomHeader from './global/CustomHeader'
+import ImageComponent from './destinationpage/ImageComponent'; 
+import DescriptionComponent from './destinationpage/DescriptionComponent'; 
+import BookingInfo from './destinationpage/BookingInfo'; 
+import BookingForm from './destinationpage/BookingForm'; 
+import ReviewComments from './destinationpage/ReviewComments';
+import CustomFooter from './global/CustomFooter';
 
 const DestinationPage = () => {
   useEffect(() => {

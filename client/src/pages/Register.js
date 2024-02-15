@@ -1,7 +1,7 @@
 import React from 'react';
-import RegistrationForm from '../components/authentification/RegistrationForm';
-import CustomHeader from '../components/global/CustomHeader';
-import CustomFooter from '../components/global/CustomFooter';
+import RegistrationForm from './authentification/RegistrationForm';
+import CustomHeader from './global/CustomHeader';
+import CustomFooter from './global/CustomFooter';
 import styles from './Auth.module.css';
 
 function RegistrationPage() {
