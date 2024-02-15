@@ -6,6 +6,7 @@ import BookingInfo from './destinationpage/BookingInfo';
 import BookingForm from './destinationpage/BookingForm'; 
 import ReviewComments from './destinationpage/ReviewComments';
 import CustomFooter from './global/CustomFooter';
+import styles from './DestinationPage.module.css'
 
 const DestinationPage = () => {
   useEffect(() => {
@@ -37,7 +38,9 @@ const DestinationPage = () => {
 
   return (
     <div>
-      <CustomHeader />
+      <div className={styles.scrollarea}>
+        <CustomHeader />
+      </div>
       <h1>Destination Page</h1>
       <ImageComponent images={images} />
       <DescriptionComponent description={description} marketingContent={marketingContent} />
@@ -53,7 +56,9 @@ const DestinationPage = () => {
         </div>
       )}
       <ReviewComments reviews={reviews} />
-      <CustomFooter/>
+      <div className={styles.scrollarea}>
+        <CustomFooter />
+      </div>
     </div>
   );
 };

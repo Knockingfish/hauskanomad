@@ -7,17 +7,23 @@ import AboutUs from './pages/AboutUs';
 import Register from './pages/Register';
 import Login from './pages/Login';
 
+import ForgotPassword from './pages/authentification/ForgotPassword'
+import PasswordReset from './pages/authentification/PasswordReset'
+
 function App() {
   return (
     <Router>
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/About" element={<AboutUs />} />
-          <Route path="/Destination" element={<DestinationPage />} />
-          <Route path="/Profile" element={<ProfilePage />} />
-          <Route path="/Register" element={<Register />} />
-          <Route path="/Login" element={<Login />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/destination" element={<DestinationPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+
+          <Route path="/forgot_password" element={<ForgotPassword />} />
+          <Route path="/password_reset" element={<PasswordReset />} />
         </Routes>
       </div>
     </Router>

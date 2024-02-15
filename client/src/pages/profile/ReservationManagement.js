@@ -76,13 +76,13 @@ const ReservationManagement = () => {
                       onChange={(e) => handleModifyReservation(reservation.id, 'location', e.target.value)}
                     />
                     <DatePicker 
-                      className={styles.modal_input2}
+                      className={styles.modal_input}
                       placeholderText="Change check-in date..."
                       selected={new Date(reservation.checkInDate)}
                       onChange={(date) => handleModifyReservation(reservation.id, 'checkInDate', date.toISOString().split('T')[0])}
                     />
                     <DatePicker 
-                      className={styles.modal_input2}
+                      className={styles.modal_input}
                       placeholderText="Change check-out date..."
                       selected={new Date(reservation.checkOutDate)}
                       onChange={(date) => handleModifyReservation(reservation.id, 'checkOutDate', date.toISOString().split('T')[0])}

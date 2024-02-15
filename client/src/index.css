@@ -21,9 +21,23 @@
   --light1: #1a1c2c;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dark3: #f4f4ff;
+    --dark2: #c4d2db;
+    --dark1: #94b0c2;
+    --light3: #566c86;
+    --light2: #38415c;
+    --light1: #1a1c2c;
+  }
+}
+
 @font-face {
   font-family: "InterVariable";
   src: local("InterVariable"), url(./fonts/InterVariable.ttf);
+}
+html {
+  font-size: 16px;
 }
 
 body {
@@ -35,4 +49,8 @@ body {
   background-color: var(--light2);
   overflow-x: hidden;
   transition: var(--train);
+}
+
+::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
 }

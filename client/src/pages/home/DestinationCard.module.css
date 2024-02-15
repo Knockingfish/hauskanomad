@@ -6,15 +6,14 @@
   justify-content: baseline;
   height: 24rem;
   width: 32rem;
-  padding: 1em;
-  margin: 2.5em;
-  border: 0px;
-  border-radius: 2em;
+  border: none;
+  border-radius: 2rem;
   color: var(--dark3);
   background-color: var(--light1);
   box-shadow: var(--heavy_shadow);
   overflow: hidden;
   transition: var(--train);
+  transition: height 0.5s, width 0.5s;
 }
 
 .destination_card img {
@@ -23,7 +22,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure the image covers the entire card */
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
@@ -32,7 +31,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1em;
+  padding: 1rem;
   background-color: var(--light1);
   color: var(--dark3);
   box-shadow: var(--light_shadow);
@@ -42,4 +41,11 @@
 
 .destination_card:hover .destination_info {
   transform: translateY(0);
+}
+
+@media screen and (max-width: 40rem) {
+  .destination_card {
+    height: 20rem;
+    width: 26rem;
+  }
 }
