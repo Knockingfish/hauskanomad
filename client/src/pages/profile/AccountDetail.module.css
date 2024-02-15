@@ -1,26 +1,33 @@
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: cplumn;
   align-items: center;
   justify-content: center;
-  height: auto;
+  min-height: calc(100vh - 12rem);
   width: 100vw;
+}
+
+.measuring_stick {
+  height: 8rem;
+  width: 100%;
+  background-color: wheat;
 }
 
 .float {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: baseline;
   justify-content: center;
   height: auto;
-  width: 40%;
-  padding: 0.5em 1em 0.5em 1em;
-  margin: 5em 1em 5em 1em;
+  width: auto;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin: 8em 0 8em 0;
   border: none;
   border-radius: 2.5em;
   color: var(--dark3);
   background-color: var(--light1);
   box-shadow: var(--heavy_shadow);
+  transition: width 0.3s ease;
 }
 
 .column {
@@ -28,21 +35,28 @@
   flex-direction: column;
   align-items: baseline;
   justify-content: center;
-  width: 90%;
+  height: auto;
+  width: auto;
 }
 
 .row {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: baseline;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  height: auto;
+  width: auto;
 }
 
 .click {
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
   width: auto;
-  padding: 1em;
-  margin: 1em;
+  padding: 0 1rem 0 1rem;
+  margin: 0.5rem;
   border: none;
   border-radius: 5em;
   font-size: 1rem;
@@ -66,22 +80,36 @@
 }
 
 .field {
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
   width: auto;
-  padding: 1em;
-  margin: 0 1em 0 0;
+  padding: 0 1rem 0 1rem;
+  margin: 0.5rem;
   border: none;
   border-radius: 5em;
   font-size: 1.1rem;
   font-weight: bold;
-  color: var(--light1);
-  background-color: var(--dark3);
-  box-shadow: var(--light_shadow);
+  color: var(--dark3);
 }
 
 .profile_container {
-  max-height: 30%;
-  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  min-width: 2rem;
+  max-height: 10rem;
+  max-width: 10rem;
+  border: none;
+  border-radius: 1rem;
+  color: var(--dark3);
+  background-color: var(--light2);
+  box-shadow: inset var(--light_shadow);
+  text-align: center;
 }
 
 .profile {
@@ -91,26 +119,19 @@
   border-radius: 1em;
 }
 
-.password {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  justify-content: center;
-  height: auto;
-  width: 90%;
-}
+/* Reset Password */
 
 .password_column {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   height: auto;
-  width: 100%;
-  padding: 1em;
-  margin: 0 1em 1em 0;
+  width: auto;
+  padding: 1rem;
+  margin: 1rem;
   border: none;
-  border-radius: 1.5em;
+  border-radius: 1.5rem;
   font-size: 1.1rem;
   font-weight: bold;
   color: var(--light1);
@@ -120,14 +141,14 @@
 
 .password_input {
   outline: none;
-  height: auto;
-  width: 90%;
-  padding: 1em;
-  margin: 0.5em 0 0.5em 0;
+  height: 3rem;
+  width: auto;
+  margin: 0.5rem 0 0.5rem 0;
   border: none;
   border-radius: 1.5em;
   font-size: 1.1rem;
   font-weight: bold;
+  text-align: center;
   color: var(--light1);
   background-color: var(--dark3);
   box-shadow: var(--light_shadow);
@@ -145,10 +166,10 @@
 .password_click {
   height: auto;
   width: auto;
-  padding: 1em;
-  margin: 1em;
+  padding: 1rem;
+  margin: 1rem;
   border: none;
-  border-radius: 5em;
+  border-radius: 5rem;
   font-size: 1rem;
   font-weight: bold;
   color: var(--dark3);
@@ -165,20 +186,30 @@
   background-color: var(--red2);
 }
 
-@media screen and (max-width: 1080px) {
-  .column {
-    width: 80%;
-  }
-
-  .row {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    justify-content: center;
-    margin: 0.5em;
-  }
-
+@media screen and (max-width: 60rem) {
   .float {
-    width: 80%;
+    flex-direction: column;
+    width: 40rem;
+  }
+}
+@media screen and (max-width: 55rem) {
+  .float {
+    width: 35rem;
+  }
+}
+
+@media screen and (max-width: 50rem) {
+  .float {
+    width: 30rem;
+  }
+}
+@media screen and (max-width: 45rem) {
+  .float {
+    width: 30rem;
+  }
+}
+@media screen and (max-width: 40rem) {
+  .float {
+    width: 25rem;
   }
 }

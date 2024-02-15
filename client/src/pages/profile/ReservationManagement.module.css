@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: auto;
+  min-height: calc(100vh - 12rem);
   width: 100vw;
 }
 
@@ -13,23 +13,24 @@
   align-items: center;
   justify-content: center;
   height: auto;
-  width: 40%;
+  width: 60rem;
   padding: 0.5em 1em 0.5em 1em;
-  margin: 5em 1em 5em 1em;
+  margin: 8em 0 8em 0;
   border: none;
   border-radius: 2.5em;
   font-weight: bold;
   color: var(--dark3);
   background-color: var(--light1);
   box-shadow: var(--heavy_shadow);
+  transition: width 0.3s ease;
 }
 
 .column {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: baseline;
   justify-content: center;
-  width: 90%;
+  width: 100%;
 }
 
 .click {
@@ -62,7 +63,7 @@
 .modal {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   height: auto;
   width: 90%;
@@ -80,10 +81,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   outline: none;
   height: 1em;
-  width: 75%;
+  width: 90%;
   padding: 1em;
   margin: 0.5em 0 0.5em 0;
   border: none;
@@ -99,32 +100,6 @@
   background-color: var(--red1);
 }
 .modal_input:active, .modal_input:focus {
-  background-color: var(--red2);
-}
-
-.modal_input2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  outline: none;
-  height: 1em;
-  width: 75%;
-  padding: 1em;
-  margin: 0.5em 0 0.5em 0;
-  border: none;
-  border-radius: 5em;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--light1);
-  background-color: var(--dark3);
-  box-shadow: var(--light_shadow);
-}
-.modal_input2:hover {
-  color: #f4f4ff;
-  background-color: var(--red1);
-}
-.modal_input2:active, .modal_input2:focus {
   background-color: var(--red2);
 }
 
@@ -198,7 +173,7 @@ input[type=range]::-webkit-slider-thumb:active {
   justify-content: space-between;
   outline: none;
   height: 1em;
-  width: 75%;
+  width: 90%;
   padding: 1em;
   margin: 0.5em 0 0.5em 0;
   border: none;
@@ -214,20 +189,50 @@ input[type=range]::-webkit-slider-thumb:active {
   margin-left: 1em;
 }
 
-@media screen and (max-width: 960px) {
-  .column {
-    width: 80%;
+@media screen and (max-width: 75rem) {
+  .float {
+    width: 55rem;
   }
-
+}
+@media screen and (max-width: 70rem) {
   .row {
-    display: flex;
     flex-direction: column;
     align-items: baseline;
-    justify-content: center;
-    margin: 0.5em;
   }
-
   .float {
-    width: 80%;
+    width: 50rem;
+  }
+}
+@media screen and (max-width: 65rem) {
+  .float {
+    width: 45rem;
+  }
+}
+@media screen and (max-width: 60rem) {
+  .float {
+    width: 40rem;
+  }
+  .column {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 55rem) {
+  .float {
+    width: 35rem;
+  }
+}
+@media screen and (max-width: 50rem) {
+  .float {
+    width: 30rem;
+  }
+}
+@media screen and (max-width: 45rem) {
+  .float {
+    width: 30rem;
+  }
+}
+@media screen and (max-width: 40rem) {
+  .float {
+    width: 25rem;
   }
 }

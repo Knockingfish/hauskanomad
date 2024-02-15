@@ -3,12 +3,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  position: relative;
   height: 8rem;
   width: 100vw;
   background-color: var(--light1);
   transition: var(--train);
-  z-index: 1;
   overflow: auto;
   box-shadow: var(--heavy_shadow);
   font-size: 1.5em;

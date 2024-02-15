@@ -36,6 +36,9 @@
   font-family: "InterVariable";
   src: local("InterVariable"), url(./fonts/InterVariable.ttf);
 }
+html {
+  font-size: 16px;
+}
 
 body {
   font-family: "InterVariable";
@@ -46,4 +49,8 @@ body {
   background-color: var(--light2);
   overflow-x: hidden;
   transition: var(--train);
+}
+
+::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
 }
