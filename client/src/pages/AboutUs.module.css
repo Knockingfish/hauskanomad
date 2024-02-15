@@ -1,22 +1,26 @@
-.about_body {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: auto;
-  font-size: 20px;
+.scrollarea {
   transition: var(--train);
+  overflow: scroll;
+  box-shadow: var(--heavy_shadow);
+  scrollbar-width: none;
 }
 
-.about_container {
+.about_body {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  max-width: 90vw;
+  flex: 1;
+  height: calc(100vh - 5.5em);
+  width: 100vw;
+  padding: 1em 0em 5em 0em;
+  font-size: 20px;
+  transition: var(--train);
 }
 
 .marketing_blurb {
-  max-width: 20vw;
+  height: 60%;
+  width: 30%;
   padding: 1em;
   margin: 2em;
   border: 0px;
@@ -24,14 +28,16 @@
   color: var(--dark3);
   background-color: var(--light1);
   box-shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  scrollbar-width: none;
 }
 
 .staff_image_container {
-  max-width: 40vw;
-  padding: 1em;
-  margin: 2em;
+  position: relative;
+  height: 80%;
+  width: 50%;
   border: 0px;
-  border-radius: 2em;
+  border-radius: 5em;
   color: var(--dark3);
   background-color: var(--light1);
   box-shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.5);
@@ -39,7 +45,82 @@
 
 .staff_image {
   width: 100%;
-  height: auto;
+  height: 100%;
   border: 0px;
-  border-radius: 1em;
+  border-radius: 5em;
+  object-fit: cover; /* Make the image cover its container */
+}
+
+.text_overlay {
+  position: absolute;
+  top: -0.1%;
+  left: -0.1%;
+  padding: 1em 2em 0.75em 2em;
+  border-radius: 5em 0em 5em 0em;
+  text-align: center;
+  color: var(--dark3);
+  background-color: var(--light1);
+  box-shadow: var(--heavy_shadow);
+}
+
+/*✨ Responsive ✨*/
+
+@media screen and (max-width: 960px) {
+  .about_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: auto;
+    width: 100vw;
+    padding: 1em 0em 5em 0em;
+    font-size: 20px;
+    transition: var(--train);
+  }
+  
+  .marketing_blurb {
+    height: auto;
+    width: 80vw;
+    padding: 1em;
+    margin: 2em;
+    border: 0px;
+    border-radius: 2em;
+    color: var(--dark3);
+    background-color: var(--light1);
+    box-shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.5);
+    overflow: auto;
+  }
+  
+  .staff_image_container {
+    position: relative;
+    height: auto;
+    width: 80vw;
+    border: 0px;
+    border-radius: 5em;
+    color: var(--dark3);
+    background-color: var(--light1);
+    box-shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.5);
+  }
+  
+  .staff_image {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    border-radius: 2.5em;
+    object-fit: cover; /* Make the image cover its container */
+  }
+  
+  .text_overlay {
+    position: absolute;
+    top: -0.1%;
+    left: -0.1%;
+    padding: 1em 2em 0.75em 2em;
+    border-radius: 5em 0em 5em 0em;
+    font-size: 50%;
+    text-align: center;
+    color: var(--dark3);
+    background-color: var(--light1);
+    box-shadow: var(--heavy_shadow);
+  }
 }

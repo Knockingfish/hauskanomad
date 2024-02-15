@@ -1,10 +1,28 @@
 .scrollarea {
   transition: var(--train);
+  overflow: scroll;
+  box-shadow: var(--heavy_shadow);
+  scrollbar-width: none;
+}
+
+.scrollarea2 {
+  overflow: scroll;
+  scrollbar-width: none;
 }
 
 .card_grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
-  gap: 5em; /* Gap between grid items */
-  margin: 5em 10em 5em 10em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100vw;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2.5em 0 3em 0;
 }

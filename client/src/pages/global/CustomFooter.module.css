@@ -1,0 +1,40 @@
+.custom_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 20px;
+  padding: 1em;
+  background-color: var(--light1);
+  box-shadow: var(--heavy_shadow);
+  transition: var(--train);
+  z-index: 1;
+}
+
+.foot_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1em;
+  margin-right: 1em;
+  color: var(--dark3);
+}
+
+.foot_item {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.foot_link {
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  /**/
+  text-decoration: none;
+  color: var(--dark3);
+}
+.foot_link:hover {
+  color: var(--red1);
+  text-decoration: underline;
+}

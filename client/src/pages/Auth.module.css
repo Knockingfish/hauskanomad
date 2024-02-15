@@ -1,3 +1,10 @@
+.scrollarea {
+  transition: var(--train);
+  overflow: scroll;
+  box-shadow: var(--heavy_shadow);
+  scrollbar-width: none;
+}
+
 .container {
   display: flex;
   flex-direction: column;

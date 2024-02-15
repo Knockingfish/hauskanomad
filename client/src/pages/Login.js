@@ -1,7 +1,7 @@
 import React from 'react';
-import LoginForm from '../components/authentification/LoginForm';
-import CustomHeader from '../components/global/CustomHeader';
-import CustomFooter from '../components/global/CustomFooter';
+import LoginForm from './authentification/LoginForm';
+import CustomHeader from './global/CustomHeader';
+import CustomFooter from './global/CustomFooter';
 import styles from './Auth.module.css';
 
 function LoginPage() {
@@ -13,7 +13,9 @@ function LoginPage() {
       <div className={styles.container}>
         <LoginForm />
       </div>
-      <CustomFooter />
+      <div className={styles.scrollarea}>
+        <CustomFooter />
+      </div>
     </div>
   );
 }

@@ -23,7 +23,7 @@
 
 @font-face {
   font-family: "InterVariable";
-  src: local("InterVariable"), url(./fonts/InterVariable.woff2);
+  src: local("InterVariable"), url(./fonts/InterVariable.ttf);
 }
 
 body {

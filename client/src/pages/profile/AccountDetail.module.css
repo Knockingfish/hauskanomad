@@ -1,0 +1,184 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100vw;
+}
+
+.float {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 40%;
+  padding: 0.5em 1em 0.5em 1em;
+  margin: 5em 1em 5em 1em;
+  border: none;
+  border-radius: 2.5em;
+  color: var(--dark3);
+  background-color: var(--light1);
+  box-shadow: var(--heavy_shadow);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  width: 90%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: baseline;
+}
+
+.click {
+  height: auto;
+  width: auto;
+  padding: 1em;
+  margin: 1em;
+  border: none;
+  border-radius: 5em;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--light1);
+  background-color: var(--dark3);
+  box-shadow: var(--light_shadow);
+}
+
+.click:hover {
+  color: #f4f4ff;
+  background-color: var(--red1);
+}
+
+.click:active {
+  background-color: var(--red2);
+}
+
+.input {
+  height: 0;
+}
+
+.field {
+  height: auto;
+  width: auto;
+  padding: 1em;
+  margin: 0 1em 0 0;
+  border: none;
+  border-radius: 5em;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--light1);
+  background-color: var(--dark3);
+  box-shadow: var(--light_shadow);
+}
+
+.profile_container {
+  min-height: 30%;
+  max-width: 30%;
+}
+
+.profile {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1em;
+}
+
+.password {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  height: auto;
+  width: 90%;
+}
+
+.password_column {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  padding: 1em;
+  margin: 0 1em 1em 0;
+  border: none;
+  border-radius: 1.5em;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--light1);
+  background-color: var(--dark2);
+  box-shadow: var(--light_shadow);
+}
+
+.password_input {
+  outline: none;
+  height: auto;
+  width: 90%;
+  padding: 1em;
+  margin: 0.5em 0 0.5em 0;
+  border: none;
+  border-radius: 1.5em;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--light1);
+  background-color: var(--dark3);
+  box-shadow: var(--light_shadow);
+}
+
+.password_input:hover {
+  color: #f4f4ff;
+  background-color: var(--red1);
+}
+
+.password_input:active, .password_input:focus {
+  background-color: var(--red2);
+}
+
+.password_click {
+  height: auto;
+  width: auto;
+  padding: 1em;
+  margin: 1em;
+  border: none;
+  border-radius: 5em;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--dark3);
+  background-color: var(--light1);
+  box-shadow: var(--light_shadow);
+}
+
+.password_click:hover {
+  color: #f4f4ff;
+  background-color: var(--red1);
+}
+
+.password_click:active {
+  background-color: var(--red2);
+}
+
+@media screen and (max-width: 1080px) {
+  .column {
+    width: 80%;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    margin: 0.5em;
+  }
+
+  .float {
+    width: 80%;
+  }
+}

@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './fonts/InterVariable.woff2'
-import './fonts/InterVariable-Italic.woff2'
+import './fonts/InterVariable.ttf'
+import './fonts/InterVariable-Italic.ttf'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
