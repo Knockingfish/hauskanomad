@@ -79,27 +79,20 @@ const SearchBar = () => {
               onChange={handleInputChange}
               name="textQuery"
             />
-            {showDropdown && (
-              <div className={styles.dropdown}>
-                {searchResults.map((result, index) => (
-                  <div className={styles.dropdown_item} key={index} onClick={() => handleResultClick(result)}>{result}</div>
-                ))}
-              </div>
-            )}
           </div>
           <div className={styles.bar_section}>
             <DatePicker
-              className={styles.date_item}
+              className={styles.bar_item}
               calendarClassName={styles.calendar}
               selected={startDate}
               onChange={(date) => setStartDate(date)}
               selectsStart
               startDate={startDate}
               endDate={endDate}
-              placeholderText="Select start date"
+              placeholderText="Select start date..."
             />
             <DatePicker
-              className={styles.date_item}
+              className={styles.bar_item}
               calendarClassName={styles.calendar}
               selected={endDate}
               onChange={(date) => setEndDate(date)}
@@ -107,31 +100,44 @@ const SearchBar = () => {
               startDate={startDate}
               endDate={endDate}
               minDate={startDate}
-              placeholderText="Select end date"
+              placeholderText="Select end date..."
             />
           </div>
           <div className={styles.bar_section}>
-            <input 
-              className={styles.range_item} 
-              type="range" 
-              value={numGuests} 
-              min={1} 
-              max={10} 
-              onChange={(e) => setNumGuests(parseInt(e.target.value))} 
-            />
-            <span className={styles.range_item}>Guests: {numGuests}</span>
+            <div className={styles.slider_item}>
+              <input 
+                className={styles.range_item} 
+                type="range" 
+                value={numGuests} 
+                min={1} 
+                max={10} 
+                onChange={(e) => setNumGuests(parseInt(e.target.value))} 
+              />
+              <span className={styles.range_item}>Guests: {numGuests}</span>
+            </div>
           </div>
           <div className={styles.bar_section}>
-            <input  
-              type="range" 
-              value={numRooms} 
-              min={1} 
-              max={5} 
-              onChange={(e) => setNumRooms(parseInt(e.target.value))} 
-            />
-            <span className={styles.range_item}>Rooms: {numRooms}</span>
+            <div className={styles.slider_item}>
+              <input  
+                type="range" 
+                value={numRooms} 
+                min={1} 
+                max={5} 
+                onChange={(e) => setNumRooms(parseInt(e.target.value))} 
+              />
+              <span className={styles.range_item}>Rooms: {numRooms}</span>
+            </div>
           </div>
           <button className={styles.search_button} onClick={handleSearch}>SEARCH</button>
+        </div>
+        <div>
+          {showDropdown && (
+            <div className={styles.dropdown}>
+              {searchResults.map((result, index) => (
+                <div className={styles.dropdown_item} key={index} onClick={() => handleResultClick(result)}>{result}</div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
   );

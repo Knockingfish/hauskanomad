@@ -6,13 +6,13 @@ import styles from './AboutUs.module.css'
 
 function AboutUs() {
   useEffect(() => {
-    document.title = 'About Us';
+    document.title = 'HauskaNomad - About Us';
   }, []);
 
   return (
     <div>
       <div className={styles.scrollarea}>
-        <CustomHeader className={styles.scrollarea} />
+        <CustomHeader/>
       </div>
         <div className={styles.about_body}>
             <div className={styles.marketing_blurb}>
@@ -36,7 +36,9 @@ function AboutUs() {
               </div>
             </div>
         </div>
-      <CustomFooter />
+      <div className={styles.scrollarea}>
+        <CustomFooter />
+      </div>
     </div>
   );
 }

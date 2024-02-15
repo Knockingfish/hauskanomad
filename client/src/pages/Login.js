@@ -7,7 +7,7 @@ import styles from './Auth.module.css';
 function LoginPage() {
   return (
     <div>
-      <div className={styles.scrollarea}>
+      <div>
           <CustomHeader />
       </div>
       <div className={styles.container}>

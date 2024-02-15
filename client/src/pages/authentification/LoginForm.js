@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './LoginForm.module.css'
 
 function LoginForm() {
@@ -26,6 +27,7 @@ function LoginForm() {
             </>
         )}
       </div>
+      <Link className={styles.link} to="/Forgot_Password">Forgot your password?</Link>
     </div>
   );
 }

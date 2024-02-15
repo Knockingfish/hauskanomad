@@ -4,19 +4,9 @@ import LogoImage from './HauskaNomadLogo.png';
 import styles from './CustomHeader.module.css';
 
 function CustomHeader({ isLoggedIn }) {
-  const [containerWidth, setContainerWidth] = useState(window.screen.width);
   const [darkMode, setDarkMode] = useState(false);
+  const [showMenu, setShowMenu] = useState(false); // State to toggle the visibility of the menu
   const location = useLocation();
-
-  useEffect(() => {
-    function updateWidth() {
-      setContainerWidth(window.screen.width);
-    }
-
-    window.addEventListener('resize', updateWidth);
-
-    return () => window.removeEventListener('resize', updateWidth);
-  }, []);
 
   const handleLogout = () => {
     // Handle logout functionality here
@@ -28,27 +18,37 @@ function CustomHeader({ isLoggedIn }) {
     document.documentElement.classList.toggle('dark_mode', !darkMode);
   };
 
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
-    <header className={`${styles.container} ${darkMode ? styles.dark_mode : ''}`} style={{ width: containerWidth }}>
+    <header className={`${styles.container} ${darkMode ? styles.dark_mode : ''}`}>
       <div className={styles.first_section}>
         <Link to="/">
           <img className={styles.logo} src={LogoImage} alt="Logo" />
         </Link>
       </div>
-      <div className={styles.second_section}>
-        <div className={styles.theme} onClick={toggleDarkMode}>THEME</div>
+      {/* Hamburger menu */}
+      <div className={styles.hamburger} onClick={toggleMenu}>
+        <div className={`${styles.hamburger_line} ${showMenu ? styles.open : ''}`}></div>
+        <div className={`${styles.hamburger_line} ${showMenu ? styles.open : ''}`}></div>
+        <div className={`${styles.hamburger_line} ${showMenu ? styles.open : ''}`}></div>
+      </div>
+      <div className={`${styles.second_section} ${showMenu ? styles.show_menu : ''}`}>
+        <div className={styles.theme} onClick={toggleDarkMode}>⏻</div>
         <div className={styles.menu}>
-            {isLoggedIn ? (
-              <>
-                <button onClick={handleLogout}>Logout</button>
-              </>
-            ) : (
-              <>
-                <Link className={`${styles.menu_item} ${location.pathname === '/profile' ? styles.active : ''}`} to="/profile">PROFILE</Link>
-                <Link className={`${styles.menu_item} ${location.pathname === '/login' ? styles.active : ''}`} to="/login">LOGIN</Link>
-                <Link className={`${styles.menu_item} ${location.pathname === '/register' ? styles.active : ''}`} to="/register">REGISTER</Link>
-              </>
-            )}
+          {isLoggedIn ? (
+            <>
+              <button onClick={handleLogout}>Logout</button>
+            </>
+          ) : (
+            <>
+              <Link className={`${styles.menu_item} ${location.pathname === '/profile' ? styles.active : ''}`} to="/profile">PROFILE</Link>
+              <Link className={`${styles.menu_item} ${location.pathname === '/login' ? styles.active : ''}`} to="/login">LOGIN</Link>
+              <Link className={`${styles.menu_item} ${location.pathname === '/register' ? styles.active : ''}`} to="/register">REGISTER</Link>
+            </>
+          )}
         </div>
         <nav className={styles.menu}>
           <a className={`${styles.menu_item} ${location.pathname === '/source' ? styles.active : ''}`} href="https://github.com/Knockingfish/hauskanomad">SOURCE</a>

@@ -18,7 +18,7 @@ const NewsletterSubscription = () => {
         <div className={styles.newsletter_bar}>
           <input
             type="email"
-            placeholder="Enter your email"
+            placeholder="Enter your email..."
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />

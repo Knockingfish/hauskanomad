@@ -10,19 +10,30 @@
   scrollbar-width: none;
 }
 
-.card_grid {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-  width: 100vw;
-}
-
-.column {
+.grid_container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 2.5em 0 3em 0;
+  width: 100vw;
+}
+
+.card_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin: 5rem;
+  transition: grid-template-columns 20s ease;
+}
+
+@media screen and (max-width: 87.5rem) {
+  .card_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 70rem) {
+  .card_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

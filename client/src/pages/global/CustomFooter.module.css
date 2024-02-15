@@ -3,9 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  font-size: 20px;
-  padding: 1em;
+  height: auto;
+  width: 100vw;
+  font-size: 1.25em;
+  padding: 1rem;
   background-color: var(--light1);
   box-shadow: var(--heavy_shadow);
   transition: var(--train);
@@ -17,19 +18,17 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-left: 1em;
-  margin-right: 1em;
   color: var(--dark3);
 }
 
 .foot_item {
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .foot_link {
-  margin-left: 0.25em;
-  margin-right: 0.25em;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
   /**/
   text-decoration: none;
   color: var(--dark3);
@@ -37,4 +36,14 @@
 .foot_link:hover {
   color: var(--red1);
   text-decoration: underline;
+}
+
+.foot_link:active {
+  color: var(--red2)
+}
+
+@media screen and (min-width: 50%) {
+  .foot_container {
+    flex-direction: column;
+  }
 }

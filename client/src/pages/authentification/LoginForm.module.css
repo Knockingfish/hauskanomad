@@ -40,11 +40,13 @@
   }
   
   .menu input:hover {
-    background-color: var(--red2);
+    color: #f4f4ff;
+    background-color: var(--red1);
   }
   
   .menu input:focus {
-    font-weight: bold;
+    color: #f4f4ff;
+    background-color: var(--red2);
   }
   
   .menu button {
@@ -56,6 +58,7 @@
     color: var(--dark3);
     background-color: var(--light1);
     font-size: 1em;
+    font-weight: bold;
   }
   
   .menu button:hover {
@@ -66,4 +69,19 @@
   .menu button:active {
     color: #f4f4ff;
     background-color: var(--red2);
+  }
+
+  .link {
+    margin: 1em 0 0.5em 0;
+    color: var(--dark3);
+    text-decoration: none;
+  }
+
+  .link:hover {
+    color: var(--red1);
+    text-decoration: underline;
+  }
+
+  .link:active {
+    color: var(--red2);
   }

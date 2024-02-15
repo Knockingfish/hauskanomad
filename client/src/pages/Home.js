@@ -12,10 +12,11 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    document.title = 'Home Page';
+    document.title = 'HauskaNomad - Home Page';
+    fetchDestinations();
   }, []);
 
-  useEffect(() => {
+  const fetchDestinations = () => {
     fetch("http://localhost:5000/api/destinations")
       .then((response) => response.json())
       .then((data) => {
@@ -26,7 +27,7 @@ const Home = () => {
         console.error("Error fetching destinations:", error);
         setLoading(false);
       });
-  }, []);
+  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -46,18 +47,10 @@ const Home = () => {
         <SearchBar />
       </div>
 
-      <div className={styles.scrollarea2}>
+      <div className={styles.grid_container}>
         <div className={styles.card_grid}>
-          {/* Split destinations array into three columns */}
-          {[0, 1, 2].map(column => (
-            <div key={column} className={styles.column}>
-              {destinations.map((destination, index) => {
-                if (index % 3 === column) {
-                  return <DestinationCard key={destination.id} destination={destination} />;
-                }
-                return null;
-              })}
-            </div>
+          {destinations.map(destination => (
+            <DestinationCard key={destination.id} destination={destination} />
           ))}
         </div>
       </div>

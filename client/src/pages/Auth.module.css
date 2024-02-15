@@ -12,5 +12,5 @@
   justify-content: center;
   flex: 1;
   width: 100vw;
-  height: 87.5vh;
+  min-height: calc(100vh - 7em);
 }

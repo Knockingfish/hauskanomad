@@ -80,7 +80,7 @@
 }
 
 .profile_container {
-  min-height: 30%;
+  max-height: 30%;
   max-width: 30%;
 }
 

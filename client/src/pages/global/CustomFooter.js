@@ -1,21 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './CustomFooter.module.css'
 
 const Footer = () => {
-  const [containerWidth, setContainerWidth] = useState(window.screen.width);
-
-  useEffect(() => {
-    function updateWidth() {
-      setContainerWidth(window.screen.width);
-    }
-
-    window.addEventListener('resize', updateWidth);
-
-    return () => window.removeEventListener('resize', updateWidth);
-  }, []);
-
   return (
-    <footer className={styles.custom_footer} style={{ width: containerWidth }}>
+    <footer className={styles.custom_footer}>
       <div className={styles.foot_container}>
         <div className={styles.foot_item}>Contact us: info@hauskanomad.com</div>
         <div className={styles.foot_item}>Phone: +358 55 0866841</div>

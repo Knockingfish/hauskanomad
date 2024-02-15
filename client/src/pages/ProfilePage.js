@@ -9,7 +9,7 @@ const ProfilePage = () => {
   const [activeSection, setActiveSection] = useState('account');
 
   useEffect(() => {
-    document.title = 'Profile';
+    document.title = 'HauskaNomad - Profile';
   }, []);
 
   return (
