@@ -7,8 +7,8 @@
   --dark3: #1a1c2c;
   --red1: #b13e53;
   --red2: #591f2a;
-  --heavy_shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.5);
-  --light_shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.25);
+  --heavy_shadow: 0em 0em 1rem 0.1rem rgba(0, 0, 0, 0.5);
+  --light_shadow: 0em 0em 1rem 0.1rem rgba(0, 0, 0, 0.25);
   --train: background-color 0.2s ease;
 }
 
@@ -36,18 +36,18 @@
   font-family: "InterVariable";
   src: local("InterVariable"), url(./fonts/InterVariable.ttf);
 }
+
 html {
   font-size: 16px;
+  font-family: "InterVariable";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: "InterVariable";
   padding: 0;
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: var(--light2);
-  overflow-x: hidden;
   transition: var(--train);
 }
 

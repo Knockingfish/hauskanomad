@@ -4,8 +4,8 @@
   flex-direction: column;
   align-items: baseline;
   justify-content: baseline;
-  height: 24rem;
-  width: 32rem;
+  height: 30rem;
+  width: 30rem;
   border: none;
   border-radius: 2rem;
   color: var(--dark3);
@@ -45,7 +45,7 @@
 
 @media screen and (max-width: 40rem) {
   .destination_card {
-    height: 20rem;
-    width: 26rem;
+    height: 25rem;
+    width: 25rem;
   }
 }
