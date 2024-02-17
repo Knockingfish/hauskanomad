@@ -43,10 +43,6 @@ const Home = () => {
         <Slideshow />
       </div>
 
-      <div className={styles.scrollarea}>
-        <SearchBar />
-      </div>
-
       <div className={styles.grid_container}>
         <div className={styles.card_grid}>
           {destinations.map(destination => (

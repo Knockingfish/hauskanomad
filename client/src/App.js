@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { DarkModeProvider } from './pages/global/DarkModeContext';
 import Home from './pages/Home';
 import DestinationPage from './pages/DestinationPage';
 import ProfilePage from './pages/ProfilePage';
@@ -13,10 +14,10 @@ import PasswordReset from './pages/authentification/PasswordReset'
 function App() {
   return (
     <Router>
-      <div>
+      <DarkModeProvider>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutUs />} />
+          <Route path="/about_us" element={<AboutUs />} />
           <Route path="/destination" element={<DestinationPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/register" element={<Register />} />
@@ -25,7 +26,7 @@ function App() {
           <Route path="/forgot_password" element={<ForgotPassword />} />
           <Route path="/password_reset" element={<PasswordReset />} />
         </Routes>
-      </div>
+      </DarkModeProvider>
     </Router>
   );
 }

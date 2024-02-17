@@ -7,8 +7,9 @@
   --dark3: #1a1c2c;
   --red1: #b13e53;
   --red2: #591f2a;
-  --heavy_shadow: 0em 0em 1rem 0.1rem rgba(0, 0, 0, 0.5);
-  --light_shadow: 0em 0em 1rem 0.1rem rgba(0, 0, 0, 0.25);
+  --heavy_shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.5);
+  --light_shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.25);
+  --overlay_shadow: 0 0 5rem 0.1rem rgba(0, 0, 0, 0.5);
   --train: background-color 0.2s ease;
 }
 

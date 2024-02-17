@@ -3,97 +3,55 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: var(--train);
-  height: calc(100vh - 8rem);
+}
+
+.search {
+  position: absolute;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  box-shadow: inset var(--overlay_shadow);
+  z-index: 1;
 }
 
 .image_container {
   position: relative;
-  width: 80vw;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+.blurred {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(1rem);
 }
 
-.image_container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: inset var(--heavy_shadow);
-}
-
-.formatting_inner {
+.image_wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  height: calc(100vh - 8rem);
+  animation: scrollImages 240s linear infinite; /* Adjust animation duration as needed */
 }
 
-.bg {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: rem;
-  background-color: var(--light2);
+.image_slide {
+  flex: 0 0 auto;
 }
 
-.caption {
-  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-  margin: 0.25rem;
-  border: none;
-  border-radius: 5rem;
-  font-size: 1.25em;
-  color: var(--dark3);
-  background-color: var(--light1);
-  box-shadow: var(--heavy_shadow);
-  z-index: 1;
+.image {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
 }
 
-.controls {
-  margin: 0.5rem;
-  z-index: 1;
-}
-
-.control_large {
-  width: 2rem;
-  height: 2rem;
-  border: none;
-  border-radius: 5rem;
-  margin: 0.5rem;
-  font-size: 1.125em;
-  font-weight: bold;
-  color: var(--dark3);
-  background-color: var(--light1);
-  box-shadow: var(--heavy_shadow);
-}
-
-.control_large:hover {
-  color: #f4f4ff;
-  background-color: var(--red1);
-}
-
-.control_large:active {
-  background-color: var(--red2);
-}
-
-.control_small {
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 0px;
-  border-radius: 1rem;
-  margin: 0.5rem;
-  font-weight: bold;
-  color: var(--dark3);
-  background-color: var(--light1);
-  box-shadow: var(--heavy_shadow);
-}
-
-.control_small:hover {
-  color: #f4f4ff;
-  background-color: var(--red1);
-}
-
-.control_small:active {
-  background-color: var(--red2);
+@keyframes scrollImages {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% * 24)); /* Adjust the number of images (6) */
+  }
 }

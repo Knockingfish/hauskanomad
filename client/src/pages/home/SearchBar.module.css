@@ -4,9 +4,7 @@
   align-items: center;
   justify-content: center;
   height: auto;
-  width: 100vw;
-  background-color: var(--light1);
-  transition: var(--train);
+  width: auto;
 }
 
 .search_bar {
@@ -16,7 +14,6 @@
   justify-content: center;
   width: auto;
   height: 6rem;
-  margin: 1rem 0 1rem 0;
   border: none;
   border-radius: 5rem;
   background-color: var(--dark2);
@@ -27,9 +24,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: auto;
   height: 5rem;
+  padding: 0 0.5rem 0 0.5rem;
   margin: 0 0.5rem 0 0.5rem;
   outline: none;
   border: none;
@@ -47,28 +45,25 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 15rem;
-  height: 4rem;
-  margin: 0 0.5rem 0 0.5rem;
+  width: 11rem;
+  height: 3rem;
+  padding: 0.5rem;
   outline: none;
   border: none;
   border-radius: 5rem;
   font-size: 1em;
   color: var(--light1);
-  background-color: var(--dark3);
-  text-align: center;
+  background-color: transparent;
+  text-align: calc(-2rem);
 }
-
 .bar_item:hover {
   color: #f4f4ff;
   background-color: var(--red1);
   box-shadow: var(--light_shadow);
 }
-
 .bar_item:active {
   background-color: var(--red2);
 }
-
 .bar_item:focus {
   color: #f4f4ff;
   background-color: var(--red2);
@@ -78,19 +73,17 @@
 
 .slider_item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 15rem;
+  width: 12rem;
   height: 4rem;
-  margin: 0 0.5rem 0 0.5rem;
   outline: none;
   border: none;
   border-radius: 5rem;
   font-size: 1em;
   color: var(--light1);
-  background-color: var(--dark3);
-  text-align: center;
+  background-color: transparent;
   font-weight: bold;
 }
 
@@ -134,24 +127,29 @@ input[type=range]::-webkit-slider-thumb:active {
 /* Search submission */
 
 .search_button {
-  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
   height: 5rem;
   padding: 0 1rem 0 1rem;
   margin: 0 0.5rem 0 0.5rem;
   border: none;
   border-radius: 5rem;
-  font-weight: bold;
-  font-size: 1.33em;
   color: var(--dark3);
   background-color: var(--light1);
   box-shadow: var(--light_shadow);
 }
-
+.search_icon {
+  height: 2rem;
+  width: 2rem;
+  object-fit: contain;
+}
 .search_button:hover {
   color:#f4f4ff;
   background-color: var(--red1);
 }
-
 .search_button:active {
   background-color: var(--red2);
 }
