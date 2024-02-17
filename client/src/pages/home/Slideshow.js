@@ -1,12 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import SearchBar from './SearchBar'
 import styles from './Slideshow.module.css';
 
 const Slideshow = () => {
-  // Initiate state for the slideshow
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [nextImageIndex, setNextImageIndex] = useState(1); // Initialize with the index of the second image
+  const [isSearchBarHovered, setIsSearchBarHovered] = useState(false);
+  const [isSearchBarFocused, setIsSearchBarFocused] = useState(false);
+
+  const handleSearchBarHover = (isHovered) => {
+    setIsSearchBarHovered(isHovered);
+  };
+
+  const handleSearchBarFocus = (isFocused) => {
+    setIsSearchBarFocused(isFocused);
+  };
 
   // Hardcoded array of images and captions
-  const images = [
+  const initialImages = [
     {
       id: 1,
       url: '/slideshow/australia.webp',
@@ -129,58 +139,32 @@ const Slideshow = () => {
     },
   ];
 
-  // Control refresh rate for slideshow
-  useEffect(() => {
-    let slideshowInterval;
-
-    slideshowInterval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3333);
-
-    return () => clearInterval(slideshowInterval);
-  }, [currentImageIndex, images]);
-
-  // Enable moving forwards in the slideshow index manually
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  // Enable moving backwards in the slideshow index manually
-  const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
-
-  // Handles manual selection of a position in the index.
-  const selectImage = (index) => {
-    setCurrentImageIndex(index);
-  };
-
-  // Inline style for the parallax effect
-  const inlineStyle = {
-    backgroundImage: `url(${images[currentImageIndex].url})`,
-    minHeight: '80vh',
-    backgroundAttachment: 'fixed',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-  };
-
   return (
     <div className={styles.formatting_outer}>
-      <div className={styles.image_container} style={inlineStyle}>
-        <div className={styles.formatting_inner}>
-          <div className={styles.caption}>{images[currentImageIndex].caption}</div>
-          <div className={styles.controls}>
-            <button className={styles.control_large} onClick={prevImage}>🞀</button>
-              {images.map((image, index) => (
-                <button className={styles.control_small} key={image.id} onClick={() => selectImage(index)}>
-                  {index + 1}
-                </button>
-              ))}
-            <button className={styles.control_large} onClick={nextImage}>🞂</button>
-          </div>
+      <div className={styles.image_container}>
+        <div className={styles.image_wrapper}>
+          {/* Render the current and next images */}
+          {initialImages.map((image, index) => (
+            <div key={image.id} className={styles.image_slide}>
+              <img
+                src={image.url}
+                alt={image.caption}
+                className={`${styles.image} ${index === nextImageIndex ? styles.next : ''} ${isSearchBarHovered || isSearchBarFocused ? styles.blurred : ''}`}
+              />
+            </div>
+          ))}
         </div>
       </div>
+      <div 
+        className={styles.search}
+        onMouseEnter={() => handleSearchBarHover(true)}
+        onMouseLeave={() => handleSearchBarHover(false)}
+        onFocus={() => handleSearchBarFocus(true)}
+        onBlur={() => handleSearchBarFocus(false)}
+      >
+        <SearchBar/>
+      </div>
+      <div className={styles.overlay} />
     </div>
   );
 };
