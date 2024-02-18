@@ -481,9 +481,13 @@
   }
   .first_section {
     width: 100vw;
+    margin: none;
+  }
+  .logo {
+    height: 4rem;
   }
   .second_section {
-    margin: 1rem;
+    margin: 1rem 0 1rem 0;
   }
   .fourth_section {
     position: absolute;

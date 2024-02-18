@@ -18,15 +18,6 @@
   --light1: #1a1c2c;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --dark3: #f4f4ff;
-    --dark2: #c4d2db;
-    --light2: #38415c;
-    --light1: #1a1c2c;
-  }
-}
-
 @font-face {
   font-family: "InterVariable";
   src: local("InterVariable"), url(./fonts/InterVariable.ttf);
@@ -47,7 +38,6 @@ body {
   color: var(--dark3);
   background-color: var(--light2);
   transition: var(--train);
-  overflow-x: hidden;
   text-decoration: none;
 }
 
