@@ -47,7 +47,6 @@ body {
   color: var(--dark3);
   background-color: var(--light2);
   transition: var(--train);
-  overflow-x: hidden;
   text-decoration: none;
 }
 
