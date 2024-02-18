@@ -6,13 +6,10 @@
   justify-content: baseline;
   height: 30rem;
   width: 30rem;
-  border: none;
   border-radius: 2rem;
-  color: var(--dark3);
   background-color: var(--light1);
   box-shadow: var(--heavy_shadow);
   overflow: hidden;
-  transition: var(--train);
   transition: height 0.5s, width 0.5s;
 }
 
@@ -32,8 +29,9 @@
   left: 0;
   right: 0;
   padding: 1rem;
+  height: 10rem;
+  width: auto;
   background-color: var(--light1);
-  color: var(--dark3);
   box-shadow: var(--light_shadow);
   transform: translateY(100%);
   transition: transform 0.3s ease;
@@ -43,9 +41,12 @@
   transform: translateY(0);
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 35rem) {
   .destination_card {
     height: 25rem;
     width: 25rem;
+  }
+  .destination_info {
+    height: 8.33rem;
   }
 }

@@ -14,7 +14,7 @@ const ProfilePage = () => {
 
   return (
     <div>
-      <div className={styles.scrollarea}>
+      <div className={styles.end_container}>
         <CustomHeader />
       </div>
 
@@ -23,12 +23,12 @@ const ProfilePage = () => {
           <button className={`${styles.section} ${activeSection === 'account' ? styles.active : ''}`} onClick={() => setActiveSection('account')}>Account</button>
           <button className={`${styles.section} ${activeSection === 'reservation' ? styles.active : ''}`} onClick={() => setActiveSection('reservation')}>Reservation</button>
         </nav>
-        <div className={styles.content}>
+        <div>
           {activeSection === 'account' && <AccountDetails />}
           {activeSection === 'reservation' && <ReservationManagement />}
         </div>
       </div>
-      <div className={styles.scrollarea}>
+      <div className={styles.end_container}>
         <CustomFooter />
       </div>
     </div>

@@ -1,10 +1,6 @@
 .newsletter_outer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin: 0em 0em 5rem 0em;
-  transition: var(--train);
+  height: auto;
+  width: 60vw;
 }
 
 .newsletter_inner {
@@ -12,11 +8,10 @@
   flex-direction: column;
   align-items: baseline;
   justify-content: baseline;
-  width: 60%;
+  height: auto;
+  width: 100%;
   padding: 1rem;
-  border: 0px;
   border-radius: 2rem;
-  color: var(--dark3);
   background-color: var(--light1);
   box-shadow: var(--heavy_shadow);
 }
@@ -27,7 +22,7 @@
 }
 .pitch {
   font-size: 1.5em;
-  margin: 0em 0em 1rem 0em;
+  margin: 0 0 1rem 0;
 }
 
 .newsletter_bar {
@@ -36,11 +31,11 @@
   align-items: center;
   justify-content: baseline;
   height: 3rem;
+  width: calc(100% - 1rem);
   padding: 0.5rem;
   border: none;
   border-radius: 5rem;
   background-color: var(--dark2);
-  width: 95%;
   box-shadow: var(--heavy_shadow)
 }
 .newsletter_bar input {
@@ -66,8 +61,8 @@
 
 .newsletter_bar button {
   height: 3rem;
-  width: 7.5rem;
-  margin: 0em 0em 0em 0.5em;
+  width: 8rem;
+  margin: 0 0 0 0.5rem;
   border: none;
   border-radius: 5rem;
   color: var(--dark3);

@@ -7,9 +7,8 @@ import ProfilePage from './pages/ProfilePage';
 import AboutUs from './pages/AboutUs';
 import Register from './pages/Register';
 import Login from './pages/Login';
-
-import ForgotPassword from './pages/authentification/ForgotPassword'
-import PasswordReset from './pages/authentification/PasswordReset'
+import ForgotPassword from './pages/ForgotPassword'
+import PasswordReset from './pages/PasswordReset'
 
 function App() {
   return (

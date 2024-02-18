@@ -1,17 +1,8 @@
-.scrollarea {
-  transition: var(--train);
-  overflow: scroll;
+.end_container {
   box-shadow: var(--heavy_shadow);
-  scrollbar-width: none;
-}
-
-.scrollarea2 {
-  overflow: scroll;
-  scrollbar-width: none;
 }
 
 .grid_container {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,12 +13,21 @@
 .card_grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+  gap: 5rem;
   margin: 5rem;
   transition: grid-template-columns 20s ease;
 }
 
-@media screen and (max-width: 87.5rem) {
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20rem;
+  width: 100vw;
+}
+
+@media screen and (max-width: 105rem) {
   .card_grid {
     grid-template-columns: repeat(2, 1fr);
   }

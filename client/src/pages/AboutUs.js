@@ -11,9 +11,7 @@ function AboutUs() {
 
   return (
     <div>
-      <div className={styles.scrollarea}>
-        <CustomHeader/>
-      </div>
+      <CustomHeader/>
         <div className={styles.about_body}>
             <div className={styles.marketing_blurb}>
               <h2>About HauskaNomad</h2>
@@ -36,9 +34,7 @@ function AboutUs() {
               </div>
             </div>
         </div>
-      <div className={styles.scrollarea}>
-        <CustomFooter />
-      </div>
+      <CustomFooter />
     </div>
   );
 }

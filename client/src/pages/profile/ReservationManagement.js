@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import styles from './ReservationManagement.module.css';
+import styles from './ProfilePage2.module.css';
 
 const ReservationManagement = () => {
   const [reservations, setReservations] = useState([
@@ -88,6 +88,7 @@ const ReservationManagement = () => {
                       onChange={(date) => handleModifyReservation(reservation.id, 'checkOutDate', date.toISOString().split('T')[0])}
                     />
                     <div className={styles.modal_slider}>
+                      <div className={styles.range_item}>Guests</div>
                       <input
                         type="range"
                         value={reservation.guests}
@@ -95,9 +96,9 @@ const ReservationManagement = () => {
                         max="10"
                         onChange={(e) => handleModifyReservation(reservation.id, 'guests', e.target.value)}
                       />
-                      <span className={styles.range_item}>Guests: {reservation.guests}</span>
                     </div>
                     <div className={styles.modal_slider}>
+                      <div className={styles.range_item}>Rooms</div>
                       <input
                         type="range"
                         value={reservation.rooms}
@@ -105,7 +106,6 @@ const ReservationManagement = () => {
                         max="5"
                         onChange={(e) => handleModifyReservation(reservation.id, 'rooms', e.target.value)}
                       />
-                      <span className={styles.range_item}>Rooms: {reservation.rooms}</span>
                     </div>
                     <button className={styles.modal_click} onClick={() => handleCancelReservation(reservation.id)}>CANCEL RESERVATION</button>
                   </div>

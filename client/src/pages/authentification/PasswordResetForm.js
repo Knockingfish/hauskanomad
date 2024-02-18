@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
 import CustomHeader from '../global/CustomHeader';
 import CustomFooter from '../global/CustomFooter';
-import styles from './PasswordReset.module.css';
+import styles from './Account.module.css';
 
 function PasswordResetPage() {
   const navigate = useNavigate(); // Initialize the useNavigate hook
@@ -30,10 +30,6 @@ function PasswordResetPage() {
   };
 
   return (
-    <div>
-      <div className={styles.scrollarea}>
-          <CustomHeader />
-      </div>
       <div className={styles.container}>
         <div className={styles.float}>
           <h2>Reset Password</h2>
@@ -56,10 +52,6 @@ function PasswordResetPage() {
           </form>
         </div>
       </div>
-      <div className={styles.scrollarea}>
-        <CustomFooter />
-      </div>
-    </div>
   );
 }
 

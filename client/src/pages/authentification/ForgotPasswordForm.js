@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Assuming you're using React Router for navigation
 import CustomHeader from '../global/CustomHeader';
 import CustomFooter from '../global/CustomFooter';
-import styles from './ForgotPassword.module.css'
+import styles from './Account.module.css'
 
 function ForgotPasswordPage() {
   const [email, setEmail] = useState('');
@@ -22,10 +22,6 @@ function ForgotPasswordPage() {
   };
 
   return (
-    <div>
-      <div className={styles.scrollarea}>
-          <CustomHeader />
-      </div>
       <div className={styles.container}>
         <div className={styles.float}>
           <h2>Forgot Password</h2>
@@ -42,10 +38,6 @@ function ForgotPasswordPage() {
             <Link className={styles.link} to="/login">Back to login</Link>
         </div>
       </div>
-      <div>
-        <CustomFooter />
-      </div>
-    </div>
   );
 }
 
