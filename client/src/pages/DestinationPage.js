@@ -38,7 +38,7 @@ const DestinationPage = () => {
 
   return (
     <div>
-      <div className={styles.scrollarea}>
+      <div className={styles.end_container}>
         <CustomHeader />
       </div>
       <h1>Destination Page</h1>
@@ -56,7 +56,7 @@ const DestinationPage = () => {
         </div>
       )}
       <ReviewComments reviews={reviews} />
-      <div className={styles.scrollarea}>
+      <div className={styles.end_container}>
         <CustomFooter />
       </div>
     </div>

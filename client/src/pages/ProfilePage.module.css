@@ -1,8 +1,5 @@
-.scrollarea {
-  transition: var(--train);
-  overflow: scroll;
+.end_container {
   box-shadow: var(--heavy_shadow);
-  scrollbar-width: none;
   position: relative;
   z-index: 3;
 }
@@ -12,7 +9,7 @@
   flex-direction: column;
   align-items: baseline;
   justify-content: baseline;
-  min-height: calc(100vh - 7em);
+  min-height: calc(100vh - 6rem);
   width: 100vw;
 }
 
@@ -21,11 +18,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 4em;
+  height: 4rem;
   width: 100vw;
   background-color: var(--dark2);
   box-shadow: var(--heavy_shadow);
-  transition: transform 0.3s ease; /* Transition for smooth animation */
 }
 
 .row {
@@ -37,9 +33,9 @@
   position: relative;
   height: 4rem;
   width: 100%;
-  padding: 0.5em;
+  padding: 0.5rem;
   text-align: start;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: bold;
   border: none;
   color: var(--light1);
@@ -47,16 +43,8 @@
   box-shadow: var(--heavy_shadow);
 }
 
-/* Active button */
 nav button.active {
   color: #f4f4ff;
   background-color: var(--red1);
   z-index: 1;
-}
-
-.content {
-  flex: 1;
-  transition: var(--train);
-  overflow: auto;
-  scrollbar-width: none;
 }

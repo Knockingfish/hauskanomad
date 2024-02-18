@@ -14,7 +14,7 @@
   position: absolute;
   height: 100vh;
   width: 100vw;
-  box-shadow: inset var(--overlay_shadow);
+  box-shadow: inset var(--heavy_shadow);
   z-index: 1;
 }
 
@@ -52,6 +52,6 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-100% * 24)); /* Adjust the number of images (6) */
+    transform: translateX(calc(-100% * 23)); /* Adjust the number of images (6) */
   }
 }

@@ -35,7 +35,7 @@ const Home = () => {
 
   return (
     <div className="container">
-      <div className={styles.scrollarea}>
+      <div className={styles.end_container}>
         <CustomHeader />
       </div>
 
@@ -51,7 +51,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="newsletter-section">
+      <div className={styles.newsletter}>
         <NewsletterSubscription />
       </div>
 

@@ -7,13 +7,13 @@ import styles from './Auth.module.css';
 function RegistrationPage() {
   return (
     <div>
-      <div className={styles.scrollarea}>
+      <div>
         <CustomHeader />
       </div>
       <div className={styles.container}>
         <RegistrationForm />
       </div>
-      <div className={styles.scrollarea}>
+      <div>
         <CustomFooter />
       </div>
     </div>

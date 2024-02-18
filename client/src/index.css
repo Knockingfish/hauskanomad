@@ -1,23 +1,19 @@
 :root {
   --light1: #f4f4ff;
   --light2: #c4d2db;
-  --light3: #94b0c2;
-  --dark1: #566c86;
   --dark2: #38415c;
   --dark3: #1a1c2c;
   --red1: #b13e53;
   --red2: #591f2a;
+  --white: #f4f4ff;
   --heavy_shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.5);
   --light_shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.25);
-  --overlay_shadow: 0 0 5rem 0.1rem rgba(0, 0, 0, 0.5);
-  --train: background-color 0.2s ease;
+  --train: background-color 0.3s ease;
 }
 
 :root.dark_mode {
   --dark3: #f4f4ff;
   --dark2: #c4d2db;
-  --dark1: #94b0c2;
-  --light3: #566c86;
   --light2: #38415c;
   --light1: #1a1c2c;
 }
@@ -26,8 +22,6 @@
   :root {
     --dark3: #f4f4ff;
     --dark2: #c4d2db;
-    --dark1: #94b0c2;
-    --light3: #566c86;
     --light2: #38415c;
     --light1: #1a1c2c;
   }
@@ -46,10 +40,61 @@ html {
 }
 
 body {
+  overflow: auto;
   padding: 0;
   margin: 0;
+  scrollbar-width: none;
+  color: var(--dark3);
   background-color: var(--light2);
   transition: var(--train);
+  overflow-x: hidden;
+  text-decoration: none;
+}
+
+div {
+  border: none;
+  outline: none;
+}
+
+input {
+  border: none;
+  outline: none;
+  color: var(--light1);
+  background-color: transparent;
+}
+input[type=range] {
+  height: 0.5rem;
+  width: auto;
+  margin-left: 0.5rem;
+  border-radius: 1rem;
+  background-color: var(--light2);
+}
+input[type=range]::-webkit-slider-thumb,
+input[type=range]::-moz-range-thumb {
+  height: 1.25rem;
+  width: 1.25rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--light1);
+  box-shadow: var(--light_shadow);
+}
+input[type=range]::-moz-range-thumb:hover {
+  background-color: var(--red1);
+}
+input[type=range]::-moz-range-thumb:active {
+  background-color: var(--red2);
+}
+
+
+button {
+  border: none;
+  outline: none;
+  color: var(--light1);
+  background-color: transparent;
+}
+
+span {
+  color: var(--light1);
 }
 
 ::-webkit-scrollbar {

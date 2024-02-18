@@ -1,6 +1,5 @@
-.scrollarea {
-  transition: var(--train);
-  overflow: scroll;
+.end_container {
+  position: relative;
   box-shadow: var(--heavy_shadow);
-  scrollbar-width: none;
+  z-index: 1;
 }

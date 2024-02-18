@@ -1,33 +1,21 @@
-.scrollarea {
-  transition: var(--train);
-  overflow: scroll;
-  box-shadow: var(--heavy_shadow);
-  scrollbar-width: none;
-}
-
 .about_body {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  flex: 1;
-  height: calc(100vh - 5.5em);
+  height: calc(100vh - 6rem);
   width: 100vw;
-  padding: 1em 0em 5em 0em;
-  font-size: 20px;
-  transition: var(--train);
+  font-size: 1.25em;
 }
 
 .marketing_blurb {
-  height: 60%;
+  height: auto;
   width: 30%;
-  padding: 1em;
-  margin: 2em;
-  border: 0px;
+  padding: 1rem;
+  margin: 1.5rem;
   border-radius: 2em;
-  color: var(--dark3);
   background-color: var(--light1);
-  box-shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.5);
+  box-shadow: var(--heavy_shadow);
   overflow: auto;
   scrollbar-width: none;
 }
@@ -36,18 +24,17 @@
   position: relative;
   height: 80%;
   width: 50%;
-  border: 0px;
-  border-radius: 5em;
+  margin: 1.5rem;
+  border-radius: 5rem;
   color: var(--dark3);
   background-color: var(--light1);
-  box-shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.5);
+  box-shadow: var(--heavy_shadow);
 }
 
 .staff_image {
   width: 100%;
   height: 100%;
-  border: 0px;
-  border-radius: 5em;
+  border-radius: 5rem;
   object-fit: cover; /* Make the image cover its container */
 }
 
@@ -55,72 +42,34 @@
   position: absolute;
   top: -0.1%;
   left: -0.1%;
-  padding: 1em 2em 0.75em 2em;
-  border-radius: 5em 0em 5em 0em;
+  padding: 1rem 2rem 0.75rem 2rem;
+  border-radius: 5rem 0 5rem 0;
   text-align: center;
-  color: var(--dark3);
   background-color: var(--light1);
   box-shadow: var(--heavy_shadow);
 }
 
 /*✨ Responsive ✨*/
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 80rem) {
   .about_body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex: 1;
     height: auto;
-    width: 100vw;
-    padding: 1em 0em 5em 0em;
-    font-size: 20px;
-    transition: var(--train);
   }
   
   .marketing_blurb {
     height: auto;
-    width: 80vw;
-    padding: 1em;
-    margin: 2em;
-    border: 0px;
-    border-radius: 2em;
-    color: var(--dark3);
-    background-color: var(--light1);
-    box-shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.5);
-    overflow: auto;
+    width: 80%;
   }
-  
+
   .staff_image_container {
-    position: relative;
-    height: auto;
-    width: 80vw;
-    border: 0px;
-    border-radius: 5em;
-    color: var(--dark3);
-    background-color: var(--light1);
-    box-shadow: 0em 0em 1em 0.1em rgba(0, 0, 0, 0.5);
-  }
-  
-  .staff_image {
-    width: 100%;
-    height: 100%;
-    border: 0px;
-    border-radius: 2.5em;
-    object-fit: cover; /* Make the image cover its container */
+    width: 80%;
   }
   
   .text_overlay {
-    position: absolute;
-    top: -0.1%;
-    left: -0.1%;
-    padding: 1em 2em 0.75em 2em;
-    border-radius: 5em 0em 5em 0em;
-    font-size: 50%;
-    text-align: center;
-    color: var(--dark3);
-    background-color: var(--light1);
-    box-shadow: var(--heavy_shadow);
+    font-size: 0.5em;
   }
 }

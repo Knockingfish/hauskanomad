@@ -3,13 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: auto;
   width: 100vw;
   font-size: 1.25em;
   padding: 1rem;
   background-color: var(--light1);
   box-shadow: var(--heavy_shadow);
-  transition: var(--train);
   z-index: 1;
 }
 
@@ -18,7 +16,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: var(--dark3);
 }
 
 .foot_item {
@@ -29,8 +26,6 @@
 .foot_link {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
-  /**/
-  text-decoration: none;
   color: var(--dark3);
 }
 .foot_link:hover {
@@ -42,7 +37,7 @@
   color: var(--red2)
 }
 
-@media screen and (min-width: 50%) {
+@media (max-width: 60rem) {
   .foot_container {
     flex-direction: column;
   }

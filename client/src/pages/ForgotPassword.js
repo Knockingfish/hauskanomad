@@ -1,17 +1,17 @@
 import React from 'react';
-import LoginForm from './authentification/LoginForm';
+import ForgotPasswordForm from './authentification/ForgotPasswordForm';
 import CustomHeader from './global/CustomHeader';
 import CustomFooter from './global/CustomFooter';
 import styles from './Auth.module.css';
 
-function LoginPage() {
+function RegistrationPage() {
   return (
     <div>
       <div>
-          <CustomHeader />
+        <CustomHeader />
       </div>
       <div className={styles.container}>
-        <LoginForm />
+        <ForgotPasswordForm />
       </div>
       <div>
         <CustomFooter />
@@ -20,4 +20,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default RegistrationPage;

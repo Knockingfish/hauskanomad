@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import styles from './AccountDetail.module.css';
+import styles from './ProfilePage2.module.css';
 
 const AccountDetails = () => {
   const fileInputRef = useRef(null);
