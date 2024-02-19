@@ -1,7 +1,10 @@
-// server/controllers/authController.js
+import express from 'express';
 import User from '../models/User.js';
-import router from '../routes/auth.js'; // Import the router from auth.js
 
+// Initialize the router
+const authRoutes = express.Router();
+
+// Route handlers
 export const registerUser = async (req, res) => {
   try {
     // Extract user input
@@ -27,3 +30,30 @@ export const registerUser = async (req, res) => {
     return res.status(500).json({ message: 'Internal server error.' });
   }
 };
+
+export const loginUser = async (req, res) => {
+    try {
+      // Extract user input
+      const { email, password } = req.body;
+  
+      // Find the user in the database by email
+      const existingUser = await User.findOne({ email });
+  
+      // If the user does not exist or password does not match, return an error
+      if (!existingUser || existingUser.password !== password) {
+        return res.status(400).json({ message: 'Invalid email or password.' });
+      }
+  
+      // If email and password match, return success message
+      return res.status(200).json({ message: 'Login successful.' });
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json({ message: 'Internal server error.' });
+    }
+  };
+
+// Define the register and login routes
+authRoutes.post('/register', registerUser);
+authRoutes.post('/login', loginUser);
+
+export default authRoutes; // Export the router

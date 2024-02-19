@@ -1,16 +1,16 @@
-// LoginForm.jsx
+// Account.jsx
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import LoginForm from './LoginForm'; // Import the LoginForm component
 import axios from 'axios';
 
-function LoginForm() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [loginError, setLoginError] = useState('');
+function Account() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loginError, setLoginError] = useState('');
 
-  const handleLogin = async () => {
+  const handleLogin = async (email, password) => {
     try {
-      // Handle login logic here
+      // Make an API call to your backend for user authentication
       const response = await axios.post('/api/auth', {
         email,
         password
@@ -25,20 +25,17 @@ function LoginForm() {
       console.error("Login failed:", error);
       setLoginError(error.message);
     }
-  };  
+  };    
 
   return (
     <div>
-      <h2>Login</h2>
-      <div>
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} /><br />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} /><br />
-        <button onClick={handleLogin}>LOGIN</button>
-      </div>
+      {/* Render the LoginForm component and pass handleLogin as a prop */}
+      <LoginForm onLogin={handleLogin} />
       {loginError && <p>Login failed: {loginError}</p>}
       {isLoggedIn && <p>Login successful! You're now logged in.</p>}
+      <Link to="/Forgot_Password">Forgot your password?</Link>
     </div>
   );
 }
 
-export default LoginForm;
+export default Account;
