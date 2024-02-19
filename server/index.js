@@ -5,7 +5,6 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import authRoutes from './routes/auth.js';
-import destinationRoutes from './routes/destinationRoutes.js';
 
 // Load environment variables from .env file
 dotenv.config();
@@ -24,7 +23,6 @@ mongoose.connect(process.env.MONGO_DB_CONNECTION_STRING, {
 
 // Register your routes
 app.use('/auth', authRoutes);
-app.use('/destination', destinationRoutes);
 
 // Start your server
 const PORT = process.env.PORT || 5000;

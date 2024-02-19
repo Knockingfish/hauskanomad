@@ -1,5 +1,6 @@
 // server/controllers/authController.js
 import User from '../models/User.js';
+import router from '../routes/auth.js'; // Import the router from auth.js
 
 export const registerUser = async (req, res) => {
   try {
