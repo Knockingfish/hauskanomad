@@ -32,7 +32,7 @@ const RegistrationForm = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/register",
+        "http://localhost:5000/signup",
         {
           ...inputValue,
         },
