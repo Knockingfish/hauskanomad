@@ -1,59 +1,51 @@
-import express from 'express';
-import User from '../models/User.js';
+const User = require("../Models/UserModel.js");
+const { createSecretToken } = require("../util/SecretToken.js");
+const bcrypt = require("bcrypt");
 
-// Initialize the router
-const authRoutes = express.Router();
-
-// Route handlers
-export const registerUser = async (req, res) => {
+module.exports.Signup = async (req, res, next) => {
   try {
-    // Extract user input
-    const { email, password, username } = req.body;
-
-    // Check if email or username already exists in the database
-    const existingUser = await User.findOne({ $or: [{ email }, { username }] });
-
+    const { email, password, username, createdAt } = req.body;
+    const existingUser = await User.findOne({ email });
     if (existingUser) {
-      return res.status(400).json({ message: 'User already exists.' });
+      return res.json({ message: "User already exists" });
     }
-
-    // Create a new user
-    const newUser = new User({ email, password, username });
-
-    // Save the new user to the database
-    await newUser.save();
-
-    // Send a response
-    return res.status(201).json({ message: 'User registered successfully.' });
+    const user = await User.create({ email, password, username, createdAt });
+    const token = createSecretToken(user._id);
+    res.cookie("token", token, {
+      withCredentials: true,
+      httpOnly: false,
+    });
+    res
+      .status(201)
+      .json({ message: "User signed in successfully", success: true, user });
+    next();
   } catch (error) {
     console.error(error);
-    return res.status(500).json({ message: 'Internal server error.' });
   }
 };
 
-export const loginUser = async (req, res) => {
+module.exports.Login = async (req, res, next) => {
     try {
-      // Extract user input
       const { email, password } = req.body;
-  
-      // Find the user in the database by email
-      const existingUser = await User.findOne({ email });
-  
-      // If the user does not exist or password does not match, return an error
-      if (!existingUser || existingUser.password !== password) {
-        return res.status(400).json({ message: 'Invalid email or password.' });
+      if(!email || !password ){
+        return res.json({message:'All fields are required'})
       }
-  
-      // If email and password match, return success message
-      return res.status(200).json({ message: 'Login successful.' });
+      const user = await User.findOne({ email });
+      if(!user){
+        return res.json({message:'Incorrect password or email' }) 
+      }
+      const auth = await bcrypt.compare(password,user.password)
+      if (!auth) {
+        return res.json({message:'Incorrect password or email' }) 
+      }
+       const token = createSecretToken(user._id);
+       res.cookie("token", token, {
+         withCredentials: true,
+         httpOnly: false,
+       });
+       res.status(201).json({ message: "User logged in successfully", success: true });
+       next()
     } catch (error) {
       console.error(error);
-      return res.status(500).json({ message: 'Internal server error.' });
     }
-  };
-
-// Define the register and login routes
-authRoutes.post('/register', registerUser);
-authRoutes.post('/login', loginUser);
-
-export default authRoutes; // Export the router
+  }

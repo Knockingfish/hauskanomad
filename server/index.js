@@ -1,28 +1,33 @@
-import express from 'express';
-import cors from 'cors';
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-import authRoutes from './controllers/authController.js'; // Make sure to use the correct path
-
-dotenv.config();
-
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
 const app = express();
+require("dotenv").config();
+const cookieParser = require("cookie-parser");
+const authRoute = require("./Routes/AuthRoute.js");
+const { MONGO_URL, PORT } = process.env;
 
-app.use('/api/auth', authRoutes); // Use authRoutes for your API auth routes
+mongoose
+  .connect(MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("MongoDB is  connected successfully"))
+  .catch((err) => console.error(err));
 
-app.use(cors({
-  origin: 'http://localhost:3000',
-  credentials: true
-}));
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
+});
+
+app.use(
+  cors({
+    origin: ["http://localhost:3000"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+app.use(cookieParser());
 
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO_DB_CONNECTION_STRING, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
-});
+app.use("/", authRoute);
