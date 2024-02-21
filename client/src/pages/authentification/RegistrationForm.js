@@ -26,9 +26,9 @@ const RegistrationForm = () => {
   return (
     <div>
       <form className={styles.menu} onSubmit={handleSubmit}>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
         <button type="submit">Register</button>
       </form>
       <p>{registrationStatus}</p>
