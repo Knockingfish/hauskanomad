@@ -1,94 +1,58 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+// LoginForm.js
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import styles from './Account.module.css';
 
-const LoginForm = () => {
-  const navigate = useNavigate();
-  const [inputValue, setInputValue] = useState({
-    email: "",
-    password: "",
-  });
-  const { email, password } = inputValue;
-  const handleOnChange = (e) => {
-    const { name, value } = e.target;
-    setInputValue({
-      ...inputValue,
-      [name]: value,
-    });
-  };
+function LoginForm() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleError = (err) =>
-    toast.error(err, {
-      position: "bottom-left",
-    });
-  const handleSuccess = (msg) =>
-    toast.success(msg, {
-      position: "bottom-left",
-    });
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleLogin = async () => {
     try {
-      const { data } = await axios.post(
-        "http://localhost:5000/login",
-        {
-          ...inputValue,
+      const response = await fetch('http://localhost:5000/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        { withCredentials: true }
-      );
-      console.log(data);
-      const { success, message } = data;
-      if (success) {
-        handleSuccess(message);
-        setTimeout(() => {
-          navigate("/");
-        }, 1000);
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        console.log("Login successful!");
+        setIsLoggedIn(true);
       } else {
-        handleError(message);
+        setError(data.message); // Set error message received from the server
       }
     } catch (error) {
-      console.log(error);
+      console.error("Error logging in:", error);
+      setError('An error occurred while logging in.'); // Set a generic error message
     }
-    setInputValue({
-      ...inputValue,
-      email: "",
-      password: "",
-    });
   };
 
   return (
-    <div className="form_container">
-      <h2>Login Account</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            value={email}
-            placeholder="Enter your email"
-            onChange={handleOnChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            value={password}
-            placeholder="Enter your password"
-            onChange={handleOnChange}
-          />
-        </div>
-        <button type="submit">Submit</button>
-        <span>
-          Already have an account? <Link to={"/signup"}>Signup</Link>
-        </span>
-      </form>
-      <ToastContainer />
+    <div className={styles.container}>
+    <div className={styles.float}>
+    <h2>Login</h2>
+    <div className={styles.menu}>
+    {isLoggedIn ? (
+      <p>Login successful! You're now logged in.</p>
+    ) : (
+      <>
+      <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} /><br />
+      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} /><br />
+      <button onClick={handleLogin}>LOGIN</button>
+      {error && <p className={styles.error}>{error}</p>} {/* Display error message if present */}
+      </>
+    )}
+    </div>
+    <Link className={styles.link} to="/Forgot_Password">Forgot your password?</Link>
+    </div>
     </div>
   );
-};
+}
 
 export default LoginForm;
