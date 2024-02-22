@@ -1,38 +1,56 @@
-import React, { useState } from 'react';
-import SearchBar from './SearchBar'
+import React, { useState, useEffect } from 'react';
 import styles from './Slideshow.module.css';
-import initialImages from './initialImages.json'; // Import the JSON file
+import initialImages from './initialImages.json'; // Import the JSON content
 
 const Slideshow = () => {
-  const [nextImageIndex, setNextImageIndex] = useState(1); // Initialize with the index of the second image
-  const [isSearchBarHovered, setIsSearchBarHovered] = useState(false);
-  const [isSearchBarFocused, setIsSearchBarFocused] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const handleSearchBarHover = (isHovered) => {
-    setIsSearchBarHovered(isHovered);
+  useEffect(() => {
+    let intervalId;
+
+    const startSlideShow = () => {
+      intervalId = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % initialImages.length);
+      }, 5000); // Auto-transition every 5 seconds
+    };
+
+    const stopSlideShow = () => {
+      clearInterval(intervalId);
+    };
+
+    startSlideShow();
+
+    return () => {
+      stopSlideShow();
+    };
+  }, [currentImageIndex]);
+
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? initialImages.length - 1 : prevIndex - 1));
   };
 
-  const handleSearchBarFocus = (isFocused) => {
-    setIsSearchBarFocused(isFocused);
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % initialImages.length);
   };
 
   return (
     <div className={styles.formatting_outer}>
       <div className={styles.image_container}>
         <div className={styles.image_wrapper}>
-          {/* Render the current and next images */}
-          {initialImages.map((image, index) => (
-            <div key={image.id} className={styles.image_slide}>
-              <img
-                src={image.url}
-                alt={image.caption}
-                className={`${styles.image} ${index === nextImageIndex ? styles.next : ''} ${isSearchBarHovered || isSearchBarFocused ? styles.blurred : ''}`}
-              />
-            </div>
-          ))}
+          <div key={initialImages[currentImageIndex].id} className={styles.image_slide}>
+            <img
+              src={initialImages[currentImageIndex].url}
+              alt={initialImages[currentImageIndex].caption}
+              className={styles.image}
+            />
+          </div>
         </div>
       </div>
-      <div className={styles.overlay} />
+      <div className={styles.control}>
+        <button className={styles.controls} onClick={handlePrevImage}>🞀</button>
+        <button className={styles.controls} onClick={handleNextImage}>🞂</button>
+      </div>
+      <div className={styles.caption}>{initialImages[currentImageIndex].caption}</div>
     </div>
   );
 };
