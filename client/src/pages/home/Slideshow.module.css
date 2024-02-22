@@ -1,57 +1,80 @@
+/* Image Transition Container */
+
+.image_container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* Ensure that the underneath images are hidden when sliding over */
+  z-index: -1;
+}
+
+.parallax {
+  background-attachment: fixed; /* Fix the background image position during scroll */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  background-size: cover; /* Cover the entire container with the background image */
+}
+
+.image {
+  position: absolute;
+  background-attachment: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 1s ease-in-out; /* Transition only the transform property */
+}
+
+.visible {
+  transform: translateX(0%); /* Slide the image into view */
+  opacity: 1;
+}
+
+.hidden {
+  transform: translateX(100%); /* Slide the image out of view */
+  opacity: 1; /* Hide the image underneath */
+}
+
+.caption {
+  position: absolute;
+  padding: 1rem 2rem 1rem 1rem;
+  border-radius: 0 0 5rem 0;
+  font-size: 2em;
+  color: var(--dark3);
+  background-color: var(--light1);
+  box-shadow: var(--heavy_shadow);
+  z-index: 0;
+}
+
+/* Slideshow control + caption */
+
 .formatting_outer {
+  display: flex;
+  flex-direction: row;
+}
+
+.control_container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+}
+
+.controls {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 4rem;
+  width: 4rem;
+  margin: 1rem;
+  border-radius: 5rem;
+  color: var(--dark3);
+  background-color: var(--light1);
+  box-shadow: var(--heavy_shadow);
 }
-
-.search {
-  position: absolute;
-  z-index: 2;
-}
-
-.overlay {
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  box-shadow: inset var(--heavy_shadow);
-  z-index: 1;
-}
-
-.image_container {
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-}
-.blurred {
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  filter: blur(1rem);
-}
-
-.image_wrapper {
-  display: flex;
-  animation: scrollImages 240s linear infinite; /* Adjust animation duration as needed */
-}
-
-.image_slide {
-  flex: 0 0 auto;
-}
-
-.image {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  object-fit: cover;
-}
-
-@keyframes scrollImages {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-100% * 23)); /* Adjust the number of images (6) */
-  }
+.slide_icon {
+  height: 2rem;
+  width: 2rem;
 }

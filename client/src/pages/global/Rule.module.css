@@ -1,0 +1,13 @@
+.rule {
+	position: relative;
+	width: 100vw;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: baseline;
+	font-size: 1.5em;
+	font-style: italic;
+	color: black;
+	background-color: wheat;
+	z-index: 999;
+}

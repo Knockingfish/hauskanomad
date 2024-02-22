@@ -10,7 +10,9 @@ const AccountDetails = () => {
     address: '123 Main Street, Cityville',
     phoneNumber: '555-1234',
     emailAddress: 'john.doe@example.com',
+    // Add more fields as needed
   });
+
   const [editedProfilePicture, setEditedProfilePicture] = useState('');
   const [editedAddress, setEditedAddress] = useState('');
   const [editedPhoneNumber, setEditedPhoneNumber] = useState('');
@@ -22,13 +24,14 @@ const AccountDetails = () => {
   const [showPasswordFields, setShowPasswordFields] = useState(false);
 
   useEffect(() => {
-    setUser({
-      ...user,
-      profilePicture: editedProfilePicture || user.profilePicture,
-      address: editedAddress || user.address,
-      phoneNumber: editedPhoneNumber || user.phoneNumber,
-      emailAddress: editedEmailAddress || user.emailAddress,
-    });
+    setUser((prevUser) => ({
+      ...prevUser,
+      profilePicture: editedProfilePicture || prevUser.profilePicture,
+      address: editedAddress || prevUser.address,
+      phoneNumber: editedPhoneNumber || prevUser.phoneNumber,
+      emailAddress: editedEmailAddress || prevUser.emailAddress,
+      // Add more fields as needed
+    }));
   }, [editedProfilePicture, editedAddress, editedPhoneNumber, editedEmailAddress]);
 
   const handleProfilePictureChange = (event) => {
@@ -65,7 +68,11 @@ const AccountDetails = () => {
       return;
     }
 
-    setUser((prevUser) => ({ ...prevUser, password: newPassword }));
+    setUser((prevUser) => ({
+      ...prevUser,
+      password: newPassword,
+      // Add more fields as needed
+    }));
     setPasswordChangeError('');
     setShowPasswordFields(false);
   };
@@ -73,85 +80,85 @@ const AccountDetails = () => {
   return (
     <div className={styles.container}>
       <div className={styles.float}>
-          <div className={styles.column}>
-            <h2>Profile Information</h2>
-            <h4>Profile Picture</h4>
-            <div className={styles.profile_container}>
-              <img className={styles.profile} src={user.profilePicture} alt="Pic" />
-            </div>
-            <button className={styles.click} onClick={handleButtonClick}>
-              PROFILE PICTURE
-            </button>
-            <input
-              ref={fileInputRef}
-              type="file"
-              accept="image/*"
-              onChange={handleProfilePictureChange}
-              className={styles.input}
-            />
+        <div className={styles.column}>
+          <h2>Profile Information</h2>
+          <h4>Profile Picture</h4>
+          <div className={styles.profile_container}>
+            <img className={styles.profile} src={user.profilePicture} alt="Profile" />
           </div>
-          <div className={styles.column}>
-            <h4>Street Address</h4>
-            <p className={styles.field}>{user.address}</p>
-            <button
-              className={styles.click}
-              onClick={() => spawnInputField('address', user.address, setEditedAddress)}
-            >
-              STREET ADDRESS
-            </button>
-            <h4>Phone Number</h4>
-            <p className={styles.field}>{user.phoneNumber}</p>
-            <button
-              className={styles.click}
-              onClick={() => spawnInputField('phone number', user.phoneNumber, setEditedPhoneNumber)}
-            >
-              PHONE NUMBER
-            </button>
-          </div>
-          <div className={styles.column}>
-            <h4>Email Address</h4>
-            <p className={styles.field}>{user.emailAddress}</p>
-            <button
-              className={styles.click}
-              onClick={() => spawnInputField('email address', user.emailAddress, setEditedEmailAddress)}
-            >
-              EMAIL ADDRESS
-            </button>
-            <h4>Password Change</h4>
-            <button className={styles.click} onClick={handleResetPasswordToggle}>
-              {showPasswordFields ? 'HIDE PASSWORD RESET' : 'RESET PASSWORD'}
-            </button>
-            {showPasswordFields && (
-              <div className={styles.password_column}>
-                <input
-                  className={styles.password_input}
-                  type="password"
-                  placeholder="Current Password"
-                  value={currentPassword}
-                  onChange={(e) => setCurrentPassword(e.target.value)}
-                />
-                <input
-                  className={styles.password_input}
-                  type="password"
-                  placeholder="New Password"
-                  value={newPassword}
-                  onChange={(e) => setNewPassword(e.target.value)}
-                />
-                <input
-                  className={styles.password_input}
-                  type="password"
-                  placeholder="Confirm New Password"
-                  value={confirmNewPassword}
-                  onChange={(e) => setConfirmNewPassword(e.target.value)}
-                />
-                <button className={styles.password_click} onClick={handleSubmit}>
-                  SUBMIT
-                </button>
-                {passwordChangeError && <p className={styles.error}>{passwordChangeError}</p>}
-              </div>
-            )}
-          </div>
+          <button className={styles.click} onClick={handleButtonClick}>
+            PROFILE PICTURE
+          </button>
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="image/*"
+            onChange={handleProfilePictureChange}
+            className={styles.input}
+          />
         </div>
+        <div className={styles.column}>
+          <h4>Street Address</h4>
+          <p className={styles.field}>{user.address}</p>
+          <button
+            className={styles.click}
+            onClick={() => spawnInputField('address', user.address, setEditedAddress)}
+          >
+            STREET ADDRESS
+          </button>
+          <h4>Phone Number</h4>
+          <p className={styles.field}>{user.phoneNumber}</p>
+          <button
+            className={styles.click}
+            onClick={() => spawnInputField('phone number', user.phoneNumber, setEditedPhoneNumber)}
+          >
+            PHONE NUMBER
+          </button>
+        </div>
+        <div className={styles.column}>
+          <h4>Email Address</h4>
+          <p className={styles.field}>{user.emailAddress}</p>
+          <button
+            className={styles.click}
+            onClick={() => spawnInputField('email address', user.emailAddress, setEditedEmailAddress)}
+          >
+            EMAIL ADDRESS
+          </button>
+          <h4>Password Change</h4>
+          <button className={styles.click} onClick={handleResetPasswordToggle}>
+            {showPasswordFields ? 'HIDE PASSWORD RESET' : 'RESET PASSWORD'}
+          </button>
+          {showPasswordFields && (
+            <div className={styles.password_column}>
+              <input
+                className={styles.password_input}
+                type="password"
+                placeholder="Current Password"
+                value={currentPassword}
+                onChange={(e) => setCurrentPassword(e.target.value)}
+              />
+              <input
+                className={styles.password_input}
+                type="password"
+                placeholder="New Password"
+                value={newPassword}
+                onChange={(e) => setNewPassword(e.target.value)}
+              />
+              <input
+                className={styles.password_input}
+                type="password"
+                placeholder="Confirm New Password"
+                value={confirmNewPassword}
+                onChange={(e) => setConfirmNewPassword(e.target.value)}
+              />
+              <button className={styles.password_click} onClick={handleSubmit}>
+                SUBMIT
+              </button>
+              {passwordChangeError && <p className={styles.error}>{passwordChangeError}</p>}
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

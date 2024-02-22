@@ -1,0 +1,460 @@
+[
+    {
+        "id": 1,
+        "name": "Australia",
+        "info": "Down under.",
+        "url": "/card/australia.webp",
+        "location": [
+            "australia",
+            "oceania",
+            "europe"
+        ],
+        "guestCount": 1,
+        "roomCount": 5,
+        "startDate": "1213-03-01",
+        "endDate": "2044-06-09"
+    },
+    {
+        "id": 2,
+        "name": "Brazil",
+        "info": "Double jump.",
+        "url": "/card/brazil.webp",
+        "location": [
+            "brazil",
+            "america",
+            "south america",
+            "latin america"
+        ],
+        "guestCount": 4,
+        "roomCount": 4,
+        "startDate": "2024-03-01",
+        "endDate": "2024-03-12"
+    },
+    {
+        "id": 3,
+        "name": "China",
+        "info": "The real one.",
+        "url": "/card/china.webp",
+        "location": [
+            "china",
+            "taiwan",
+            "asia",
+            "middle kingdom",
+            "winnie the pooh"
+        ],
+        "guestCount": 10,
+        "roomCount": 3,
+        "startDate": "0001-03-01",
+        "endDate": "50000-12-12"
+    },
+    {
+        "id": 4,
+        "name": "Cuba",
+        "info": "The CIA couldn't kill him. They tried.",
+        "url": "/card/cuba.webp",
+        "location": [
+            "cuba",
+            "castro",
+            "south america",
+            "latin america"
+        ],
+        "guestCount": 3,
+        "roomCount": 4,
+        "startDate": "2024-03-01",
+        "endDate": "2480-04-23"
+    },
+    {
+        "id": 5,
+        "name": "Egypt",
+        "info": "6000 years of history, only 1000 years of which anyone cares about.",
+        "url": "/card/egypt.webp",
+        "location": [
+            "egypt",
+            "pyramid",
+            "coptic",
+            "muslim",
+            "middle east",
+            "africa"
+        ],
+        "guestCount": 1,
+        "roomCount": 1,
+        "startDate": "2024-03-01",
+        "endDate": "2024-03-07"
+    },
+    {
+        "id": 6,
+        "name": "France",
+        "info": "It would be nice if they weren't French.",
+        "url": "/card/france.webp",
+        "location": [
+            "france",
+            "paris",
+            "snob",
+            "rosbif",
+            "europe",
+            "wine"
+        ],
+        "guestCount": 1,
+        "roomCount": 1,
+        "startDate": "2024-03-01",
+        "endDate": "2024-03-02"
+    },
+    {
+        "id": 7,
+        "name": "Germany",
+        "info": "Betäubungsmittelverschreibungsverordnung.",
+        "url": "/card/germany.webp",
+        "location": [
+            "germany",
+            "berlin",
+            "sausage",
+            "europe",
+            "beer"
+        ],
+        "guestCount": 1,
+        "roomCount": 1,
+        "startDate": "2024-03-01",
+        "endDate": "2024-03-07"
+    },
+    {
+        "id": 8,
+        "name": "Hawaii",
+        "info": "Not actually part of North America but fuck it.",
+        "url": "/card/hawaii.webp",
+        "location": [
+            "hawaii",
+            "polynesia",
+            "oceania",
+            "asia",
+            "america",
+            "north america",
+            "south america",
+            "luau",
+            "lua",
+            "pineapple"
+        ],
+        "guestCount": 10,
+        "roomCount": 5,
+        "startDate": "2024-03-01",
+        "endDate": "2025-03-01"
+    },
+    {
+        "id": 9,
+        "name": "India",
+        "info": "\"Don't eat the street meats or drink the tap water.\" - Karen, 2024",
+        "url": "/card/india.webp",
+        "location": [
+            "india",
+            "bangladesh",
+            "pakistan",
+            "bhutan",
+            "south asia",
+            "asia",
+            "naan",
+            "ghee",
+            "cow"
+        ],
+        "guestCount": 10,
+        "roomCount": 1,
+        "startDate": "2024-03-01",
+        "endDate": "2024-06-10"
+    },
+    {
+        "id": 10,
+        "name": "Indonesia",
+        "info": "Shariah vTuber.",
+        "url": "/card/indonesia.webp",
+        "location": [
+            "indonesia",
+            "malaysia",
+            "asia",
+            "muslim",
+            "oceania"
+        ],
+        "guestCount": 5,
+        "roomCount": 5,
+        "startDate": "2024-03-01",
+        "endDate": "2024-04-01"
+    },
+    {
+        "id": 11,
+        "name": "Japan",
+        "info": "Weeb.",
+        "url": "/card/japan.webp",
+        "location": [
+            "japan",
+            "weeb",
+            "anime",
+            "samurai",
+            "ninja",
+            "china",
+            "eroge",
+            "black company",
+            "asia",
+            "east asia"
+        ],
+        "guestCount": 1,
+        "roomCount": 1,
+        "startDate": "1945-09-02",
+        "endDate": "2023-09-02"
+    },
+    {
+        "id": 12,
+        "name": "Lapland",
+        "info": "Not the Finnish part.",
+        "url": "/card/lapland.webp",
+        "location": [
+            "lapland",
+            "reindeer",
+            "sami",
+            "sapmi",
+            "europe",
+            "assimilation"
+        ],
+        "guestCount": 2,
+        "roomCount": 3,
+        "startDate": "2026-03-01",
+        "endDate": "2026-03-07"
+    },
+    {
+        "id": 13,
+        "name": "Mexico",
+        "info": "\"Don't eat the street meats or drink the tap water.\" - Karen, 2024",
+        "url": "/card/mexico.webp",
+        "location": [
+            "mexico",
+            "sombrero",
+            "taco",
+            "burrito",
+            "tequila",
+            "empanada",
+            "enchilada",
+            "nacho",
+            "nacho libre",
+            "the wall",
+            "latin america"
+        ],
+        "guestCount": 7,
+        "roomCount": 4,
+        "startDate": "2022-03-01",
+        "endDate": "2027-07-27"
+    },
+    {
+        "id": 14,
+        "name": "Morocco",
+        "info": "This wasn't the bottom of the barrel, but it was close.",
+        "url": "/card/morocco.webp",
+        "location": [
+            "morocco",
+            "tagine",
+            "muslim",
+            "middle east",
+            "africa"
+        ],
+        "guestCount": 4,
+        "roomCount": 5,
+        "startDate": "2024-03-01",
+        "endDate": "2054-03-21"
+    },
+    {
+        "id": 15,
+        "name": "New York",
+        "info": "Explore the Big Apple and its iconic landmarks.",
+        "url": "/card/new_york.webp",
+        "location": [
+            "new york",
+            "boston",
+            "manhattan",
+            "spiderman",
+            "spodermin",
+            "usa",
+            "us",
+            "america",
+            "murrica",
+            "harlem",
+            "twin towers"
+        ],
+        "guestCount": 1,
+        "roomCount": 1,
+        "startDate": "0911-09-11",
+        "endDate": "9110-09-11"
+    },
+    {
+        "id": 16,
+        "name": "New Zealand",
+        "info": "This image has a free license, trust me (it does actually).",
+        "url": "/card/new_zealand.webp",
+        "location": [
+            "new zealand",
+            "middle earth",
+            "lotr",
+            "lord of the rings",
+            "sheep",
+            "australia",
+            "oceania",
+            "maori",
+            "haka"
+        ],
+        "guestCount": 3,
+        "roomCount": 3,
+        "startDate": "1788-01-26",
+        "endDate": "2025-01-26"
+    },
+    {
+        "id": 17,
+        "name": "Nigeria",
+        "info": "Omo.",
+        "url": "/card/nigeria.webp",
+        "location": [
+            "nigeria",
+            "omo",
+            "africa"
+        ],
+        "guestCount": 10,
+        "roomCount": 3,
+        "startDate": "2024-03-01",
+        "endDate": "2027-04-31"
+    },
+    {
+        "id": 18,
+        "name": "Peru",
+        "info": "Chicken pizza.",
+        "url": "/card/peru.webp",
+        "location": [
+            "peru",
+            "inca",
+            "aymara",
+            "quechua",
+            "smallpox",
+            "spanish",
+            "south america",
+            "latin america",
+            "america"
+        ],
+        "guestCount": 4,
+        "roomCount": 5,
+        "startDate": "2024-03-01",
+        "endDate": "2024-05-05"
+    },
+    {
+        "id": 19,
+        "name": "Philippines",
+        "info": "Latin America at home.",
+        "url": "/card/philippines.webp",
+        "location": [
+            "philippines",
+            "filipino",
+            "pinoy",
+            "adobo",
+            "agay",
+            "asia",
+            "latin america",
+            "america",
+            "oceania"
+        ],
+        "guestCount": 1,
+        "roomCount": 1,
+        "startDate": "2024-03-01",
+        "endDate": "2024-03-07"
+    },
+    {
+        "id": 20,
+        "name": "Quebec",
+        "info": "You thought the French were bad? Just you wait and see.",
+        "url": "/card/quebec.webp",
+        "location": [
+            "france",
+            "\"french\"",
+            "quebec",
+            "quebecois",
+            "scum",
+            "montreal",
+            "canada",
+            "america",
+            "north america"
+        ],
+        "guestCount": 2,
+        "roomCount": 3,
+        "startDate": "2024-03-01",
+        "endDate": "2024-12-23"
+    },
+    {
+        "id": 21,
+        "name": "San Francisco",
+        "info": "As expensive to visit as other places are to live.",
+        "url": "/card/san_francisco.webp",
+        "location": [
+            "san francisco",
+            "california",
+            "golden gate bridge",
+            "red bridge",
+            "america",
+            "us",
+            "usa",
+            "north america"
+        ],
+        "guestCount": 1,
+        "roomCount": 1,
+        "startDate": "2024-03-01",
+        "endDate": "2024-06-04"
+    },
+    {
+        "id": 22,
+        "name": "South Africa",
+        "info": "It just hasn't been the same since Apartheid ended.",
+        "url": "/card/south_africa.webp",
+        "location": [
+            "nelson mandela",
+            "mandela effect",
+            "south africa",
+            "afrika",
+            "zulu",
+            "africa"
+        ],
+        "guestCount": 1,
+        "roomCount": 1,
+        "startDate": "2024-03-01",
+        "endDate": "2024-04-27"
+    },
+    {
+        "id": 23,
+        "name": "Thailand",
+        "info": "Bring a green card.",
+        "url": "/card/thailand.webp",
+        "location": [
+            "thailand",
+            "thai",
+            "bangkok",
+            "asia",
+            "south east asia",
+            "south asia"
+        ],
+        "guestCount": 1,
+        "roomCount": 1,
+        "startDate": "1234-05-06",
+        "endDate": "6543-02-01"
+    },
+    {
+        "id": 24,
+        "name": "United Kingdom",
+        "info": "Has your country been ruined by the British Empire? Continue listening to learn how you can be compensated.",
+        "url": "/card/uk.webp",
+        "location": [
+            "uk",
+            "united kindgom",
+            "britain",
+            "england",
+            "scotland",
+            "cornwall",
+            "wales",
+            "fish and chips",
+            "beans on toast",
+            "rosbif",
+            "british empire"
+        ],
+        "guestCount": 1,
+        "roomCount": 1,
+        "startDate": "2024-03-01",
+        "endDate": "2024-03-07"
+    }
+]
