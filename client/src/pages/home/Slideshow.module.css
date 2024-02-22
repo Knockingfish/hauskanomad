@@ -1,28 +1,57 @@
-.formatting_outer{
+/* Image Transition Container */
+
+.image_container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* Ensure that the underneath images are hidden when sliding over */
+  z-index: -1;
+}
+
+.parallax {
+  background-attachment: fixed; /* Fix the background image position during scroll */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  background-size: cover; /* Cover the entire container with the background image */
+}
+
+.image {
+  position: absolute;
+  background-attachment: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 1s ease-in-out; /* Transition only the transform property */
+}
+
+.visible {
+  transform: translateX(0%); /* Slide the image into view */
+  opacity: 1;
+}
+
+.hidden {
+  transform: translateX(100%); /* Slide the image out of view */
+  opacity: 1; /* Hide the image underneath */
+}
+
+.caption {
+  position: absolute;
+  padding: 1rem 2rem 1rem 1rem;
+  border-radius: 0 0 5rem 0;
+  font-size: 2em;
+  color: var(--dark3);
+  background-color: var(--light1);
+  box-shadow: var(--heavy_shadow);
+  z-index: 0;
+}
+
+/* Slideshow control + caption */
+
+.formatting_outer {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.image_container{
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-}
-  
-.image{
-  height: 100vh;
-  width: 100vw;
-  transition: left 0.5s ease;
-  position: relative;
-  left: 0;
 }
 
-.image:not(.current) {
-  transform: translateX(-100%);
-}
-
-.control{
+.control_container {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -32,26 +61,20 @@
   width: 100vw;
 }
 
-.controls{
-  height: 5rem;
-  width: 5rem;
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 4rem;
   margin: 1rem;
   border-radius: 5rem;
   color: var(--dark3);
   background-color: var(--light1);
   box-shadow: var(--heavy_shadow);
 }
-
-.caption{
-  position: absolute;
-  top: 35%;
-  left: 7%;
-  padding: 1rem;
-  border-radius: 5rem;
-  font-size: 2em;
-  font-weight: bolder;
-  font-family: 'Playfair Display';
-  color: var(--dark3);
-  background-color: var(--light1);
-  box-shadow: var(--heavy_shadow);
+.slide_icon {
+  height: 2rem;
+  width: 2rem;
 }

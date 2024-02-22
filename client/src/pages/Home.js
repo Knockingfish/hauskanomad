@@ -1,5 +1,3 @@
-// Home.js
-
 import React, { useState, useEffect } from 'react';
 import CustomHeader from './global/CustomHeader';
 import DestinationCard from "./home/DestinationCard";
@@ -17,6 +15,10 @@ const Home = () => {
   const [endDate, setEndDate] = useState(null);
   const [numGuests, setNumGuests] = useState(1);
   const [numRooms, setNumRooms] = useState(1);
+
+  useEffect(() => {
+    document.title = 'HauskaNomad - Home';
+  }, []);
 
   useEffect(() => {
     setDestinations(destinationData);
