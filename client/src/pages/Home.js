@@ -1,37 +1,34 @@
-import React, { useEffect, useState } from "react";
-import CustomHeader from './global/CustomHeader'
+// Home.js
+
+import React, { useState, useEffect } from 'react';
+import CustomHeader from './global/CustomHeader';
 import DestinationCard from "./home/DestinationCard";
-import SearchBar from "./home/SearchBar";
 import Slideshow from "./home/Slideshow";
+import SearchBar from './home/SearchBar';
 import NewsletterSubscription from "./home/NewsletterSubscription";
 import CustomFooter from './global/CustomFooter';
 import styles from './Home.module.css';
+import destinationData from './destinations.json';
 
 const Home = () => {
   const [destinations, setDestinations] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+  const [numGuests, setNumGuests] = useState(1);
+  const [numRooms, setNumRooms] = useState(1);
 
   useEffect(() => {
-    document.title = 'HauskaNomad - Home Page';
-    fetchDestinations();
+    setDestinations(destinationData);
   }, []);
 
-  const fetchDestinations = () => {
-    fetch("http://localhost:5000/api/destinations")
-      .then((response) => response.json())
-      .then((data) => {
-        setDestinations(data.destinations);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching destinations:", error);
-        setLoading(false);
-      });
-  };
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  const filteredDestinations = destinations.filter(destination =>
+    destination.location.some(location => location.toLowerCase().includes(searchQuery.toLowerCase())) &&
+    (!startDate || new Date(destination.startDate) >= startDate) &&
+    (!endDate || new Date(destination.endDate) <= endDate) &&
+    destination.guestCount >= numGuests &&
+    destination.roomCount >= numRooms
+  );
 
   return (
     <div className="container">
@@ -39,14 +36,31 @@ const Home = () => {
         <CustomHeader />
       </div>
 
-      <div className="slideshow">
+      <div className={styles.slideshow}>
         <Slideshow />
       </div>
 
+      <SearchBar
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        startDate={startDate}
+        setStartDate={setStartDate}
+        endDate={endDate}
+        setEndDate={setEndDate}
+        numGuests={numGuests}
+        setNumGuests={setNumGuests}
+        numRooms={numRooms}
+        setNumRooms={setNumRooms}
+      />
+
       <div className={styles.grid_container}>
         <div className={styles.card_grid}>
-          {destinations.map(destination => (
-            <DestinationCard key={destination.id} destination={destination} />
+          {/* Render filtered destinations */}
+          {filteredDestinations.map(destination => (
+            <DestinationCard
+              key={destination.id}
+              destination={destination}
+            />
           ))}
         </div>
       </div>
