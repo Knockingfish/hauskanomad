@@ -3,3 +3,23 @@
   box-shadow: var(--heavy_shadow);
   z-index: 1;
 }
+
+.top, .middle{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.top {
+  box-shadow: var(--heavy_shadow);
+}
+
+.bottom{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 67.5rem;
+  width: 100vw;
+}

@@ -1,17 +1,20 @@
-
+import styles from './ReviewComments.module.css';
 import React from 'react';
 
-const ReviewComments = ({ reviews }) => {
+const ReviewComments = () => {
   return (
-    <div>
-      <h2>Reviews and Comments</h2>
-      {reviews.map((review, index) => (
-        <div key={index}>
-          <p>{review.comment}</p>
-          <p>Score: {review.score}</p>
-          <p>Username: {review.username}</p>
-        </div>
-      ))}
+    <div className={styles.review_container}>
+      <div className={styles.review_header}>
+        <h2 className={styles.header}>Reviews and Comments</h2>
+      </div>
+      <div className={styles.bruv}>
+        <p></p>
+          <div className="rating-container">
+            <div className="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div className="rating-bar"></div>
+          </div>
+        <p>Username: </p>
+      </div>
     </div>
   );
 };

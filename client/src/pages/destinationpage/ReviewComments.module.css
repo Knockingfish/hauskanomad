@@ -1,0 +1,26 @@
+.review_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    border-radius: 2rem;
+    background-color: var(--dark2);
+}
+
+.review_header {
+    padding: 0 1rem 0 1rem;
+    margin: 1rem;
+    border-radius: 5rem;
+    color: var(--light1);
+    background-color: var(--dark3);
+}
+
+.bruv {
+    margin: 1rem;
+    border-radius: 1.5rem;
+    font-size: 1.5em;
+    color: var(--light1);
+    background-color: var(--dark3);
+}

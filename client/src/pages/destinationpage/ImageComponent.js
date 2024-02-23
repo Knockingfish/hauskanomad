@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './ImageComponent.module.css';
 
 const ImageComponent = ({ images }) => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -12,16 +13,16 @@ const ImageComponent = ({ images }) => {
   };
 
   return (
-    <div>
-      {images.map((image, index) => (
+    <div className={styles.images}>
+     
         <img
-          key={index}
-          src={image}
-          alt={`Destination ${index + 1}`}
-          onClick={() => handleClick(index)}
+        className={styles.img}
+          src='/destination/australia.webp'
+          alt='something'
+          
           style={{ cursor: 'pointer' }}
         />
-      ))}
+    
       {selectedImage !== null && (
         <Modal image={images[selectedImage]} closeModal={closeModal} />
       )}

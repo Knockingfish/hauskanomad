@@ -78,3 +78,9 @@
   height: 2rem;
   width: 2rem;
 }
+.controls:hover {
+  background-color: var(--red1);
+}
+.controls:active {
+  background-color: var(--red2);
+}
