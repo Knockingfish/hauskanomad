@@ -25,18 +25,18 @@
     box-shadow: var(--light_shadow);
 }
 
-input {
+.input {
     padding: 0.5rem;
     margin: 0.5rem;
     border-radius: 5rem;
     background-color: var(--light1);
     box-shadow: var(--light_shadow);
 }
-input:hover {
+.input:hover {
     color: var(--white);
     background-color: var(--red1);
 }
-input:focus {
+.input:focus {
     color: var(--white);
     background-color: var(--red2);
 }

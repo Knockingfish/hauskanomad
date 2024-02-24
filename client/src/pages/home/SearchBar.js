@@ -19,123 +19,125 @@ const SearchBar = ({ searchQuery, setSearchQuery, startDate, setStartDate, endDa
       <Rule/>
       <div className={styles.search_bg}>
         <p className={styles.title}>Search</p>
-        <p className={styles.content}>Placeholder text because it kind of helps the "style"</p>
-        <div className={styles.search_bar}>
-          {/* Dropdown search"bar" */}
-          <div className={styles.drop_container}>
-            <button className={styles.drop_button} onClick={() => setShowMenu(!showMenu)}>
-              <img
-                className={styles.drop_icon}
-                src={darkMode ? '/down_dark.png' : '/down_light.png'}
-                alt="drop"
-              />
-            </button>
-            {showMenu && (
-              <div className={styles.search_menu}>
-                <div className={styles.menu_section}>
-                  <input
-                    className={styles.menu_item1}
-                    type="text"
-                    placeholder="Search destinations..."
-                    value={searchQuery}
-                    onChange={handleInputChange}
-                    name="textQuery"
-                  />
-                  <DatePicker
-                    className={styles.menu_item2}
-                    calendarClassName={styles.calendar}
-                    selected={startDate}
-                    onChange={date => setStartDate(date)}
-                    selectsStart
-                    startDate={startDate}
-                    endDate={endDate}
-                    placeholderText="Select start date..."
-                  />
-                  <DatePicker
-                    className={styles.menu_item3}
-                    calendarClassName={styles.calendar}
-                    selected={endDate}
-                    onChange={date => setEndDate(date)}
-                    selectsEnd
-                    startDate={startDate}
-                    endDate={endDate}
-                    minDate={startDate}
-                    placeholderText="Select end date..."
-                  />
-                  <div className={styles.slider_menu1}>
-                    <span className={styles.range_item}>Guests: {numGuests}</span>
+        <p className={styles.content}>See all of our wonderful locations!</p>
+        <div className={styles.position}>
+          <div className={styles.search_bar}>
+            {/* Dropdown search"bar" */}
+            <div className={styles.drop_container}>
+              <button className={styles.drop_button} onClick={() => setShowMenu(!showMenu)}>
+                <img
+                  className={styles.drop_icon}
+                  src={darkMode ? '/down_dark.png' : '/down_light.png'}
+                  alt="drop"
+                />
+              </button>
+              {showMenu && (
+                <div className={styles.search_menu}>
+                  <div className={styles.menu_section}>
                     <input
-                      type="range"
-                      value={numGuests}
-                      min={1}
-                      max={10}
-                      onChange={(e) => setNumGuests(parseInt(e.target.value))}
+                      className={styles.menu_item1}
+                      type="text"
+                      placeholder="Search destinations..."
+                      value={searchQuery}
+                      onChange={handleInputChange}
+                      name="textQuery"
                     />
-                  </div>
-                  <div className={styles.slider_menu2}>
-                    <span className={styles.range_item}>Rooms: {numRooms}</span>
-                    <input
-                      type="range"
-                      value={numRooms}
-                      min={1}
-                      max={5}
-                      onChange={(e) => setNumRooms(parseInt(e.target.value))}
+                    <DatePicker
+                      className={styles.menu_item2}
+                      calendarClassName={styles.calendar}
+                      selected={startDate}
+                      onChange={date => setStartDate(date)}
+                      selectsStart
+                      startDate={startDate}
+                      endDate={endDate}
+                      placeholderText="Select start date..."
                     />
+                    <DatePicker
+                      className={styles.menu_item3}
+                      calendarClassName={styles.calendar}
+                      selected={endDate}
+                      onChange={date => setEndDate(date)}
+                      selectsEnd
+                      startDate={startDate}
+                      endDate={endDate}
+                      minDate={startDate}
+                      placeholderText="Select end date..."
+                    />
+                    <div className={styles.slider_menu1}>
+                      <span className={styles.range_item}>Guests: {numGuests}</span>
+                      <input
+                        type="range"
+                        value={numGuests}
+                        min={1}
+                        max={10}
+                        onChange={(e) => setNumGuests(parseInt(e.target.value))}
+                      />
+                    </div>
+                    <div className={styles.slider_menu2}>
+                      <span className={styles.range_item}>Rooms: {numRooms}</span>
+                      <input
+                        type="range"
+                        value={numRooms}
+                        min={1}
+                        max={5}
+                        onChange={(e) => setNumRooms(parseInt(e.target.value))}
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
-          </div>
-          {/* Expanded searchbar */}
-          <div className={styles.bar_section}>
-            <input
-              className={styles.bar_item1}
-              type="text"
-              placeholder="Search destinations..."
-              value={searchQuery}
-              onChange={handleInputChange}
-              name="textQuery"
-            />
-            <DatePicker
-              className={styles.bar_item2}
-              calendarClassName={styles.calendar}
-              selected={startDate}
-              onChange={date => setStartDate(date)}
-              selectsStart
-              startDate={startDate}
-              endDate={endDate}
-              placeholderText="Select start date..."
-            />
-            <DatePicker
-              className={styles.bar_item3}
-              calendarClassName={styles.calendar}
-              selected={endDate}
-              onChange={date => setEndDate(date)}
-              selectsEnd
-              startDate={startDate}
-              endDate={endDate}
-              minDate={startDate}
-              placeholderText="Select end date..."
-            />
-            <div className={styles.slider_item1}>
-              <span className={styles.range_item}>Guests: {numGuests}</span>
-              <input
-                type="range"
-                value={numGuests}
-                min={1}
-                max={10}
-                onChange={(e) => setNumGuests(parseInt(e.target.value))}
-              />
+              )}
             </div>
-            <div className={styles.slider_item2}>
-              <span className={styles.range_item}>Rooms: {numRooms}</span>
+            {/* Expanded searchbar */}
+            <div className={styles.bar_section}>
               <input
-                type="range"
-                value={numRooms}
-                min={1}
-                max={5}
-                onChange={(e) => setNumRooms(parseInt(e.target.value))}
+                className={styles.bar_item1}
+                type="text"
+                placeholder="Search destinations..."
+                value={searchQuery}
+                onChange={handleInputChange}
+                name="textQuery"
               />
+              <DatePicker
+                className={styles.bar_item2}
+                calendarClassName={styles.calendar}
+                selected={startDate}
+                onChange={date => setStartDate(date)}
+                selectsStart
+                startDate={startDate}
+                endDate={endDate}
+                placeholderText="Select start date..."
+              />
+              <DatePicker
+                className={styles.bar_item3}
+                calendarClassName={styles.calendar}
+                selected={endDate}
+                onChange={date => setEndDate(date)}
+                selectsEnd
+                startDate={startDate}
+                endDate={endDate}
+                minDate={startDate}
+                placeholderText="Select end date..."
+              />
+              <div className={styles.slider_item1}>
+                <span className={styles.range_item}>Guests: {numGuests}</span>
+                <input
+                  type="range"
+                  value={numGuests}
+                  min={1}
+                  max={10}
+                  onChange={(e) => setNumGuests(parseInt(e.target.value))}
+                />
+              </div>
+              <div className={styles.slider_item2}>
+                <span className={styles.range_item}>Rooms: {numRooms}</span>
+                <input
+                  type="range"
+                  value={numRooms}
+                  min={1}
+                  max={5}
+                  onChange={(e) => setNumRooms(parseInt(e.target.value))}
+                />
+              </div>
             </div>
           </div>
         </div>

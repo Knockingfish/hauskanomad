@@ -6,6 +6,14 @@
   justify-content: center;
 }
 
+.position {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .search_bg {
   margin: 2rem;
   border-radius: 2rem;
@@ -42,6 +50,7 @@
   align-items: center;
   justify-content: space-between;
   height: 4rem;
+  width: auto;
   padding: 0 0.5rem 0 0.5rem;
   margin: 0 0.5rem 0 0.5rem;
   border-radius: 5rem;
@@ -52,27 +61,75 @@
 
 /* Generic input */
 
-.bar_item {
+.bar_item1 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 11rem;
   height: 2rem;
+  width: auto;
   padding: 0.5rem;
   border-radius: 5rem;
   font-size: 1em;
   color: var(--light1);
 }
-.bar_item:hover {
+.bar_item1:hover {
   color: var(--white);
   background-color: var(--red1);
   box-shadow: var(--light_shadow);
 }
-.bar_item:active {
+.bar_item1:active {
   background-color: var(--red2);
 }
-.bar_item:focus {
+.bar_item1:focus {
+  color: var(--white);
+  background-color: var(--red2);
+}
+.bar_item2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: auto;
+  padding: 0.5rem;
+  border-radius: 5rem;
+  font-size: 1em;
+  color: var(--light1);
+}
+.bar_item2:hover {
+  color: var(--white);
+  background-color: var(--red1);
+  box-shadow: var(--light_shadow);
+}
+.bar_item2:active {
+  background-color: var(--red2);
+}
+.bar_item2:focus {
+  color: var(--white);
+  background-color: var(--red2);
+}
+.bar_item3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: auto;
+  padding: 0.5rem;
+  border-radius: 5rem;
+  font-size: 1em;
+  color: var(--light1);
+}
+.bar_item3:hover {
+  color: var(--white);
+  background-color: var(--red1);
+  box-shadow: var(--light_shadow);
+}
+.bar_item3:active {
+  background-color: var(--red2);
+}
+.bar_item3:focus {
   color: var(--white);
   background-color: var(--red2);
 }
@@ -84,6 +141,7 @@
   align-items: center;
   justify-content: center;
   height: 4rem;
+  width: auto;
   border-radius: 5rem;
   font-size: 1em;
   font-weight: bold;
@@ -137,8 +195,8 @@
   align-items: center;
   justify-content: center;
   height: auto;
-  width: auto;
-  margin: 5.5rem;
+  width: 18rem;
+  margin-top: 5.5rem;
   border-radius: 1.5rem;
   background-color: var(--dark2);
   z-index: 1;
@@ -149,20 +207,23 @@
   align-items: center;
   justify-content: center;
   height: auto;
-  width: auto;
+  width: 16rem;
   border-radius: 1.25rem;
   padding: 0.5rem;
   margin: 0.5rem;
   background-color: var(--dark3);
 }
 
-@media (min-width: 75rem) {
+@media (min-width: 90rem) {
   .drop_container {
     display: none;
   }
 }
 
-@media (max-width: 75rem) {
+@media (max-width: 90rem) {
+  .menu_section {
+    height: auto;
+  }
   .menu_item1, .menu_item2, .menu_item3, .slider_menu1 {
     display: none;
   }
@@ -170,10 +231,6 @@
     display: none;
   }
   .slider_menu2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     height: 4rem;
     border-radius: 5rem;
     font-size: 1em;
@@ -181,7 +238,7 @@
   }
 }
 
-@media (max-width: 70rem) {
+@media (max-width: 81rem) {
   .slider_item1 {
     display: none;
   }
@@ -196,7 +253,7 @@
     font-weight: bold;
   }
 }
-@media (max-width: 55rem) {
+@media (max-width: 66rem) {
   .bar_item3 {
     display: none;
   }
@@ -205,8 +262,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: auto;
     height: 2rem;
+    width: 15rem;
     padding: 0.5rem;
     border-radius: 5rem;
     font-size: 1em;
@@ -226,7 +283,17 @@
   }
 }
 
-@media (max-width: 45rem) {
+@media (max-width: 51rem) {
+  .search_bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+  }
+  .drop_button {
+    margin: 0;
+  }
   .bar_item2, .bar_item1, .bar_section {
     display: none;
   }
@@ -235,8 +302,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: auto;
     height: 2rem;
+    width: 15rem;
     padding: 0.5rem;
     border-radius: 5rem;
     font-size: 1em;

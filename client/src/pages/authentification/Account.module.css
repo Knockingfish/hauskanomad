@@ -11,10 +11,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: auto;
+  width: auto;
   border-radius: 1.5rem;
   background-color: var(--light1);
   box-shadow: var(--heavy_shadow);
   font-size: 1.25em;
+}
+
+.title {
+  margin-bottom: 0.5rem;
 }
 
 .menu {
@@ -22,7 +28,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 0.5rem;
+  height: auto;
+  width: auto;
+  padding: 0.5rem;
   margin: 1rem;
   border-radius: 1.5rem;
   background-color: var(--dark2);
@@ -31,8 +39,9 @@
 
 .menu input {
   outline: none;
+  height: 2rem;
   padding: 0.5rem;
-  margin: 0.5rem 1rem 0.5rem 1rem;
+  margin: 0.5rem;
   border-radius: 2rem;
   color: var(--light1);
   background-color: var(--dark3);

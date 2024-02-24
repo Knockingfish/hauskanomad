@@ -76,12 +76,12 @@ function CustomHeader() {
       {isLoggedIn ? (
         <>
         <Link className={`${styles.burger_menu_item2} ${location.pathname === "/profile" ? styles.active : ""}`} to="/profile">PROFILE</Link>
-        <Link className={`${styles.burger_menu_item1} ${location.pathname === "/profile" ? styles.active : ""}`} onClick={handleLogout}>LOGOUT</Link>
+        <Link className={styles.burger_menu_item1} onClick={handleLogout}>LOGOUT</Link>
         </>
       ) : (
         <>
-        <Link className={`${styles.burger_menu_item2} ${location.pathname === "/login" ? styles.active : ""}`} to="/login">LOGIN</Link>
-        <Link className={`${styles.burger_menu_item1} ${location.pathname === "/register" ? styles.active : ""}`} to="/register">REGISTER</Link>
+        <Link className={`${styles.burger_menu_item1} ${location.pathname === "/login" ? styles.active : ""}`} to="/login">LOGIN</Link>
+        <Link className={`${styles.burger_menu_item2} ${location.pathname === "/register" ? styles.active : ""}`} to="/register">REGISTER</Link>
         </>
       )}
       <a className={styles.burger_menu_item3} href="https://github.com/Knockingfish/hauskanomad">SOURCE</a>
