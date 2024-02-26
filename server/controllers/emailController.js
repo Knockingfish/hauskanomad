@@ -16,7 +16,7 @@ const sendEmail = async (email) => {
 
     // Send mail with defined transport object
     let info = await transporter.sendMail({
-      from: '"Your App" <your_outlook_email@outlook.com>', // Sender address
+      from: 'hauskanomad@outlook.com', // Sender address
       to: email, // Recipient email address
       subject: "Welcome to Our Newsletter", // Subject line
       text: "Thank you for subscribing to our newsletter!", // Plain text body
