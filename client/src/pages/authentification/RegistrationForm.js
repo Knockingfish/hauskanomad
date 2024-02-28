@@ -13,15 +13,22 @@ const RegistrationForm = () => {
 
     try {
       // Send a POST request to the registration route
-      await axios.post('http://localhost:5000/auth/register', { email, password, username });
+      await axios.post('http://localhost:5000/register', { email, password, username });
 
       // If the registration was successful, update the registration status
       setRegistrationStatus('Registration successful!');
     } catch (error) {
-      // If there was an error during registration, update the registration status with the error message
-      setRegistrationStatus(`Registration failed: ${error.response.data.message}`);
+      // Check if error.response exists before accessing its properties
+      if (error.response && error.response.data && error.response.data.message) {
+        // If there was an error during registration, update the registration status with the error message
+        setRegistrationStatus(`Registration failed: ${error.response.data.message}`);
+      } else {
+        // If error.response doesn't exist or doesn't have expected properties, handle the error accordingly
+        setRegistrationStatus(`Registration failed: ${error.message}`);
+      }
     }
   };
+
 
   return (
     <div>
