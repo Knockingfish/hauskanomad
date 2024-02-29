@@ -3,52 +3,81 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    height: 30rem;
     width: 60vw;
+    border-radius: 0 0 0 4rem;
+    background-color: var(--light1);
+    box-shadow: var(--heavy_shadow);
 }
 
-.booking_outer {
+.booking_bg {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: auto;
-    width: 90%;
-    border-radius: 2rem;
-    font-size: 2em;
+    width: 60%;
+    border-radius: 2.5rem;
     color: var(--light1);
     background-color: var(--dark2);
-    box-shadow: var(--light_shadow);
-}
-
-.booking_info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 90%;
-    width: 90%;
-    margin: 2rem;
-    border-radius: 2rem;
-    background-color: var(--dark3);
-    box-shadow: var(--heavy-shadow);
-}
-
-.booking_inner {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    justify-content: start;
-    height: 90%;
-    width: 90%;
-    padding: 1rem;
-    border-radius: 2rem;
-    font-size: 1em;
-    color: var(--light1);
+    box-shadow: var(--heavy_shadow);
 }
 
 .header {
     padding: 1rem;
+    margin: 1rem 1rem 0 1rem;
     border-radius: 5rem;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--light1);
     background-color: var(--dark3);
+    box-shadow: var(--light_shadow);
+}
+.booking_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    width: 90%;
+    margin: 1rem;
+    border-radius: 2rem;
+    color: var(--light1);
+    background-color: var(--dark3);
+    box-shadow: var(--light_shadow);
+}
+
+.listing {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    color: var(--dark3);
+    background-color: var(--light1);
+    box-shadow: var(--light_shadow);
+}
+
+@media (max-width: 70rem) {
+    .booking_container {
+        height: 40rem;
+    }
+    .booking_info {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 60rem) {
+    .booking_container {
+        height: 40rem;
+        width: 100vw;
+        border-radius: 0;
+    }
+    .header {
+        border-radius: 2.5rem;
+        max-width: 70vw;
+    }
 }
