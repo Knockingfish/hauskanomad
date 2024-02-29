@@ -1,57 +1,40 @@
 import React, { useState } from 'react';
 import styles from './ImageComponent.module.css';
 
-const ImageComponent = ({ images }) => {
-  const [selectedImage, setSelectedImage] = useState(null);
+const ImageComponent = ({ image }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleClick = (index) => {
-    setSelectedImage(index);
+  const openModal = () => {
+    setIsOpen(true);
   };
 
   const closeModal = () => {
-    setSelectedImage(null);
+    setIsOpen(false);
   };
 
   return (
-    <div className={styles.images}>
-     
-        <img
+    <div className={styles.image_container}>
+      <img
         className={styles.img}
-          src='/destination/australia.webp'
-          alt='something'
-          
-          style={{ cursor: 'pointer' }}
-        />
-    
-      {selectedImage !== null && (
-        <Modal image={images[selectedImage]} closeModal={closeModal} />
-      )}
+        onClick={openModal}
+        src={image}
+        alt='destination'
+      />
+      <div className={styles.overlay} />
     </div>
   );
 };
 
 const Modal = ({ image, closeModal }) => {
   return (
-    <div
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        backgroundColor: 'rgba(0, 0, 0, 0.7)',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-      onClick={closeModal}
-    >
-      <img
-        src={image}
-        alt="Expanded"
-        style={{ maxWidth: '80%', maxHeight: '80%', objectFit: 'contain' }}
-        onClick={(e) => e.stopPropagation()}
-      />
+    <div className={styles.modalOverlay} onClick={closeModal}>
+      <div className={styles.modalContent}>
+        <img
+          src={image}
+          alt="Expanded"
+          className={styles.modalImage}
+        />
+      </div>
     </div>
   );
 };

@@ -1,17 +1,55 @@
-.images{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    height: 80vh;
-    width: 60vw;
-    box-shadow: var(--heavy-shadow);
-  }
+.image_container {
+  position: relative;
+  height: 40rem;
+  width: 60vw;
+  border-radius: 1rem 5rem 9rem 13rem;
+}
 
-.img{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
+.img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-color: var(--light1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  box-shadow: inset var(--heavy_shadow);
+  z-index: 99;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.66);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+}
+
+.modalImage {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 60rem) {
+  .image_container {
+    height: auto;
+    width: 100vw;
+  }
 }

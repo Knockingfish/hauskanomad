@@ -1,7 +1,7 @@
 .end_container {
   position: relative;
   box-shadow: var(--heavy_shadow);
-  z-index: 1;
+  z-index: 2;
 }
 
 .top, .middle{
@@ -9,10 +9,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-
-.top {
-  box-shadow: var(--heavy_shadow);
+  margin: 0;
 }
 
 .bottom{
@@ -22,4 +19,10 @@
   justify-content: center;
   height: 67.5rem;
   width: 100vw;
+}
+
+@media (max-width: 60rem) {
+  .top, .middle {
+    flex-direction: column;
+  }
 }

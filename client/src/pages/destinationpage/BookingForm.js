@@ -1,26 +1,85 @@
-import styles from './BookingForm.module.css'
+import styles from './BookingForm.module.css';
 import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
 
 const BookingForm = () => {
-  
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+  const [guests, setGuests] = useState(1);
+  const [rooms, setRooms] = useState(1);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Construct the data object with form values
+    const formData = {
+      startDate: startDate ? startDate.toISOString() : null,
+      endDate: endDate ? endDate.toISOString() : null,
+      guests: parseInt(guests),
+      rooms: parseInt(rooms)
+    };
+
+    try {
+      // Send the form data to the server
+      const response = await fetch('/api/bookings', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        // Handle successful response from the server
+        console.log('Form data submitted successfully:', formData);
+      } else {
+        // Handle error response from the server
+        console.error('Error submitting form data:', response.statusText);
+      }
+    } catch (error) {
+      // Handle network errors
+      console.error('Error submitting form data:', error.message);
+    }
+  };
 
   return (
-    <form className={styles.outer_container}>
+    <form className={styles.outer_container} onSubmit={handleSubmit}>
       <div className={styles.form_container}>
+        <div className={styles.header}>Book now!</div>
         <div className={styles.input_container}>
-          <input
+          <DatePicker
             className={styles.input}
-            placeholder="dunno"
+            selected={startDate}
+            onChange={date => setStartDate(date)}
+            placeholderText="Select start date..."
           />
-          <input
+          <DatePicker
             className={styles.input}
-            placeholder="wut dis"
+            selected={endDate}
+            onChange={date => setEndDate(date)}
+            placeholderText="Select end date..."
           />
-          <input
-            className={styles.input}
-            placeholder="who dat"
-          />
-          <button className={styles.form_button} type="submit">BOOK NOW</button>
+          <div className={styles.slider}>
+            <span className={styles.range_item}>Guests: {guests}</span>
+            <input
+              type="range"
+              value={guests}
+              min={1}
+              max={10}
+              onChange={e => setGuests(e.target.value)}
+            />
+          </div>
+          <div className={styles.slider}>
+            <span className={styles.range_item}>Rooms: {rooms}</span>
+            <input
+              type="range"
+              value={rooms}
+              min={1}
+              max={5}
+              onChange={e => setRooms(e.target.value)}
+            />
+          </div>
+          <button className={styles.form_button} type="submit">SUBMIT</button>
         </div>
       </div>
     </form>
