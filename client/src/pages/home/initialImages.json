@@ -2,121 +2,145 @@
     {
         "id": 1,
         "url": "/slideshow/australia.webp",
-        "caption": "A modern vacation."
+        "caption": "Discover modern wonders.",
+        "alt": "australia"
     },
     {
         "id": 2,
         "url": "/slideshow/brazil.webp",
-        "caption": "Take in the fresh air and the relaxing atmosphere."
+        "caption": "Breathe in nature's charm.",
+        "alt": "brazil"
     },
     {
         "id": 3,
         "url": "/slideshow/china.webp",
-        "caption": "The fun doesn't end even when the sun goes down."
+        "caption": "Endless fun after dark.",
+        "alt": "china"
     },
     {
         "id": 4,
         "url": "/slideshow/cuba.webp",
-        "caption": "A place for you to relax alone or with company."
+        "caption": "Relaxation awaits you.",
+        "alt": "cuba"
     },
     {
         "id": 5,
         "url": "/slideshow/egypt.webp",
-        "caption": "Cut off contact from the world and focus on inner peace."
+        "caption": "Find inner peace here.",
+        "alt": "egypt"
     },
     {
         "id": 6,
         "url": "/slideshow/france.webp",
-        "caption": "Cut off contact from the world and focus on inner peace."
+        "caption": "Experience timeless charm.",
+        "alt": "france"
     },
     {
         "id": 7,
         "url": "/slideshow/germany.webp",
-        "caption": "A modern vacation."
+        "caption": "Modern marvels await.",
+        "alt": "germany"
     },
     {
         "id": 8,
         "url": "/slideshow/hawaii.webp",
-        "caption": "Take in the fresh air and the relaxing atmosphere."
+        "caption": "Embrace serenity.",
+        "alt": "hawaii"
     },
     {
         "id": 9,
         "url": "/slideshow/india.webp",
-        "caption": "The fun doesn't end even when the sun goes down."
+        "caption": "Nighttime delights await.",
+        "alt": "india"
     },
     {
         "id": 10,
         "url": "/slideshow/indonesia.webp",
-        "caption": "A place for you to relax alone or with company."
+        "caption": "Perfect for solitude.",
+        "alt": "indonesia"
     },
     {
         "id": 11,
         "url": "/slideshow/japan.webp",
-        "caption": "Cut off contact from the world and focus on inner peace."
+        "caption": "Serene cultural escape.",
+        "alt": "japan"
     },
     {
         "id": 12,
         "url": "/slideshow/lapland.webp",
-        "caption": "Cut off contact from the world and focus on inner peace."
+        "caption": "Escape to tranquility.",
+        "alt": "lapland"
     },
     {
         "id": 13,
         "url": "/slideshow/mexico.webp",
-        "caption": "A modern vacation."
+        "caption": "Vibrant vacation spot.",
+        "alt": "mexico"
     },
     {
         "id": 14,
         "url": "/slideshow/morocco.webp",
-        "caption": "Take in the fresh air and the relaxing atmosphere."
+        "caption": "Relax in scenic beauty.",
+        "alt": "morocco"
     },
     {
         "id": 15,
         "url": "/slideshow/new_york.webp",
-        "caption": "The fun doesn't end even when the sun goes down."
+        "caption": "City that never sleeps.",
+        "alt": "new york"
     },
     {
         "id": 16,
         "url": "/slideshow/new_zealand.webp",
-        "caption": "A place for you to relax alone or with company."
+        "caption": "Nature's retreat.",
+        "alt": "new zealand"
     },
     {
         "id": 17,
         "url": "/slideshow/nigeria.webp",
-        "caption": "Cut off contact from the world and focus on inner peace."
+        "caption": "Find peace within.",
+        "alt": "nigeria"
     },
     {
         "id": 18,
         "url": "/slideshow/peru.webp",
-        "caption": "Cut off contact from the world and focus on inner peace."
+        "caption": "Discover inner calm.",
+        "alt": "peru"
     },
     {
         "id": 19,
         "url": "/slideshow/phillipines.webp",
-        "caption": "A modern vacation."
+        "caption": "Modern paradise.",
+        "alt": "philippines"
     },
     {
         "id": 20,
         "url": "/slideshow/quebec.webp",
-        "caption": "Take in the fresh air and the relaxing atmosphere."
+        "caption": "Charm in every corner.",
+        "alt": "quebec"
     },
     {
         "id": 21,
         "url": "/slideshow/san_francisco.webp",
-        "caption": "The fun doesn't end even when the sun goes down."
+        "caption": "Nightlife adventure.",
+        "alt": "san francisco"
     },
     {
         "id": 22,
         "url": "/slideshow/south_africa.webp",
-        "caption": "A place for you to relax alone or with company."
+        "caption": "Solitude or company.",
+        "alt": "south africa"
     },
     {
         "id": 23,
         "url": "/slideshow/thailand.webp",
-        "caption": "Cut off contact from the world and focus on inner peace."
+        "caption": "Tranquil hideaway.",
+        "alt": "thailand"
     },
     {
         "id": 24,
         "url": "/slideshow/uk.webp",
-        "caption": "Cut off contact from the world and focus on inner peace."
+        "caption": "Escape to tranquility.",
+        "alt": "uk"
     }
 ]

@@ -36,7 +36,7 @@ const Slideshow = () => {
                 key={index}
                 className={`${styles.image} ${isActive ? styles.visible : styles.hidden} ${isNext ? styles.next : ''}`}
                 src={image.url}
-                alt={image.caption}
+                alt={image.alt}
               />
             );
           })}

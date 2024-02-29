@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Australia",
-        "info": "Down under.",
+        "info": "Vast landscapes and diverse wildlife. Explore the beauty of Down Under.",
         "url": "/card/australia.webp",
         "location": [
             "australia",
@@ -17,7 +17,7 @@
     {
         "id": 2,
         "name": "Brazil",
-        "info": "Double jump.",
+        "info": "Experience the rhythm of samba and the lush Amazon rainforest.",
         "url": "/card/brazil.webp",
         "location": [
             "brazil",
@@ -33,7 +33,7 @@
     {
         "id": 3,
         "name": "China",
-        "info": "The real one.",
+        "info": "Rich history and vibrant culture. Discover the wonders of the Middle Kingdom.",
         "url": "/card/china.webp",
         "location": [
             "china",
@@ -50,7 +50,7 @@
     {
         "id": 4,
         "name": "Cuba",
-        "info": "The CIA couldn't kill him. They tried.",
+        "info": "Revolutionary spirit and Caribbean charm. Explore the streets of Havana.",
         "url": "/card/cuba.webp",
         "location": [
             "cuba",
@@ -66,7 +66,7 @@
     {
         "id": 5,
         "name": "Egypt",
-        "info": "6000 years of history, only 1000 years of which anyone cares about.",
+        "info": "An ancient civilization steeped in mystique. Discover the wonders of the Nile.",
         "url": "/card/egypt.webp",
         "location": [
             "egypt",
@@ -84,7 +84,7 @@
     {
         "id": 6,
         "name": "France",
-        "info": "It would be nice if they weren't French.",
+        "info": "Exquisite cuisine and timeless elegance. Discover the essence of France.",
         "url": "/card/france.webp",
         "location": [
             "france",
@@ -102,7 +102,7 @@
     {
         "id": 7,
         "name": "Germany",
-        "info": "Betäubungsmittelverschreibungsverordnung.",
+        "info": "A blend of rich history and modern innovation. Explore the heart of Europe.",
         "url": "/card/germany.webp",
         "location": [
             "germany",
@@ -119,7 +119,7 @@
     {
         "id": 8,
         "name": "Hawaii",
-        "info": "Not actually part of North America but fuck it.",
+        "info": "Tropical paradise with stunning beaches and volcanic landscapes.",
         "url": "/card/hawaii.webp",
         "location": [
             "hawaii",
@@ -141,7 +141,7 @@
     {
         "id": 9,
         "name": "India",
-        "info": "\"Don't eat the street meats or drink the tap water.\" - Karen, 2024",
+        "info": "A land of diverse cultures and spiritual richness. Experience the colors of India.",
         "url": "/card/india.webp",
         "location": [
             "india",
@@ -162,7 +162,7 @@
     {
         "id": 10,
         "name": "Indonesia",
-        "info": "Shariah vTuber.",
+        "info": "A diverse archipelago with stunning natural beauty. Explore the wonders of Indonesia.",
         "url": "/card/indonesia.webp",
         "location": [
             "indonesia",
@@ -179,7 +179,7 @@
     {
         "id": 11,
         "name": "Japan",
-        "info": "Weeb.",
+        "info": "A land where tradition meets modernity. Explore the vibrant culture of Japan.",
         "url": "/card/japan.webp",
         "location": [
             "japan",
@@ -201,7 +201,7 @@
     {
         "id": 12,
         "name": "Lapland",
-        "info": "Not the Finnish part.",
+        "info": "Majestic landscapes and indigenous culture. Experience the magic of Lapland.",
         "url": "/card/lapland.webp",
         "location": [
             "lapland",
@@ -219,7 +219,7 @@
     {
         "id": 13,
         "name": "Mexico",
-        "info": "\"Don't eat the street meats or drink the tap water.\" - Karen, 2024",
+        "info": "Vibrant culture and delicious cuisine. Dive into the flavors of Mexico.",
         "url": "/card/mexico.webp",
         "location": [
             "mexico",
@@ -242,7 +242,7 @@
     {
         "id": 14,
         "name": "Morocco",
-        "info": "This wasn't the bottom of the barrel, but it was close.",
+        "info": "Exotic landscapes and rich heritage. Immerse yourself in the magic of Morocco.",
         "url": "/card/morocco.webp",
         "location": [
             "morocco",
@@ -259,7 +259,7 @@
     {
         "id": 15,
         "name": "New York",
-        "info": "Explore the Big Apple and its iconic landmarks.",
+        "info": "The city that never sleeps. Experience the energy of New York.",
         "url": "/card/new_york.webp",
         "location": [
             "new york",
@@ -282,7 +282,7 @@
     {
         "id": 16,
         "name": "New Zealand",
-        "info": "This image has a free license, trust me (it does actually).",
+        "info": "Breathtaking landscapes and friendly locals. Discover the beauty of New Zealand.",
         "url": "/card/new_zealand.webp",
         "location": [
             "new zealand",
@@ -303,7 +303,7 @@
     {
         "id": 17,
         "name": "Nigeria",
-        "info": "Omo.",
+        "info": "Vibrant culture and bustling cities. Experience the spirit of Nigeria.",
         "url": "/card/nigeria.webp",
         "location": [
             "nigeria",
@@ -318,7 +318,7 @@
     {
         "id": 18,
         "name": "Peru",
-        "info": "Chicken pizza.",
+        "info": "Ancient ruins and stunning landscapes. Explore the treasures of Peru.",
         "url": "/card/peru.webp",
         "location": [
             "peru",
@@ -339,7 +339,7 @@
     {
         "id": 19,
         "name": "Philippines",
-        "info": "Latin America at home.",
+        "info": "Tropical paradise with stunning beaches and vibrant culture.",
         "url": "/card/philippines.webp",
         "location": [
             "philippines",
@@ -360,7 +360,7 @@
     {
         "id": 20,
         "name": "Quebec",
-        "info": "You thought the French were bad? Just you wait and see.",
+        "info": "Unique blend of European charm and North American spirit.",
         "url": "/card/quebec.webp",
         "location": [
             "france",
@@ -381,7 +381,7 @@
     {
         "id": 21,
         "name": "San Francisco",
-        "info": "As expensive to visit as other places are to live.",
+        "info": "Iconic landmarks and cultural diversity. Experience the charm of San Francisco.",
         "url": "/card/san_francisco.webp",
         "location": [
             "san francisco",
@@ -401,7 +401,7 @@
     {
         "id": 22,
         "name": "South Africa",
-        "info": "It just hasn't been the same since Apartheid ended.",
+        "info": "Diverse landscapes and rich wildlife. Explore the beauty of South Africa.",
         "url": "/card/south_africa.webp",
         "location": [
             "nelson mandela",
@@ -419,7 +419,7 @@
     {
         "id": 23,
         "name": "Thailand",
-        "info": "Bring a green card.",
+        "info": "Exotic cuisine and stunning beaches. Discover the wonders of Thailand.",
         "url": "/card/thailand.webp",
         "location": [
             "thailand",
@@ -437,7 +437,7 @@
     {
         "id": 24,
         "name": "United Kingdom",
-        "info": "Has your country been ruined by the British Empire? Continue listening to learn how you can be compensated.",
+        "info": "Historic landmarks and cultural heritage. Explore the charm of the UK.",
         "url": "/card/uk.webp",
         "location": [
             "uk",

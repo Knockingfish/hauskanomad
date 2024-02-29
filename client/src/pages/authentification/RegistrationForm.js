@@ -31,14 +31,15 @@ const RegistrationForm = () => {
 
 
   return (
-    <div>
+    <div className={styles.float}>
+      <div className={styles.title}>Register</div>
       <form className={styles.menu} onSubmit={handleSubmit}>
         <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
         <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
         <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
         <button type="submit">Register</button>
       </form>
-      <p>{registrationStatus}</p>
+      <p className={styles.register}>{registrationStatus}</p>
     </div>
   );
 };

@@ -14,13 +14,21 @@
   height: auto;
   width: auto;
   border-radius: 1.5rem;
-  background-color: var(--light1);
+  color: var(--light1);
+  background-color: var(--dark2);
   box-shadow: var(--heavy_shadow);
-  font-size: 1.25em;
 }
 
 .title {
+  padding: 1rem;
+  margin-top: 1rem;
   margin-bottom: 0.5rem;
+  border-radius: 5rem;
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--light1);
+  background-color: var(--dark3);
+  box-shadow: var(--light_shadow);
 }
 
 .menu {
@@ -33,7 +41,7 @@
   padding: 0.5rem;
   margin: 1rem;
   border-radius: 1.5rem;
-  background-color: var(--dark2);
+  background-color: var(--dark3);
   box-shadow: var(--light_shadow);
 }
 
@@ -43,17 +51,17 @@
   padding: 0.5rem;
   margin: 0.5rem;
   border-radius: 2rem;
-  color: var(--light1);
-  background-color: var(--dark3);
+  color: var(--dark3);
+  background-color: var(--light1);
   box-shadow: var(--light_shadow);
   font-size: 1em;
 }
 .menu input:hover {
   color: var(--white);
-  background-color: var(--red2);
+  background-color: var(--red1);
 }
 .menu input:focus {
-  color: var(--white);
+  background-color: var(--red2);
 }
 
 .menu button {
@@ -87,4 +95,7 @@
 }
 .link:active {
   color: var(--red2);
+}
+
+.register {
 }
