@@ -1,7 +1,7 @@
 import React from 'react';
-import ForgotPasswordForm from './authentification/ForgotPasswordForm';
-import CustomHeader from './global/CustomHeader';
-import CustomFooter from './global/CustomFooter';
+import PasswordResetForm from './PasswordResetForm';
+import CustomHeader from '../global/CustomHeader';
+import CustomFooter from '../global/CustomFooter';
 import styles from './Auth.module.css';
 
 function RegistrationPage() {
@@ -11,7 +11,7 @@ function RegistrationPage() {
         <CustomHeader />
       </div>
       <div className={styles.container}>
-        <ForgotPasswordForm />
+        <PasswordResetForm />
       </div>
       <div>
         <CustomFooter />

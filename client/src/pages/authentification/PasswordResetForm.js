@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
 import CustomHeader from '../global/CustomHeader';
 import CustomFooter from '../global/CustomFooter';
-import styles from './Account.module.css';
+import styles from './components/Account.module.css';
 
 function PasswordResetPage() {
   const navigate = useNavigate(); // Initialize the useNavigate hook

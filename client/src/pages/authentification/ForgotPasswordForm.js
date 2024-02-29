@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Assuming you're using React Router for navigation
 import CustomHeader from '../global/CustomHeader';
 import CustomFooter from '../global/CustomFooter';
-import styles from './Account.module.css'
+import styles from './components/Account.module.css'
 
 function ForgotPasswordPage() {
   const [email, setEmail] = useState('');

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Slideshow.module.css';
 import jsonimg from './initialImages.json';
-import { useDarkMode } from '../global/DarkModeContext';
+import { useDarkMode } from '../../global/DarkModeContext';
 
 const Slideshow = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

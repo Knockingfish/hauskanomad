@@ -2,7 +2,7 @@ import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import styles from './SearchBar.module.css';
-import { useDarkMode } from '../global/DarkModeContext';
+import { useDarkMode } from '../../global/DarkModeContext';
 
 const SearchBar = ({ searchQuery, setSearchQuery, startDate, setStartDate, endDate, setEndDate, numGuests, setNumGuests, numRooms, setNumRooms }) => {
   const { darkMode } = useDarkMode();
