@@ -1,16 +1,16 @@
 import React from 'react';
-import CustomHeader from './global/CustomHeader'
-import ImageComponent from './destinationpage/ImageComponent';
-import DescriptionComponent from './destinationpage/DescriptionComponent';
-import BookingInfo from './destinationpage/BookingInfo';
-import BookingForm from './destinationpage/BookingForm';
-import ReviewComments from './destinationpage/ReviewComments';
-import CustomFooter from './global/CustomFooter';
+import CustomHeader from '../global/CustomHeader'
+import ImageComponent from './components/ImageComponent';
+import DescriptionComponent from './components/DescriptionComponent';
+import BookingInfo from './components/BookingInfo';
+import BookingForm from './components/BookingForm';
+import ReviewComments from './components/ReviewComments';
+import CustomFooter from '../global/CustomFooter';
 import styles from './DestinationPage.module.css'
 
 const DestinationPage = () => {
-  const imageSrc = '/destination/australia.webp'
-  const destination = 'australia'
+  const imageSrc = '/destination/south_africa.webp'
+  const destination = 'south_africa'
 
   return (
     <div>

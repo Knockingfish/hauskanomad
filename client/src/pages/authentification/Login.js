@@ -1,7 +1,7 @@
 import React from 'react';
-import LoginForm from './authentification/LoginForm';
-import CustomHeader from './global/CustomHeader';
-import CustomFooter from './global/CustomFooter';
+import LoginForm from './components/LoginForm';
+import CustomHeader from '../global/CustomHeader';
+import CustomFooter from '../global/CustomFooter';
 import styles from './Auth.module.css';
 
 function LoginPage() {

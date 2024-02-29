@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from React Router
-import CustomHeader from './global/CustomHeader';
-import DestinationCard from "./home/DestinationCard";
-import Slideshow from "./home/Slideshow";
-import SearchBar from './home/SearchBar';
-import NewsletterSubscription from "./home/NewsletterSubscription";
-import CustomFooter from './global/CustomFooter';
+import CustomHeader from '../global/CustomHeader';
+import DestinationCard from "./components/DestinationCard";
+import Slideshow from "./components/Slideshow";
+import SearchBar from './components/SearchBar';
+import NewsletterSubscription from "./components/NewsletterSubscription";
+import CustomFooter from '../global/CustomFooter';
 import styles from './Home.module.css';
 import destinationData from './destinations.json';
 
@@ -60,7 +60,7 @@ const Home = () => {
         <div className={styles.card_grid}>
           {/* Render filtered destinations */}
           {filteredDestinations.map(destination => (
-            <Link key={destination.id} to={`/${destination.name}`}> {/* Wrap DestinationCard with Link */}
+            <Link key={destination.id} to={`/${destination.link}`}> {/* Wrap DestinationCard with Link */}
               <DestinationCard destination={destination} />
             </Link>
           ))}

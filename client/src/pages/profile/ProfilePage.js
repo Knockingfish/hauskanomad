@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
-import AccountDetails from './profile/AccountDetails';
-import ReservationManagement from './profile/ReservationManagement';
-import CustomHeader from './global/CustomHeader';
-import CustomFooter from './global/CustomFooter';
+import AccountDetails from './components/AccountDetails';
+import ReservationManagement from './components/ReservationManagement';
+import CustomHeader from '../global/CustomHeader';
+import CustomFooter from '../global/CustomFooter';
 import styles from './ProfilePage.module.css';
 
 const ProfilePage = () => {

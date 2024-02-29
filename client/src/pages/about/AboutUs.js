@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import StaffImage from './about/staff_picture.png';
-import CustomHeader from './global/CustomHeader';
-import CustomFooter from './global/CustomFooter';
+import StaffImage from './assets/staff_picture.png';
+import CustomHeader from '../global/CustomHeader';
+import CustomFooter from '../global/CustomFooter';
 import styles from './AboutUs.module.css'
 
 function AboutUs() {
