@@ -3,10 +3,11 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
 
 const userSchema = new mongoose.Schema({
-  // Define your schema fields here
   email: { type: String, required: true },
   password: { type: String, required: true },
-  username: { type: String, required: true }
+  username: { type: String, required: true },
+  emailVerified: { type: Boolean, default: false },
+  emailVerificationToken: String
 });
 
 // Define a method to compare passwords

@@ -9,6 +9,7 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import ForgotPassword from './pages/ForgotPassword'
 import PasswordReset from './pages/PasswordReset'
+import VerifiedPage from './pages/VerifiedPage'
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
 
           <Route path="/forgot_password" element={<ForgotPassword />} />
           <Route path="/password_reset" element={<PasswordReset />} />
+
+          <Route path="/verified" element={<VerifiedPage />} />
         </Routes>
       </DarkModeProvider>
     </Router>
