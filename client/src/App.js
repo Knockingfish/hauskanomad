@@ -7,8 +7,6 @@ import AboutUs from './pages/about/AboutUs';
 
 import Register from './pages/authentification/Register';
 import Login from './pages/authentification/Login';
-//import ForgotPassword from './pages/authentification/ForgotPassword'
-import PasswordReset from './pages/authentification/PasswordReset'
 import VerifiedPage from './pages/authentification/VerifiedPage'
 
 import Australia from './pages/destination/australia';
@@ -47,7 +45,6 @@ function App() {
 
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/password_reset" element={<PasswordReset />} />
           <Route path="/verified" element={<VerifiedPage />} />
 
           <Route path="/australia" element={<Australia />} />

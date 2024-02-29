@@ -61,6 +61,7 @@
   background-color: var(--red1);
 }
 .menu input:focus {
+  color: var(--white);
   background-color: var(--red2);
 }
 
