@@ -60,7 +60,7 @@ const Home = () => {
         <div className={styles.card_grid}>
           {/* Render filtered destinations */}
           {filteredDestinations.map(destination => (
-            <Link key={destination.id} to={`/${destination.name}`}> {/* Wrap DestinationCard with Link */}
+            <Link key={destination.id} to={`/${destination.link}`}> {/* Wrap DestinationCard with Link */}
               <DestinationCard destination={destination} />
             </Link>
           ))}
