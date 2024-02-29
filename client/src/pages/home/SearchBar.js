@@ -3,7 +3,6 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import styles from './SearchBar.module.css';
 import { useDarkMode } from '../global/DarkModeContext';
-import Rule from '../global/Rule';
 
 const SearchBar = ({ searchQuery, setSearchQuery, startDate, setStartDate, endDate, setEndDate, numGuests, setNumGuests, numRooms, setNumRooms }) => {
   const { darkMode } = useDarkMode();
@@ -16,7 +15,6 @@ const SearchBar = ({ searchQuery, setSearchQuery, startDate, setStartDate, endDa
 
   return (
     <div className={styles.search_container}>
-      <Rule/>
       <div className={styles.search_bg}>
         <p className={styles.title}>Search</p>
         <p className={styles.content}>See all of our wonderful locations!</p>

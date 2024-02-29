@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from React Router
 import CustomHeader from './global/CustomHeader';
 import DestinationCard from "./home/DestinationCard";
 import Slideshow from "./home/Slideshow";
@@ -59,10 +60,9 @@ const Home = () => {
         <div className={styles.card_grid}>
           {/* Render filtered destinations */}
           {filteredDestinations.map(destination => (
-            <DestinationCard
-              key={destination.id}
-              destination={destination}
-            />
+            <Link key={destination.id} to={`/${destination.name}`}> {/* Wrap DestinationCard with Link */}
+              <DestinationCard destination={destination} />
+            </Link>
           ))}
         </div>
       </div>
