@@ -1,10 +1,10 @@
 // server/routes/auth.js
 import express from 'express';
-const router = express.Router();
-const bookingController = require('../controllers/bookingController');
+import { Router } from 'express'; // Importing Router from express
+import { addBooking } from '../controllers/bookingController.js'; // Importing addBooking function
+import { registerUser, loginUser, subscribeNewsletter, verifyEmail } from '../controllers/authController.js'; // Importing functions from authController
 
-// Load your authentication controller
-import { registerUser, loginUser, subscribeNewsletter, verifyEmail } from '../controllers/authController.js'; // Import the verifyEmail function
+const router = Router(); // Creating a router instance
 
 // Define the register route
 router.post('/register', registerUser);
@@ -16,8 +16,9 @@ router.post('/login', loginUser);
 router.post('/subscribe', subscribeNewsletter);
 
 // Define the route for email verification
-router.get('/verify/:token', verifyEmail); // Define the endpoint for email verification
+router.get('/verify/:token', verifyEmail);
 
-router.post('/bookings', bookingController.addBooking);
+// Define the route for adding bookings
+router.post('/bookings', addBooking);
 
 export default router;

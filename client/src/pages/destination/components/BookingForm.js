@@ -21,7 +21,7 @@ const BookingForm = () => {
 
     try {
       // Send the form data to the server
-      const response = await fetch('/api/bookings', {
+      const response = await fetch('localhost:5000/auth/book', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
