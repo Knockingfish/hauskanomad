@@ -29,14 +29,7 @@ const ProfilePage = () => {
       </div>
 
       <div className={styles.container}>
-        <nav className={styles.top_panel}>
-          <button className={`${styles.section} ${activeSection === 'account' ? styles.active : ''}`} onClick={() => setActiveSection('account')}>Account</button>
-          <button className={`${styles.section} ${activeSection === 'reservation' ? styles.active : ''}`} onClick={() => setActiveSection('reservation')}>Reservation</button>
-        </nav>
-        <div>
-          {activeSection === 'account' && <AccountDetails />}
-          {activeSection === 'reservation' && <ReservationManagement />}
-        </div>
+        <ReservationManagement />
       </div>
       <div className={styles.end_container}>
         <CustomFooter />
