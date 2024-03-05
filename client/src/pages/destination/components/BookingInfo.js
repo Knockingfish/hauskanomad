@@ -8,12 +8,12 @@ const BookingInfo = () => {
         <div className={styles.header}>Booking Information</div>
         <div className={styles.booking_info}>
           <div className={styles.listing}>
-            <p>Price: </p>
-            <p>Capacity:</p>
+            <p>Price: €80-100 </p>
+            <p>Capacity: 1-10</p>
           </div>
           <div className={styles.listing}>
-            <p>Available Dates: </p>
-            <p>Restrictions: </p>
+            <p>Available Dates: 1AD-01/01/3000 </p>
+            <p>Restrictions: No Smoking, No Pets</p>
           </div>
         </div>
       </div>

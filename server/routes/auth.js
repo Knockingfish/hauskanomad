@@ -19,6 +19,6 @@ router.post('/subscribe', subscribeNewsletter);
 router.get('/verify/:token', verifyEmail);
 
 // Define the route for adding bookings
-router.post('/bookings', addBooking);
+router.post('/book', addBooking);
 
 export default router;

@@ -21,7 +21,7 @@ const BookingForm = () => {
 
     try {
       // Send the form data to the server
-      const response = await fetch('localhost:5000/auth/book', {
+      const response = await fetch('http://localhost:5000/auth/book', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -29,12 +29,14 @@ const BookingForm = () => {
         body: JSON.stringify(formData)
       });
 
+      console.log(formData)
+
       if (response.ok) {
         // Handle successful response from the server
         console.log('Form data submitted successfully:', formData);
       } else {
         // Handle error response from the server
-        console.error('Error submitting form data:', response.statusText);
+        console.error('Error 123:', response.statusText);
       }
     } catch (error) {
       // Handle network errors

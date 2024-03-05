@@ -1,13 +1,20 @@
 import Booking from '../models/Booking.js';
 
 export const addBooking = async (req, res) => {
-	const bookingData = req.body;
-
+	const newBooking = new Booking(req.body);
 	try {
-		const booking = new Booking(bookingData);
-		await booking.save();
-		res.status(201).json({ message: "Booking submitted successfully" });
-	} catch (error) {
-		res.status(500).json({ error: "Failed to submit booking" });
-	}
+		const savedBooking = await newBooking.save();
+	
+		res.status(200).json({
+		  success: true,
+		  message: "Tour booked successfully",
+		  data: savedBooking,
+		});
+	  } catch (err) {
+		res.status(500).json({
+		  success: false,
+		  message: "Could not book tour",
+		});
+	  }
+
 };
