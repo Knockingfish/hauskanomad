@@ -28,11 +28,11 @@ First the following software will be needed:
   - Notepad.
   - Micro.
   - Nano.
-    - These are each text editors which have been used in development.
 - NodeJS.
 - Some way to test RESTFUL APIs.
     - cURL.
     - Postman.
+        - Never actually used in the development of this project.
  
 #### Cloning and running the project
 
