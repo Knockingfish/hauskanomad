@@ -24,9 +24,11 @@ First the following software will be needed:
   - VSCode.
   - Sublime Text.
   - Kate.
+  - Kwrite.
   - Notepad.
   - Micro.
   - Nano.
+    - These are each text editors which have been used in development.
 - NodeJS.
 - Some way to test RESTFUL APIs.
     - cURL.
@@ -47,6 +49,8 @@ Following this, the frontend and backend can be started allowing the project to 
 `npm start`
 
 This command should be run in both the client and server directories.
+
+There is a known bug in which the server entry point will generate an erroneous file named "5000;". It is recommend to check for and erase this file when (re)starting the backend.
 
 How can I contribute?
 ---
