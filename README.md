@@ -1,7 +1,7 @@
 # HauskaNomad
 This is a basic student project to create a travel agency webapp.
 
-[Website](https://hauskanomad-1.onrender.com/) · [Documentation](https://github.com/Knockingfish/hauskanomad/wiki)
+[Website](https://hauskanomad-1.onrender.com/) • [Documentation](https://github.com/Knockingfish/hauskanomad/wiki)
 
 About
 ---
