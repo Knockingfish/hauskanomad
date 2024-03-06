@@ -38,15 +38,21 @@ First the following software will be needed:
 
 Secondarily, clone the code from github:
 
-```git clone https://github.com/Knockingfish/hauskanomad.git```
+```
+git clone https://github.com/Knockingfish/hauskanomad.git
+```
 
 In the client (frontend) and server (backend) directories of the cloned project install the required dependencies.
 
-```npm install```
+```
+npm install
+```
 
 Following this, the frontend and backend can be started allowing the project to be tested manually.
 
-```npm start```
+```
+npm start
+```
 
 This command should be run in both the client and server directories.
 
