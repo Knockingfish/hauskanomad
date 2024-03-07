@@ -50,13 +50,11 @@ npm install
 
 Following this, the frontend and backend can be started allowing the project to be tested manually.
 
+This command should be run in both the client and server directories.
+
 ```
 npm start
 ```
-
-This command should be run in both the client and server directories.
-
-There is a known bug in which the server entry point will generate an erroneous file named "5000;". It is recommend to check for and erase this file when (re)starting the backend.
 
 How can I contribute?
 ---
