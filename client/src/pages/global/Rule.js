@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Rule.module.css';
 
+// This component displays the width of the viewport (window~) in rem (a unit of length that scales with root font-size).
+
 const Rule = () => {
   const [widthInRem, setWidthInRem] = useState(0);
 

@@ -11,7 +11,8 @@ const BookingForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Construct the data object with form values
+    // Define format for booking data
+    // Used when sending a backend request
     const formData = {
       startDate: startDate ? startDate.toISOString() : null,
       endDate: endDate ? endDate.toISOString() : null,

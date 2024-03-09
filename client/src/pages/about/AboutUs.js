@@ -5,6 +5,7 @@ import CustomFooter from '../global/CustomFooter';
 import styles from './AboutUs.module.css'
 
 function AboutUs() {
+  // Set title of tab/window
   useEffect(() => {
     document.title = 'HauskaNomad - About Us';
   }, []);
@@ -16,14 +17,14 @@ function AboutUs() {
             <div className={styles.marketing_blurb}>
               <h2>About HauskaNomad</h2>
               <p>
-                HauskaNomad is your ultimate travel companion, offering a diverse range of curated experiences for adventurers and explorers alike. 
-                We believe in the power of travel to inspire, connect, and transform lives. 
+                HauskaNomad is your ultimate travel companion, offering a diverse range of curated experiences for adventurers and explorers alike.
+                We believe in the power of travel to inspire, connect, and transform lives.
               </p>
               <p>
                 Whether you're seeking serene retreats in nature, immersive cultural experiences, or adrenaline-pumping adventures, HauskaNomad has something for everyone.
               </p>
               <p>
-                Our platform was created with a vision to make travel accessible, enjoyable, and meaningful for all. 
+                Our platform was created with a vision to make travel accessible, enjoyable, and meaningful for all.
                 We understand that each journey is unique, and we strive to provide personalized recommendations and exceptional service to every traveler.
               </p>
             </div>

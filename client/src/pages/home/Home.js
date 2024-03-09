@@ -25,6 +25,7 @@ const Home = () => {
     setDestinations(destinationData);
   }, []);
 
+  // Use search query from search bar to filter the destination cards.
   const filteredDestinations = destinations.filter(destination =>
     destination.location.some(location => location.toLowerCase().includes(searchQuery.toLowerCase())) &&
     (!startDate || new Date(destination.startDate) >= startDate) &&

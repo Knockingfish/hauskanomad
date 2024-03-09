@@ -8,6 +8,7 @@ const Slideshow = () => {
   const images = jsonimg;
   const { darkMode } = useDarkMode();
 
+  // Controls slidehow refreshing + refresh rate.
   useEffect(() => {
     let slideshowInterval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -16,10 +17,12 @@ const Slideshow = () => {
     return () => clearInterval(slideshowInterval);
   }, [currentImageIndex, images.length]);
 
+  // Get next image in array and display it (set to current image).
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
+  // Show the last image in the array, for the slide effect to work as intended.
   const prevImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };

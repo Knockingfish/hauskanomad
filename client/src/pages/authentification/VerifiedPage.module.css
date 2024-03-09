@@ -15,6 +15,7 @@
 	border-radius: 2rem;
 	color: var(--light1);
 	background-color: var(--dark2);
+	box-shadow: var(--heavy_shadow);
 }
 
 .header {
@@ -24,6 +25,7 @@
 	font-weight: bold;
 	font-size: 2em;
 	background-color: var(--dark3);
+	box-shadow: var(--light_shadow);
 }
 
 .message {
@@ -32,6 +34,7 @@
 	border-radius: 2rem;
 	font-size: 1.5em;
 	background-color: var(--dark3);
+	box-shadow: var(--light_shadow);
 }
 
 .button {
@@ -42,4 +45,12 @@
 	font-size: 2em;
 	color: var(--dark3);
 	background-color: var(--light1);
+	box-shadow: var(--light_shadow);
+}
+.button:hover {
+	color: var(--white);
+	background-color: var(--red1);
+}
+.button:active {
+	background-color: var(--red2);
 }

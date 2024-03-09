@@ -6,7 +6,6 @@ import CustomFooter from '../global/CustomFooter';
 import styles from './ProfilePage.module.css';
 
 const ProfilePage = () => {
-  const [activeSection, setActiveSection] = useState('account');
   const navigate = useNavigate(); // Get the navigate function for redirection
 
   useEffect(() => {
@@ -15,9 +14,9 @@ const ProfilePage = () => {
     // Check localStorage for isLoggedIn status
     const isLoggedIn = localStorage.getItem('isLoggedIn');
 
-    // If user is not logged in, redirect to home page
+    // If user is not logged in, redirect to login page
     if (isLoggedIn !== 'true') {
-      navigate('/'); // Redirect to the home page
+      navigate('/login'); // Redirect to the login page
     }
   }, [navigate]); // Make sure to include navigate in the dependencies array
 
@@ -26,7 +25,6 @@ const ProfilePage = () => {
       <div className={styles.end_container}>
         <CustomHeader />
       </div>
-
       <div className={styles.container}>
         <ReservationManagement />
       </div>

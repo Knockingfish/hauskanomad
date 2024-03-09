@@ -3,6 +3,10 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import styles from './ReservationManagement.module.css';
 
+// This needs to be rewritten for the following requirements:
+// - It needs to allow management of actual reservations the user has made.
+// - It should (but this is optional) allow the user to change their email and password.
+
 const ReservationManagement = () => {
   const [reservations, setReservations] = useState([
     {
