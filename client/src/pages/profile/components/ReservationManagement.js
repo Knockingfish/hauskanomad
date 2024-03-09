@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import styles from './ProfilePage2.module.css';
+import styles from './ReservationManagement.module.css';
 
 const ReservationManagement = () => {
   const [reservations, setReservations] = useState([
-    { 
-      id: 1, 
-      location: 'Hotel A', 
-      checkInDate: '2024-02-15', 
-      checkOutDate: '2024-02-20', 
-      guests: 2, 
-      rooms: 1 
+    {
+      id: 1,
+      location: 'Hotel A',
+      checkInDate: '2024-02-15',
+      checkOutDate: '2024-02-20',
+      guests: 2,
+      rooms: 1
     },
-    { 
-      id: 2, 
-      location: 'Resort B', 
-      checkInDate: '2024-03-10', 
-      checkOutDate: '2024-03-15', 
-      guests: 3, 
-      rooms: 2 
+    {
+      id: 2,
+      location: 'Resort B',
+      checkInDate: '2024-03-10',
+      checkOutDate: '2024-03-15',
+      guests: 3,
+      rooms: 2
     },
   ]);
 
@@ -68,20 +68,20 @@ const ReservationManagement = () => {
                 <button className={styles.click} onClick={() => toggleButtonVisibility(reservation.id)}>MODIFY RESERVATION</button>
                 {buttonVisibility[reservation.id] && (
                   <div className={styles.modal}>
-                    <input 
+                    <input
                       className={styles.modal_input}
                       type="text"
                       placeholder="Change location..."
                       value={reservation.location}
                       onChange={(e) => handleModifyReservation(reservation.id, 'location', e.target.value)}
                     />
-                    <DatePicker 
+                    <DatePicker
                       className={styles.modal_input}
                       placeholderText="Change check-in date..."
                       selected={new Date(reservation.checkInDate)}
                       onChange={(date) => handleModifyReservation(reservation.id, 'checkInDate', date.toISOString().split('T')[0])}
                     />
-                    <DatePicker 
+                    <DatePicker
                       className={styles.modal_input}
                       placeholderText="Change check-out date..."
                       selected={new Date(reservation.checkOutDate)}

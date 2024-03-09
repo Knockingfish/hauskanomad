@@ -1,8 +1,6 @@
-// server/routes/auth.js
-import express from 'express';
 import { Router } from 'express'; // Importing Router from express
-import { addBooking } from '../controllers/bookingController.js'; // Importing addBooking function
-import { registerUser, loginUser, subscribeNewsletter, verifyEmail } from '../controllers/authController.js'; // Importing functions from authController
+import { addBooking } from './controllers/bookingController.js'; // Importing addBooking function
+import { registerUser, loginUser, subscribeNewsletter, verifyEmail } from './controllers/authController.js'; // Importing functions from authController
 
 const router = Router(); // Creating a router instance
 

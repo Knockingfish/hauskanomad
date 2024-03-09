@@ -2,7 +2,6 @@ import { sendEmail } from "./emailController.js";
 import bcrypt from 'bcrypt';
 import { v4 as uuidv4 } from 'uuid';
 import User from '../models/User.js';
-import router from '../routes/auth.js';
 import { sendVerificationEmail } from './emailController.js';
 
 export const registerUser = async (req, res) => {
