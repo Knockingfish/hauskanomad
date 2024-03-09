@@ -10,7 +10,7 @@ const VerifiedPage = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       // Redirect to "/" after 5 seconds
-      navigate("/");
+      navigate("/login");
     }, 5000);
 
     // Clean up the timeout when the component is unmounted
@@ -21,7 +21,7 @@ const VerifiedPage = () => {
 
   const handleSkip = () => {
     // Redirect immediately to "/"
-    navigate("/");
+    navigate("/login");
   };
 
   return (
