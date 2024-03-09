@@ -15,7 +15,7 @@ const Footer = () => {
         <a className={styles.foot_link} href="https://twitter.com">Twitter</a>
         <a className={styles.foot_link} href="https://instagram.com">Instagram</a>
       </div>
-      <div>
+      <div className={styles.foot_container}>
         <a className={styles.foot_link} href="https://www.flaticon.com/free-icons/moon" title="moon icons">Moon icons created by Good Ware - Flaticon</a>
         <a className={styles.foot_link} href="https://www.flaticon.com/free-icons/sun" title="sun icons">Sun icons created by Good Ware - Flaticon</a>
         <a className={styles.foot_link} href="https://www.flaticon.com/free-icons/arrow" title="arrow icons">Arrow icons created by Freepik - Flaticon</a>

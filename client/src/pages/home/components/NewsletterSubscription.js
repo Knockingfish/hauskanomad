@@ -5,10 +5,11 @@ import styles from "./NewsletterSubscription.module.css";
 const NewsletterSubscription = () => {
   const [email, setEmail] = useState("");
 
+  // Collects email input to send to backend.
   const handleSubscribe = async () => {
     try {
       console.log("Attempting to subscribe with email:", email); // Log email before making the API call
-      const response = await fetch("http://localhost:5000/auth/subscribe", {
+      const response = await fetch("http://localhost:5000/api/subscribe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -17,14 +18,15 @@ const NewsletterSubscription = () => {
       });
       console.log("Response from server:", response); // Log the response from the server
 
+      // Mix of error handling and debugging
       if (response.ok) {
-        console.log("Subscribed successfully!");
+        alert("Subscribed successfully!"); // If subscription worked, then let the user know.
         setEmail("");
       } else {
-        console.error("Failed to subscribe:", response.statusText);
+        alert("Failed to subscribe:", response.statusText); // If something went wrong, let the user know even more.
       }
     } catch (error) {
-      console.error("Error subscribing:", error);
+      alert("Error subscribing:", error); // If something else went wrong, let the user know.
     }
   };
 

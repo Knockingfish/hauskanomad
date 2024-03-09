@@ -8,6 +8,8 @@ function LoginForm() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [error, setError] = useState('');
 
+  // Store login status in local storage to track persistently.
+  // Even if the page is reloaded, the use remains logged in.
   useEffect(() => {
     const loggedInStatus = localStorage.getItem('isLoggedIn');
     if (loggedInStatus) {
@@ -15,9 +17,10 @@ function LoginForm() {
     }
   }, []);
 
+  // Make a backend request to login the user by checking their input credentials against the database.
   const handleLogin = async () => {
     try {
-      const response = await fetch('http://localhost:5000/auth/login', {
+      const response = await fetch('http://localhost:5000/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -27,6 +30,7 @@ function LoginForm() {
 
       const data = await response.json();
 
+      // Debuggin messages~~.
       if (response.ok) {
         console.log("Login successful!");
         setIsLoggedIn(true);
@@ -40,6 +44,7 @@ function LoginForm() {
     }
   };
 
+  // Would handle logging out, but this page is not generally accessible once the user has logged in.
   const handleLogout = () => {
     localStorage.removeItem('isLoggedIn');
     setIsLoggedIn(false);
@@ -49,6 +54,7 @@ function LoginForm() {
     <div className={styles.container}>
       <div className={styles.float}>
         <h2 className={styles.title}>Login</h2>
+        {/* Conditional rendering of menu based on login status */}
         <div className={styles.menu}>
         {isLoggedIn ? (
           <>

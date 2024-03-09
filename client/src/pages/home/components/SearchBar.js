@@ -4,10 +4,21 @@ import 'react-datepicker/dist/react-datepicker.css';
 import styles from './SearchBar.module.css';
 import { useDarkMode } from '../../global/DarkModeContext';
 
-const SearchBar = ({ searchQuery, setSearchQuery, startDate, setStartDate, endDate, setEndDate, numGuests, setNumGuests, numRooms, setNumRooms }) => {
+const SearchBar = ({
+  searchQuery,
+  setSearchQuery,
+  startDate,
+  setStartDate,
+  endDate,
+  setEndDate,
+  numGuests,
+  setNumGuests,
+  numRooms,
+  setNumRooms }) => {
   const { darkMode } = useDarkMode();
   const [showMenu, setShowMenu] = useState(false);
 
+  // Change the search query based on user input
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setSearchQuery(value); // Update search query

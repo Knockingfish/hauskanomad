@@ -5,7 +5,7 @@ const DestinationCard = ({ destination }) => {
 
   return (
     <div className={styles.destination_card}>
-      <img src={destination.url} alt={destination.name} /> {/* Wrap in a Link tag later, and extend the Schema to use it. */}
+      <img src={destination.url} alt={destination.name} />
       <div className={styles.destination_info}>
         <h3>{destination.name}</h3>
         <p>{destination.info}</p>

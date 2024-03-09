@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './ImageComponent.module.css';
 
 const ImageComponent = ({ image }) => {
+  // Modal functionality is (partially) coded, but not actually implemented.
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {

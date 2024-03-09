@@ -11,7 +11,8 @@ const BookingForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Construct the data object with form values
+    // Define format for booking data
+    // Used when sending a backend request
     const formData = {
       startDate: startDate ? startDate.toISOString() : null,
       endDate: endDate ? endDate.toISOString() : null,
@@ -21,7 +22,7 @@ const BookingForm = () => {
 
     try {
       // Send the form data to the server
-      const response = await fetch('http://localhost:5000/auth/book', {
+      const response = await fetch('http://localhost:5000/api/book', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

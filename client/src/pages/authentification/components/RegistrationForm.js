@@ -13,7 +13,7 @@ const RegistrationForm = () => {
 
     try {
       // Send a POST request to the registration route
-      await axios.post('http://localhost:5000/auth/register', { email, password, username });
+      await axios.post('http://localhost:5000/api/register', { email, password, username });
 
       // If the registration was successful, update the registration status
       setRegistrationStatus('Registration successful!');
@@ -35,9 +35,9 @@ const RegistrationForm = () => {
       <div className={styles.title}>Register</div>
       <form className={styles.menu} onSubmit={handleSubmit}>
         <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
         <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-        <button type="submit">Register</button>
+        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <button type="submit">REGISTER</button>
       </form>
       <p className={styles.register}>{registrationStatus}</p>
     </div>
