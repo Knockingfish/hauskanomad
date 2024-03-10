@@ -56,6 +56,8 @@ This command should be run in both the client and server directories.
 npm start
 ```
 
+The separation of backend and frontend in this way is a quirk of how this project was developed, and is unlikely to be resolved.
+
 How can I contribute?
 ---
 The best way to contribute will be to fork the project and develop your version separately, as we are not accepting contributions currently.
