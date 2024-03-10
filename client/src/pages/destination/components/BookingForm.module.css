@@ -5,6 +5,8 @@
     justify-content: center;
     height: 30rem;
     width: 40vw;
+    background-color: var(--light1);
+    box-shadow: var(--heavy_shadow);
 }
 
 .form_container {
