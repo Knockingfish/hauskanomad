@@ -12,10 +12,7 @@ Features
 - Idiosyncratic frontend interface.
 - Responsive design.
 - MERN stack.
-  - Basic use of ReactJS
-  - Vanilla CSS.
-  - ExpressJS via NodeJS.
-  - MongoDB.
+- Approximately functional.
   
 How do I run this or work on this?
 ---
@@ -29,10 +26,9 @@ First the following software will be needed:
   - Micro.
   - Nano.
 - NodeJS.
-- Some way to test RESTFUL APIs.
+- A way to test RESTFUL APIs.
     - cURL.
     - Postman.
-        - Never actually used in the development of this project.
  
 #### Cloning and running the project
 
@@ -66,3 +62,4 @@ Authors
 ---
 - Knockingfish - [Knockingfish](https://github.com/Knockingfish)
 - ReepZ - [Reepezy](https://github.com/Reepezy)
+- fourth member whose github is currently unknown.
