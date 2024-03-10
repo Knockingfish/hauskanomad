@@ -9,16 +9,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 0;
-}
-
-.bottom{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 67.5rem;
-  width: 100vw;
 }
 
 @media (max-width: 60rem) {

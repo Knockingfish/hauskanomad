@@ -1,5 +1,4 @@
 .description_container{
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,7 +6,6 @@
     height: 40rem;
     width: 40vw;
     background-color: var(--light1);
-    z-index: 1;
     box-shadow: var(--heavy-shadow);
 }
 
@@ -22,7 +20,7 @@
     border-radius: 2rem;
     background-color: var(--dark2);
     box-shadow: var(--heavy-shadow);
-    overflow: auto;
+    overflow-x: auto;
 }
 
 .description_header {
