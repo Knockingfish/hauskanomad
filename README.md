@@ -59,4 +59,4 @@ Authors
 ---
 - Knockingfish - [Knockingfish](https://github.com/Knockingfish)
 - ReepZ - [Reepezy](https://github.com/Reepezy)
-- fourth member whose github is currently unknown.
+- Shishi - [Shishi888](https://github.com/Shishi888)
