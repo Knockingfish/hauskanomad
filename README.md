@@ -12,7 +12,6 @@ Features
 - Idiosyncratic frontend interface.
 - Responsive design.
 - MERN stack.
-- Approximately functional.
   
 How do I run this or work on this?
 ---
@@ -31,8 +30,6 @@ First the following software will be needed:
     - Postman.
  
 #### Cloning and running the project
-
-Secondarily, clone the code from github:
 
 ```
 git clone https://github.com/Knockingfish/hauskanomad.git
