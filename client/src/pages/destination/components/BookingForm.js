@@ -34,14 +34,14 @@ const BookingForm = () => {
 
       if (response.ok) {
         // Handle successful response from the server
-        console.log('Form data submitted successfully:', formData);
+        alert('Successfully booked!', formData);
       } else {
         // Handle error response from the server
-        console.error('Error 123:', response.statusText);
+        alert('Error 123', response.statusText);
       }
     } catch (error) {
       // Handle network errors
-      console.error('Error submitting form data:', error.message);
+      alert('Error submitting form data!', error.message);
     }
   };
 
