@@ -60,4 +60,4 @@ Authors
 - Knockingfish - [Knockingfish](https://github.com/Knockingfish)
 - ReepZ - [Reepezy](https://github.com/Reepezy)
 - Shishi - [Shishi888](https://github.com/Shishi888)
-<!-- - Al Amin - [aminaloy](https://github.com/aminalniloy) -->
+- Al Amin - [aminaloy](https://github.com/aminalniloy)
