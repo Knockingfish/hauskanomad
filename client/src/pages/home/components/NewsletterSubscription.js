@@ -9,7 +9,7 @@ const NewsletterSubscription = () => {
   const handleSubscribe = async () => {
     try {
       console.log("Attempting to subscribe with email:", email); // Log email before making the API call
-      const response = await fetch("http://localhost:5000/api/subscribe", {
+      const response = await fetch("https://hauskabackend/api/subscribe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
