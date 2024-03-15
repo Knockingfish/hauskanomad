@@ -14,7 +14,7 @@ const ProfilePage = () => {
 
   const fetchBookings = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/bookings', {
+      const response = await fetch('https://hauskabackend.onrender.com/api/bookings', {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
@@ -46,7 +46,7 @@ const ProfilePage = () => {
 
   const handleDeleteBooking = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/bookings/${id}`, {
+      const response = await fetch(`https://hauskabackend.onrender.com/api/bookings/${id}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
