@@ -19,7 +19,7 @@ const VerifiedPage = () => {
   }, [navigate]); // Run this effect whenever navigate changes
 
   const handleSkip = () => {
-    // Redirect immediately to "/"
+    // Redirect immediately to "/login"
     navigate("/login");
   };
 

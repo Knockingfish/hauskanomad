@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { DarkModeProvider } from './pages/global/DarkModeContext';
+import NotFoundPage from './pages/global/NotFoundPage'; // Import your custom 404 page component
 import Home from './pages/home/Home';
 import ProfilePage from './pages/profile/ProfilePage';
 import AboutUs from './pages/about/AboutUs';
@@ -71,6 +72,8 @@ function App() {
           <Route path="/southafrica" element={<SouthAfrica />} />
           <Route path="/thailand" element={<Thailand />} />
           <Route path="/uk" element={<UK />} />
+
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </DarkModeProvider>
     </Router>

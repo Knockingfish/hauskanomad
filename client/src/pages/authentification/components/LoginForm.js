@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 import styles from './Account.module.css';
 
 function LoginForm() {
@@ -7,6 +7,7 @@ function LoginForm() {
   const [password, setPassword] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [error, setError] = useState('');
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   // Store login status in local storage to track persistently.
   // Even if the page is reloaded, the use remains logged in.
@@ -30,16 +31,17 @@ function LoginForm() {
 
       const data = await response.json();
 
-      // Debuggin messages~~.
+      // Debugging messages~~.
       if (response.ok) {
-        console.log("Login successful!");
+        alert("Login successful!");
         setIsLoggedIn(true);
         localStorage.setItem('isLoggedIn', true);
+        navigate('/'); // Redirect to home page using navigate
       } else {
         setError(data.message);
       }
     } catch (error) {
-      console.error("Error logging in:", error);
+      alert("Error logging in:", error);
       setError('An error occurred while logging in.');
     }
   };
@@ -70,7 +72,6 @@ function LoginForm() {
           </>
         )}
       </div>
-        <Link className={styles.link} to="/Forgot_Password">Forgot your password?</Link>
       </div>
     </div>
   );

@@ -9,8 +9,8 @@ const sendVerificationEmail = async (email, token) => {
     secure: false, // true for 465, false for other ports
     debug: true,
     auth: {
-      user: "hauskanomad@outlook.com", // Your Outlook email address
-      pass: "travel.seamlessly.123.?", // Your Outlook email password
+      user: process.env.EMAIL, // Your Outlook email address
+      pass: process.env.EMAIL_PASSWORD, // Your Outlook email password
     },
     });
 

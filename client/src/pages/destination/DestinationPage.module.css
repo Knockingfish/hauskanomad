@@ -1,7 +1,5 @@
 .end_container {
-  position: relative;
   box-shadow: var(--heavy_shadow);
-  z-index: 2;
 }
 
 .top, .middle{
@@ -9,6 +7,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+.book {
+  position: relative;
+  z-index: 100;
 }
 
 @media (max-width: 60rem) {

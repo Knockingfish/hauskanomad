@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8,6 +9,7 @@
   transition: var(--train);
   box-shadow: var(--heavy_shadow);
   font-size: 1.5em;
+  z-index: 1;
 }
 
 .first_section {
