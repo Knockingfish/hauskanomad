@@ -9,8 +9,8 @@ const sendEmail = async (email) => {
       port: 587, // Outlook SMTP port (587 is the default for TLS)
     secure: false, // true for 465, false for other ports
     auth: {
-      user: "hauskanomad@outlook.com", // Your Outlook email address
-      pass: "travel.seamlessly.123.?", // Your Outlook email password
+      user: process.env.EMAIL, // Your Outlook email address
+      pass: process.env.EMAIL_PASSWORD, // Your Outlook email password
     },
     });
 

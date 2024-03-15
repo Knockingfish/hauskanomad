@@ -32,7 +32,6 @@
 }
 
 .input_container {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,7 +41,6 @@
     border-radius: 1rem;
     background-color: var(--dark3);
     box-shadow: var(--light_shadow);
-    z-index: 999;
 }
 
 .input {
@@ -60,6 +58,10 @@
 .input:focus {
     color: var(--white);
     background-color: var(--red2);
+}
+.calendar {
+    position: relative;
+    z-index: 10;
 }
 
 .slider {

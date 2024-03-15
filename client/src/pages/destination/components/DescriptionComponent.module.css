@@ -6,7 +6,7 @@
     height: 40rem;
     width: 40vw;
     background-color: var(--light1);
-    box-shadow: var(--heavy-shadow);
+    box-shadow: var(--heavy_shadow);
 }
 
 .content_container {

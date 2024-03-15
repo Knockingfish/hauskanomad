@@ -22,7 +22,7 @@ const DestinationPage = () => {
         <DescriptionComponent content={content}/>
       </div>
       <div className={styles.middle}>
-        <BookingForm/>
+        <BookingForm destination="Cuba"/>
         <BookingInfo/>
       </div>
 

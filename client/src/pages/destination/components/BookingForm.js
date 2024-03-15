@@ -1,8 +1,8 @@
-import styles from './BookingForm.module.css';
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
+import styles from './BookingForm.module.css';
 
-const BookingForm = () => {
+const BookingForm = ({ destination }) => { // Pass destination as props
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const [guests, setGuests] = useState(1);
@@ -11,18 +11,16 @@ const BookingForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Define format for booking data
-    // Used when sending a backend request
     const formData = {
       startDate: startDate ? startDate.toISOString() : null,
       endDate: endDate ? endDate.toISOString() : null,
       guests: parseInt(guests),
-      rooms: parseInt(rooms)
+      rooms: parseInt(rooms),
+      destination // Include destination in form data
     };
 
     try {
-      // Send the form data to the server
-      const response = await fetch('http://localhost:5000/api/book', {
+      const response = await fetch('http://localhost:5000/api/bookings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -30,17 +28,13 @@ const BookingForm = () => {
         body: JSON.stringify(formData)
       });
 
-      console.log(formData)
-
       if (response.ok) {
-        // Handle successful response from the server
-        alert('Successfully booked!', formData);
+        alert('Successfully booked!');
       } else {
-        // Handle error response from the server
-        alert('Error 123', response.statusText);
+        console.log(response);
+        alert('Error ' + response.status, response.statusText);
       }
     } catch (error) {
-      // Handle network errors
       alert('Error submitting form data!', error.message);
     }
   };
@@ -48,16 +42,18 @@ const BookingForm = () => {
   return (
     <form className={styles.outer_container} onSubmit={handleSubmit}>
       <div className={styles.form_container}>
-        <div className={styles.header}>Book now!</div>
+        <div className={styles.header}>Book now for {destination}!</div> {/* Display destination */}
         <div className={styles.input_container}>
           <DatePicker
             className={styles.input}
+            calendarClassName={styles.calendar}
             selected={startDate}
             onChange={date => setStartDate(date)}
             placeholderText="Select start date..."
           />
           <DatePicker
             className={styles.input}
+            calendarClassName={styles.calendar}
             selected={endDate}
             onChange={date => setEndDate(date)}
             placeholderText="Select end date..."

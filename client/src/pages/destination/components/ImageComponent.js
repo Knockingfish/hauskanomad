@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styles from './ImageComponent.module.css';
 
 const ImageComponent = ({ image }) => {
-  // Modal functionality is (partially) coded, but not actually implemented.
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
@@ -14,26 +13,31 @@ const ImageComponent = ({ image }) => {
   };
 
   return (
-    <div className={styles.image_container}>
+    <div className={styles.image_container} onClick={openModal}>
       <img
         className={styles.img}
-        onClick={openModal}
         src={image}
         alt='destination'
       />
+      {isOpen && <Modal image={image} closeModal={closeModal} />}
       <div className={styles.overlay} />
     </div>
   );
 };
 
 const Modal = ({ image, closeModal }) => {
+  const handleClick = () => {
+    closeModal();
+  };
+
   return (
     <div className={styles.modalOverlay} onClick={closeModal}>
-      <div className={styles.modalContent}>
+      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         <img
           src={image}
           alt="Expanded"
           className={styles.modalImage}
+          onClick={handleClick}
         />
       </div>
     </div>
