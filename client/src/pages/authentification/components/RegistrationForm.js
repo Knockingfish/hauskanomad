@@ -13,7 +13,7 @@ const RegistrationForm = () => {
 
     try {
       // Send a POST request to the registration route
-      await axios.post('http://localhost:5000/api/register', { email, password, username });
+      await axios.post('https://hauskabackend.onrender.com/api/register', { email, password, username });
 
       // If the registration was successful, update the registration status
       setRegistrationStatus('Registration successful!');

@@ -15,7 +15,7 @@ const sendVerificationEmail = async (email, token) => {
     });
 
     // Construct the verification link
-    const verificationLink = `http://localhost:5000/api/verify/${token}`;
+    const verificationLink = `https://hauskabackend.onrender.com/api/verify/${token}`;
 
     // Send mail with defined transport object
     let info = await transporter.sendMail({

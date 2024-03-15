@@ -20,7 +20,7 @@ const BookingForm = ({ destination }) => { // Pass destination as props
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/bookings', {
+      const response = await fetch('https://hauskabackend.onrender.com/api/bookings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

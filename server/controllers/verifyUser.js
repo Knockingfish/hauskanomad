@@ -18,7 +18,7 @@ export const verifyEmail = async (req, res) => {
     await user.save();
 
     // Redirect the user to a success page in the frontend
-    return res.redirect('http://localhost:3000/verified'); // Adjust the URL as needed
+    return res.redirect('https://hauskanomad.onrender.com/verified'); // Adjust the URL as needed
   } catch (error) {
     console.error("Error during email verification:", error);
     return res.status(500).json({ message: 'Internal server error.' });
