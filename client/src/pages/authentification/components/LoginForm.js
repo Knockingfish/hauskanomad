@@ -21,7 +21,7 @@ function LoginForm() {
   // Make a backend request to login the user by checking their input credentials against the database.
   const handleLogin = async () => {
     try {
-      const response = await fetch('https://hauskabackend/api/login', {
+      const response = await fetch('https://hauskabackend.onrender.com/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
