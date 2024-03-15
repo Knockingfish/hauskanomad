@@ -15,7 +15,7 @@ This is a basic student project to create webapp for booking a stay at a travel 
 
 ## Screenshot
 
-![home page screenshot](https://github.com/[Knockingfish]/[hauskanomad]/blob/[main]/hauskascreenshot.png?raw=true)
+![home page screenshot](https://github.com/Knockingfish/hauskanomad/blob/main/hauskascreenshot.png?raw=true)
   
 ## How do I run this or work on this?
 
