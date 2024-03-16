@@ -54,7 +54,7 @@ npm install
 yarn install
 ```
 
-Following this, the frontend and backend can be started allowing the project to be tested manually.
+Following this, the frontend and backend can be started allowing the project to be tested locally.
 
 This command should be run in both the client and server directories.
 
@@ -70,7 +70,7 @@ The separation of backend and frontend in this way is a quirk of how this projec
 
 ## How can I contribute?
 
-The best way to contribute will be to fork the project and develop your version separately, as we are not accepting contributions currently.
+The best way to "contribute" will be to fork the project and develop your version separately, as we are not accepting contributions currently.
 
 ## Authors
 
