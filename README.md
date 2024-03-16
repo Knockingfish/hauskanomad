@@ -28,6 +28,11 @@ First the following software will be needed:
   - Notepad.
   - Micro.
   - Nano.
+  - Ed.
+  - Vi, Vim or Neovim.
+  - Kakoune.
+  - Helix.
+  - Emacs (if you can find a text editor for that).
 - NodeJS.
 - A way to test RESTFUL APIs.
     - cURL.
@@ -45,12 +50,20 @@ In the client (frontend) and server (backend) directories of the cloned project 
 npm install
 ```
 
+```
+yarn install
+```
+
 Following this, the frontend and backend can be started allowing the project to be tested manually.
 
 This command should be run in both the client and server directories.
 
 ```
 npm start
+```
+
+```
+yarn start
 ```
 
 The separation of backend and frontend in this way is a quirk of how this project was developed, and is unlikely to be resolved.
