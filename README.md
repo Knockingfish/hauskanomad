@@ -32,7 +32,7 @@ First the following software will be needed:
   - Vi, Vim or Neovim.
   - Kakoune.
   - Helix.
-  - Emacs (if you can find a text editor for that).
+  - Emacs (if you can find a text editor for Emacs).
 - NodeJS.
 - A way to test RESTFUL APIs.
     - cURL.
